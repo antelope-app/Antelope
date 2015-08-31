@@ -99,7 +99,10 @@ def translateRegex(matchType, url_filter):
 	return target
 
 def _prepend_http_regex(target):
-	return "https?://(www.)?" + target
+    if len(target) == 0:
+        return ".*" + target
+    else:
+        return "https?://(www.)?" + target
 
 # Now we get down to actually running this program
 
