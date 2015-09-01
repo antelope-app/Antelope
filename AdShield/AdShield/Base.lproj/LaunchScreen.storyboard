@@ -9,19 +9,82 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
-                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                        <viewControllerLayoutGuide type="top" id="J61-o9-0z4"/>
+                        <viewControllerLayoutGuide type="bottom" id="sEb-Bq-3O7"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="xWY-Op-7Gg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="adshield-logo" translatesAutoresizingMaskIntoConstraints="NO" id="MT4-83-utd">
+                                <rect key="frame" x="143" y="167" width="114" height="114"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6bG-WE-JYj"/>
+                                    <constraint firstAttribute="width" constant="100" id="7TM-kz-x4Y"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6bG-WE-JYj"/>
+                                        <exclude reference="7TM-kz-x4Y"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="6bG-WE-JYj"/>
+                                        <include reference="7TM-kz-x4Y"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="AdShield" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lFu-UK-va4">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="textColor" red="0.28640379581151831" green="0.28640379581151831" blue="0.28640379581151831" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="80" y="307" width="240" height="60"/>
+                                </variation>
+                            </textView>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lFu-UK-va4" firstAttribute="top" secondItem="MT4-83-utd" secondAttribute="bottom" constant="26" id="5VF-kF-Sgp"/>
+                            <constraint firstItem="MT4-83-utd" firstAttribute="top" secondItem="J61-o9-0z4" secondAttribute="bottom" constant="147" id="Swc-EU-PBM"/>
+                            <constraint firstItem="lFu-UK-va4" firstAttribute="centerX" secondItem="xWY-Op-7Gg" secondAttribute="centerX" id="kSJ-OG-hhS"/>
+                            <constraint firstItem="MT4-83-utd" firstAttribute="centerX" secondItem="xWY-Op-7Gg" secondAttribute="centerX" id="sKE-Ks-eUB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="lFu-UK-va4"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="5VF-kF-Sgp"/>
+                                <exclude reference="kSJ-OG-hhS"/>
+                                <exclude reference="Swc-EU-PBM"/>
+                                <exclude reference="sKE-Ks-eUB"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="lFu-UK-va4"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="5VF-kF-Sgp"/>
+                                <include reference="kSJ-OG-hhS"/>
+                                <include reference="Swc-EU-PBM"/>
+                                <include reference="sKE-Ks-eUB"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-33" y="393.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="adshield-logo" width="231" height="231"/>
+    </resources>
 </document>

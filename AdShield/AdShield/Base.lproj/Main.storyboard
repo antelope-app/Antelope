@@ -1,26 +1,115 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A263e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A263e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZIz-Zu-egq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tutorial View Controller-->
+        <scene sceneID="UDl-ga-dLc">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdShield" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZIz-Zu-egq" customClass="TutorialViewController" customModule="AdShield" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="zkd-xH-s5h"/>
+                        <viewControllerLayoutGuide type="bottom" id="cpA-AA-e7w"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="aic-vX-NgN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLH-EB-z7c">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adshield-logo" translatesAutoresizingMaskIntoConstraints="NO" id="ojg-2G-88Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="DAE-Zf-h8R"/>
+                                            <constraint firstAttribute="width" constant="100" id="Wr9-Hx-oQF"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="DAE-Zf-h8R"/>
+                                                <exclude reference="Wr9-Hx-oQF"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="DAE-Zf-h8R"/>
+                                                <include reference="Wr9-Hx-oQF"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ojg-2G-88Q" firstAttribute="centerX" secondItem="mLH-EB-z7c" secondAttribute="centerX" id="ADh-jn-6ko"/>
+                                    <constraint firstItem="ojg-2G-88Q" firstAttribute="centerX" secondItem="mLH-EB-z7c" secondAttribute="centerX" id="GmR-RZ-gmN"/>
+                                    <constraint firstItem="ojg-2G-88Q" firstAttribute="top" secondItem="mLH-EB-z7c" secondAttribute="top" constant="150" id="PqN-Hk-uwQ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="ojg-2G-88Q"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="ADh-jn-6ko"/>
+                                        <exclude reference="GmR-RZ-gmN"/>
+                                        <exclude reference="PqN-Hk-uwQ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="ojg-2G-88Q"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="ADh-jn-6ko"/>
+                                        <include reference="GmR-RZ-gmN"/>
+                                        <include reference="PqN-Hk-uwQ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mLH-EB-z7c" firstAttribute="top" secondItem="aic-vX-NgN" secondAttribute="top" id="030-xb-Duz"/>
+                            <constraint firstItem="mLH-EB-z7c" firstAttribute="leading" secondItem="aic-vX-NgN" secondAttribute="leading" id="RWn-Hz-PtA"/>
+                            <constraint firstItem="cpA-AA-e7w" firstAttribute="top" secondItem="mLH-EB-z7c" secondAttribute="bottom" id="XYe-eq-60Z"/>
+                            <constraint firstAttribute="trailing" secondItem="mLH-EB-z7c" secondAttribute="trailing" id="oet-he-pID"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="mLH-EB-z7c"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="XYe-eq-60Z"/>
+                                <exclude reference="030-xb-Duz"/>
+                                <exclude reference="RWn-Hz-PtA"/>
+                                <exclude reference="oet-he-pID"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="mLH-EB-z7c"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="XYe-eq-60Z"/>
+                                <include reference="030-xb-Duz"/>
+                                <include reference="RWn-Hz-PtA"/>
+                                <include reference="oet-he-pID"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="tutorialSplash" destination="mLH-EB-z7c" id="uGu-n2-EmQ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mLW-bV-hIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="324" y="1204.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="adshield-logo" width="231" height="231"/>
+    </resources>
 </document>

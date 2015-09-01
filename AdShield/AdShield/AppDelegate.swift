@@ -10,12 +10,19 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    var tutorialViewController: TutorialViewController!
     var window: UIWindow?
-
+    
+    var testColors: [UIColor] = [UIColor.redColor(), UIColor.blueColor(), UIColor.greenColor(), UIColor.yellowColor()]
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        print("hello")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        tutorialViewController = storyboard.instantiateViewControllerWithIdentifier("tutorialViewController") as? TutorialViewController
+        
         return true
     }
 
