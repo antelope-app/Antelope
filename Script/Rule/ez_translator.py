@@ -80,21 +80,22 @@ class EZRuleParser:
     def parse(self, raw_rule):
         ez_rule = EZRule(raw_rule)
 
-        ez_rule.type = self._type(raw_rule)
+        ez_rule.type = EZRuleParser._type(raw_rule)
         if ez_rule.type is EZRuleType.selector:
-            ez_rule.selector = self._css_selector(raw_rule)
+            ez_rule.selector = EZRuleParser._css_selector(raw_rule)
 
-        raw_options = self._raw_options(raw_rule)
+        raw_options = EZRuleParser._raw_options(raw_rule)
         if raw_options is not None:
-            ez_rule.content_options = self._content_options(raw_options)
-            ez_rule.load_types = self._load_types(raw_options)
-            ez_rule.domains = self._domains(raw_options)
+            ez_rule.content_options = EZRuleParser._content_options(raw_options)
+            ez_rule.load_types = EZRuleParser._load_types(raw_options)
+            ez_rule.domains = EZRuleParser._domains(raw_options)
 
-        ez_rule.url_filter = self._url_filter(raw_rule, ez_rule.type)
+        ez_rule.url_filter = EZRuleParser._url_filter(raw_rule, ez_rule.type)
 
         return ez_rule
 
-    def _type(self, raw_rule):
+    @staticmethod
+    def _type(raw_rule):
         ez_rule_type = EZRuleType.unknown
 
         if raw_rule.startswith("!"):
@@ -116,7 +117,8 @@ class EZRuleParser:
     def _selector_url_filter(raw_rule):
         return EZParseHelper.split_at_string(raw_rule, "##", right=False)
 
-    def _url_filter(self, raw_rule, ez_rule_type):
+    @staticmethod
+    def _url_filter(raw_rule, ez_rule_type):
         url_filter = raw_rule
 
         # Remove selectors
@@ -124,21 +126,22 @@ class EZRuleParser:
             url_filter = EZParseHelper.split_at_string(url_filter, '$', right=False)
 
         if ez_rule_type is EZRuleType.selector:
-            url_filter = _selector_url_filter(url_filter)
+            url_filter = EZRuleParser._selector_url_filter(url_filter)
         else:
             # To capture @@|| or @@| constructions 
             if ez_rule_type is EZRuleType.exception:
                 regex = EZParseHelper.regex_for_type(ez_rule_type)
 
                 #Casts the type to the newly pre-pended url_filter
-                ez_rule_type = self._type(url_filter)
+                ez_rule_type = EZRuleParser._type(url_filter)
 
             regex = EZParseHelper.regex_for_type(ez_rule_type)
             url_filter = EZParseHelper.split_at_string(url_filter, regex)
 
         return url_filter
 
-    def _raw_options(self, raw_rule):
+    @staticmethod
+    def _raw_options(raw_rule):
         '''
             Gets all options from the raw_rule
 
@@ -157,7 +160,8 @@ class EZRuleParser:
 
         return options
 
-    def _domains(self, raw_options):
+    @staticmethod
+    def _domains(raw_options):
         '''
             Gets the domain options from the raw_options
             
@@ -167,16 +171,18 @@ class EZRuleParser:
         domains = []
 
         for option in raw_options:
-            if self._is_domain_option(option):
+            if EZRuleParser._is_domain_option(option):
                 domains = EZParseHelper.split_at_string(option, '=').split('|')
                 break
 
         return domains
 
-    def _is_domain_option(self, option):
+    @staticmethod
+    def _is_domain_option(option):
         return option.startswith("domain=")
 
-    def _load_types(self, raw_options):
+    @staticmethod
+    def _load_types(raw_options):
         '''
             Gets the load type option from the raw options.
 
@@ -185,28 +191,31 @@ class EZRuleParser:
         load_types = []
 
         for option in raw_options:
-            if self._is_load_type_option(option):
+            if EZRuleParser._is_load_type_option(option):
                 load_types.append(option)
 
         return load_types
 
-    def _content_options(self, raw_options):
+    @staticmethod
+    def _content_options(raw_options):
         '''
             If the type isn't a domain type or load type then it is a content options type.
         '''
         content_options = []
 
         for option in raw_options:
-            if not self._is_domain_option(option) and \
-               not self._is_load_type_option(option):
+            if not EZRuleParser._is_domain_option(option) and \
+               not EZRuleParser._is_load_type_option(option):
                 content_options.append(option)
 
         return content_options
 
-    def _is_load_type_option(self, option):
+    @staticmethod
+    def _is_load_type_option(option):
         return "third-party" in option
 
-    def _css_selector(self, raw_rule, ez_rule_type=EZRuleType.selector):
+    @staticmethod
+    def _css_selector(raw_rule, ez_rule_type=EZRuleType.selector):
         signifier = EZParseHelper.regex_for_type(ez_rule_type)
         non_inclusive_index = (raw_rule.find("##") + 2)
         return raw_rule[non_inclusive_index:]
