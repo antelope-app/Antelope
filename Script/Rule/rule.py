@@ -44,3 +44,5 @@ class Rule:
     def __init__(self):
         self.action = Action()
         self.trigger = Trigger()
+
+        

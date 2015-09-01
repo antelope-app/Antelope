@@ -1,4 +1,5 @@
 from rule_builder import Translator
+from rule import Rule, Action, Trigger
 
 '''
    The core documentation for EasyList is found here:
@@ -32,7 +33,7 @@ class EZParseHelper:
 
     @classmethod
     def regex_for_type(cls, ez_rule_type):
-        # TODO: Make this actually RegEx to avoid ugly 'beginswith' / 'in' division
+        # TODO: Make this actually RegEx to avoid ugly 'startswith' / 'in' division
         signifier = None
 
         if ez_rule_type is EZRuleType.comment:
@@ -50,7 +51,7 @@ class EZParseHelper:
 
     @classmethod
     def is_ez_negated(cls, target):
-        return target.beginswith('~')
+        return target.startswith('~')
 
 class EZRule:
     def __init__(self, raw_rule):
@@ -212,21 +213,12 @@ class EZRuleParser:
 
 
 class EZTranslator(Translator):
-    def translate(self, raw_rule):
-        ez_rule = EZRuleParser.parse(raw_rule)
-
-        ios_rule = Rule(raw_rule)
-        ios_rule.action = _action_from_ez(ez_rule)
-        ios_rule.trigger = _trigger_from_ez(ez_rule)
-
-        return ios_rule
-
     @staticmethod
     def _action_from_ez(ez_rule):
         ez_rule_type = ez_rule.type
 
-        action = Action(action_type)
-        action.type = _action_type(ez_rule_type)
+        action = Action()
+        action.type = EZTranslator._action_type(ez_rule_type)
 
         if ez_rule_type is EZRuleType.selector:
             action.selector = ez_rule.selector
@@ -245,11 +237,11 @@ class EZTranslator(Translator):
     @staticmethod
     def _trigger_from_ez(ez_rule):
         trigger = Trigger()
-        trigger.url_filter = _regex_url_filter(ez_rule.url_filter, ez_rule_type)
-        trigger.resource_type = _resource_types(ez_rule.content_options)
-        trigger.load_type = _load_types(ez_rule.load_types)
-        trigger.if_domain = _if_domains(ez_rule.domains)
-        trigger.unless_domain = _unless_domains(ez_rule.domains)
+        trigger.url_filter = EZTranslator._regex_url_filter(ez_rule.url_filter, ez_rule.type)
+        trigger.resource_type = EZTranslator._resource_types(ez_rule.content_options)
+        trigger.load_type = EZTranslator._load_types(ez_rule.load_types)
+        trigger.if_domain = EZTranslator._if_domains(ez_rule.domains)
+        trigger.unless_domain = EZTranslator._unless_domains(ez_rule.domains)
 
         return trigger
 
@@ -274,7 +266,7 @@ class EZTranslator(Translator):
            ez_rule_type is EZRuleType.block_exact or \
            ez_rule_type is EZRuleType.exception or \
            ez_rule_type is EZRuleType.selector and len(url_filter) > 0:
-            target = target._prepend_http(target)
+            target = EZTranslator._prepend_http(target)
         elif ez_rule_type is EZRuleType.selector and \
            len(url_filter) is 0:
             target = ".*"
@@ -335,13 +327,20 @@ class EZTranslator(Translator):
 
         return unless_domains
 
+    def translate(self, raw_rule):
+        parser = EZRuleParser()
+        ez_rule = parser.parse(raw_rule)
+
+        ios_rule = Rule()
+        ios_rule.action = EZTranslator._action_from_ez(ez_rule)
+        ios_rule.trigger = EZTranslator._trigger_from_ez(ez_rule)
+
+        return ios_rule
+
 
 def test():
-    parser = EZRuleParser()
-    ez_rule = parser.parse("||jyvtidkx.com^$third-party")
-
     translator = EZTranslator()
-    ios_rule = translator.translate(ez_rule)
+    ios_rule = translator.translate("||jyvtidkx.com^$third-party")
 
     return ios_rule
 

@@ -68,8 +68,8 @@ def translate(rule):
 	translated_rule["action"] = {}
 
 	if css_selector:
-		translated_rule["action"]["selector"] = css_selector
 		translated_rule["action"]["type"] = "css-display-none"
+		translated_rule["action"]["selector"] = css_selector
 	else:
 		translated_rule["action"]["type"] = "block"
 	
@@ -79,6 +79,10 @@ def translate(rule):
 # TODO - Update this to correctly translate the regexes
 def translateRegex(matchType, url_filter):
 	target = url_filter
+
+	# Escape periods for regex
+	if '.' in target:
+		target = target.replace('.', "\.")
 
 	# Option separator indicates content types and should be ignored
 	if '$' in target:
@@ -100,7 +104,7 @@ def translateRegex(matchType, url_filter):
 
 def _prepend_http_regex(target):
     if len(target) == 0:
-        return ".*" + target
+        return target
     else:
         return "https?://(www.)?" + target
 
@@ -119,6 +123,11 @@ with open(filter_file_name, "r") as adblock_filter_file:
 	# Translate these and accumulate in translated_rules
 	for rule in translatable(rules(adblock_filter_file)):
 		translated_rules.append(translate(rule))
+    
+	with open('mobilelist.json') as mobile_list:
+		mobile_rules = json.load(mobile_list)
+		for rule in mobile_rules:
+			translated_rules.append(rule)
 	
 	# This pretty prints to stdout.  You can remove the pretty printing, its just debug to read with it.	
 	sys.stdout.write(json.dumps(translated_rules, sort_keys=True, indent=4, separators=(',', ': ')))
