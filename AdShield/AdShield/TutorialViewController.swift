@@ -9,11 +9,10 @@
 import UIKit
 
 class TutorialViewController: ScrollViewController {
-    
     @IBOutlet weak var tutorialSplash: UIView!
     
-    var absoluteStep: NSInteger
-    var step: NSInteger
+    var absoluteStep: NSInteger!
+    var step: NSInteger!
     
     var stepOneViewController: UIViewController = UIViewController()
     var stepTwoViewController: UIViewController = UIViewController()
