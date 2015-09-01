@@ -1,5 +1,3 @@
-from enum import Enum
-
 '''
   These classes define an iOS 9 AdBlock rule in Python.
 
@@ -18,7 +16,7 @@ class Action:
 class Trigger:
     def __init__(self):
         '''
-            "url-filter" (string, mandatory): matches the resource’s URL.
+            "url-filter" (string, mandatory): matches the resource's URL.
 
             "resource-type": (array of strings, optional): matches how the resource will be used.
                   Potential values - "document", "image", "style-sheet", "script", "font", "raw", "svg-document"
@@ -35,7 +33,8 @@ class Trigger:
         self.if_domain = []
         self.unless_domain = []
 
-    def is_valid_resource_types(resource_type):
+    @classmethod
+    def is_valid_resource_type(cls, resource_type):
         valid_types = set(["document", "image", "style-sheet", 
                 "script", "font", "raw", "svg-document"
                 "media", "popup"])
