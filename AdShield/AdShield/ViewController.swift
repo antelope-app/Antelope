@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Auto-reload content blocker when view loads
+        SFContentBlockerManager.reloadContentBlockerWithIdentifier("com.adshield.AdShield.AdShield-Extension") { (error) -> Void in
+            if let error = error {
+                print("Failed to load with \(error).")
+            } else {
+                print("Loaded successfully.")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
