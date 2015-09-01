@@ -16,8 +16,15 @@ class ActionRequestHandler: NSObject, NSExtensionRequestHandling {
     
         let item = NSExtensionItem()
         item.attachments = [attachment]
-    
-        context.completeRequestReturningItems([item], completionHandler: nil);
+        
+        print("begin")
+        context.completeRequestReturningItems([item]) { (expired) -> Void in
+            if expired == true {
+                print("expired")
+            } else {
+                print("not expired")
+            }
+        }
     }
     
 }

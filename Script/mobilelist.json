@@ -1,0 +1,20 @@
+[
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": ".GoogleActiveViewClass"
+        },
+        "trigger": {
+            "url-filter": ".*"
+        }
+    },
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": ".aswift_1_expand"
+        },
+        "trigger": {
+            "url-filter": ".*"
+        }
+    }
+]
