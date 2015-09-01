@@ -19,8 +19,8 @@ class EZRuleType:
     exception = 6
 
 class EZParseHelper:
-    @classmethod
-    def split_at_string(cls, target, splitter, right=True):
+    @staticmethod
+    def split_at_string(target, splitter, right=True):
         if splitter not in target:
             return target
 
@@ -31,8 +31,8 @@ class EZParseHelper:
         else:
             return target[:separator_index]
 
-    @classmethod
-    def regex_for_type(cls, ez_rule_type):
+    @staticmethod
+    def regex_for_type(ez_rule_type):
         # TODO: Make this actually RegEx to avoid ugly 'startswith' / 'in' division
         signifier = None
 
@@ -49,7 +49,7 @@ class EZParseHelper:
 
         return signifier
 
-    @classmethod
+    @staticmethod
     def is_ez_negated(cls, target):
         return target.startswith('~')
 
