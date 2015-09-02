@@ -2,18 +2,20 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A263e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="S1h-WZ-hAu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--MainViewController-->
         <scene sceneID="0BO-be-AAY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xeX-nU-b4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MainViewController" title="MainViewController" id="S1h-WZ-hAu" customClass="MainViewController" customModule="AdShield" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hi4-47-G4f"/>
                         <viewControllerLayoutGuide type="bottom" id="tMp-VM-lmb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SGx-sF-hot">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aic-vX-NgN">
@@ -78,10 +80,10 @@
                                 <exclude reference="aic-vX-NgN"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Y2e-Pt-R6h"/>
                                 <exclude reference="COj-ic-Kqg"/>
                                 <exclude reference="rbz-QK-a56"/>
                                 <exclude reference="ydD-kP-a8M"/>
-                                <exclude reference="Y2e-Pt-R6h"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -89,10 +91,10 @@
                                 <include reference="aic-vX-NgN"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Y2e-Pt-R6h"/>
                                 <include reference="COj-ic-Kqg"/>
                                 <include reference="rbz-QK-a56"/>
                                 <include reference="ydD-kP-a8M"/>
-                                <include reference="Y2e-Pt-R6h"/>
                             </mask>
                         </variation>
                     </view>
@@ -100,6 +102,7 @@
                         <outlet property="splashView" destination="aic-vX-NgN" id="5oo-Lo-Y2n"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeX-nU-b4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-537" y="1253.25"/>
         </scene>
@@ -112,9 +115,72 @@
                         <viewControllerLayoutGuide type="bottom" id="qyk-f7-xfc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U7H-v1-NuN">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" editable="NO" text="Welcome to AdShield" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eG9-gY-LqZ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="316" id="JfV-l4-FbQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="pua-xc-GOZ"/>
+                                </constraints>
+                                <color key="textColor" red="0.32150550828970326" green="0.32150550828970326" blue="0.32150550828970326" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JfV-l4-FbQ"/>
+                                        <exclude reference="pua-xc-GOZ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
+                                    <mask key="constraints">
+                                        <include reference="JfV-l4-FbQ"/>
+                                        <include reference="pua-xc-GOZ"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" text="AdShield removes ads from Safari, and makes your browser load faster." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QPA-Ex-r0c">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="KKY-Qa-Chs"/>
+                                    <constraint firstAttribute="height" constant="59" id="UcS-3w-Rfc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KKY-Qa-Chs"/>
+                                        <exclude reference="UcS-3w-Rfc"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="KKY-Qa-Chs"/>
+                                        <include reference="UcS-3w-Rfc"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="times-square" translatesAutoresizingMaskIntoConstraints="NO" id="Gxd-2y-YcW">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="CBC-tS-Ogl"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CBC-tS-Ogl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="CBC-tS-Ogl"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adshield-logo" translatesAutoresizingMaskIntoConstraints="NO" id="wtb-vf-Fg2">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
@@ -135,56 +201,6 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" editable="NO" text="Welcome to AdShield" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eG9-gY-LqZ">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="316" id="JfV-l4-FbQ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="99" id="VIm-0i-XJU"/>
-                                    <constraint firstAttribute="height" constant="50" id="pua-xc-GOZ"/>
-                                </constraints>
-                                <color key="textColor" red="0.32150550828970326" green="0.32150550828970326" blue="0.32150550828970326" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="JfV-l4-FbQ"/>
-                                        <exclude reference="VIm-0i-XJU"/>
-                                        <exclude reference="pua-xc-GOZ"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
-                                    <mask key="constraints">
-                                        <include reference="JfV-l4-FbQ"/>
-                                        <include reference="VIm-0i-XJU"/>
-                                        <include reference="pua-xc-GOZ"/>
-                                    </mask>
-                                </variation>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" text="AdShield removes ads from Safari, and makes your browser load faster." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QPA-Ex-r0c">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="KKY-Qa-Chs"/>
-                                    <constraint firstAttribute="height" constant="59" id="UcS-3w-Rfc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="KKY-Qa-Chs"/>
-                                        <exclude reference="UcS-3w-Rfc"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="50" y="-75" width="300" height="59"/>
-                                    <mask key="constraints">
-                                        <include reference="KKY-Qa-Chs"/>
-                                        <include reference="UcS-3w-Rfc"/>
-                                    </mask>
-                                </variation>
-                            </textView>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ha4-vY-eHy">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
@@ -196,7 +212,7 @@
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="GET STARTED">
+                                        <fragment content="START BLOCKING ADS">
                                             <attributes>
                                                 <font key="NSFont" size="14" name="HelveticaNeue-Medium"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -225,45 +241,68 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eG9-gY-LqZ" firstAttribute="centerX" secondItem="U7H-v1-NuN" secondAttribute="centerX" id="2Mf-JQ-V0s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gxd-2y-YcW" secondAttribute="trailing" id="4CA-kG-DFQ"/>
+                            <constraint firstItem="Gxd-2y-YcW" firstAttribute="top" secondItem="QPA-Ex-r0c" secondAttribute="bottom" id="4cf-kd-m0h"/>
+                            <constraint firstItem="Gxd-2y-YcW" firstAttribute="leading" secondItem="U7H-v1-NuN" secondAttribute="leadingMargin" id="8hd-iU-Wtg"/>
+                            <constraint firstItem="Gxd-2y-YcW" firstAttribute="top" secondItem="QPA-Ex-r0c" secondAttribute="bottom" id="KDh-wn-abW"/>
                             <constraint firstItem="wtb-vf-Fg2" firstAttribute="centerX" secondItem="U7H-v1-NuN" secondAttribute="centerX" id="O3J-Nj-EBV"/>
+                            <constraint firstItem="Gxd-2y-YcW" firstAttribute="top" secondItem="QPA-Ex-r0c" secondAttribute="bottom" id="Psa-eB-fe8"/>
                             <constraint firstItem="eG9-gY-LqZ" firstAttribute="centerY" secondItem="U7H-v1-NuN" secondAttribute="centerY" id="Qcg-9z-YZb"/>
                             <constraint firstItem="qyk-f7-xfc" firstAttribute="top" secondItem="Ha4-vY-eHy" secondAttribute="bottom" constant="100" id="Vp6-CS-O6u"/>
+                            <constraint firstItem="Gxd-2y-YcW" firstAttribute="top" secondItem="QPA-Ex-r0c" secondAttribute="bottom" id="YYJ-Hp-QZK"/>
                             <constraint firstItem="wtb-vf-Fg2" firstAttribute="centerY" secondItem="U7H-v1-NuN" secondAttribute="centerY" id="bQe-Tx-IQm"/>
                             <constraint firstItem="QPA-Ex-r0c" firstAttribute="centerX" secondItem="U7H-v1-NuN" secondAttribute="centerX" id="gLA-0a-8lH"/>
                             <constraint firstItem="Ha4-vY-eHy" firstAttribute="centerX" secondItem="U7H-v1-NuN" secondAttribute="centerX" id="vIg-Ht-hNS"/>
+                            <constraint firstItem="Gxd-2y-YcW" firstAttribute="top" secondItem="zfT-n9-dbx" secondAttribute="bottom" id="wOx-6V-wpK"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="wtb-vf-Fg2"/>
                                 <exclude reference="eG9-gY-LqZ"/>
                                 <exclude reference="QPA-Ex-r0c"/>
+                                <exclude reference="Gxd-2y-YcW"/>
+                                <exclude reference="wtb-vf-Fg2"/>
                                 <exclude reference="Ha4-vY-eHy"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Vp6-CS-O6u"/>
+                                <exclude reference="vIg-Ht-hNS"/>
+                                <exclude reference="4CA-kG-DFQ"/>
+                                <exclude reference="4cf-kd-m0h"/>
+                                <exclude reference="8hd-iU-Wtg"/>
+                                <exclude reference="KDh-wn-abW"/>
+                                <exclude reference="Psa-eB-fe8"/>
+                                <exclude reference="YYJ-Hp-QZK"/>
+                                <exclude reference="wOx-6V-wpK"/>
+                                <exclude reference="gLA-0a-8lH"/>
                                 <exclude reference="2Mf-JQ-V0s"/>
                                 <exclude reference="Qcg-9z-YZb"/>
                                 <exclude reference="O3J-Nj-EBV"/>
                                 <exclude reference="bQe-Tx-IQm"/>
-                                <exclude reference="gLA-0a-8lH"/>
-                                <exclude reference="vIg-Ht-hNS"/>
-                                <exclude reference="Vp6-CS-O6u"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="wtb-vf-Fg2"/>
                                 <include reference="eG9-gY-LqZ"/>
                                 <include reference="QPA-Ex-r0c"/>
+                                <include reference="Gxd-2y-YcW"/>
+                                <include reference="wtb-vf-Fg2"/>
                                 <include reference="Ha4-vY-eHy"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Vp6-CS-O6u"/>
+                                <include reference="vIg-Ht-hNS"/>
+                                <include reference="4CA-kG-DFQ"/>
+                                <include reference="4cf-kd-m0h"/>
+                                <include reference="8hd-iU-Wtg"/>
+                                <include reference="KDh-wn-abW"/>
+                                <include reference="Psa-eB-fe8"/>
+                                <include reference="YYJ-Hp-QZK"/>
+                                <include reference="wOx-6V-wpK"/>
+                                <include reference="gLA-0a-8lH"/>
                                 <include reference="2Mf-JQ-V0s"/>
                                 <include reference="Qcg-9z-YZb"/>
                                 <include reference="O3J-Nj-EBV"/>
                                 <include reference="bQe-Tx-IQm"/>
-                                <include reference="gLA-0a-8lH"/>
-                                <include reference="vIg-Ht-hNS"/>
-                                <include reference="Vp6-CS-O6u"/>
                             </mask>
                         </variation>
                     </view>
@@ -271,6 +310,7 @@
                         <outlet property="logoImage" destination="wtb-vf-Fg2" id="ucp-GP-Cs6"/>
                         <outlet property="nextButton" destination="Ha4-vY-eHy" id="Acm-Vv-kZt"/>
                         <outlet property="stepZeroHeader" destination="eG9-gY-LqZ" id="SGn-Ii-bjO"/>
+                        <outlet property="stepZeroHeaderImage" destination="Gxd-2y-YcW" id="689-fM-6Li"/>
                         <outlet property="stepZeroSubheader" destination="QPA-Ex-r0c" id="44c-Kn-ywQ"/>
                     </connections>
                 </viewController>
@@ -287,7 +327,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QH1-eH-vKb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hLQ-RC-wrr">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -300,5 +340,6 @@
     </scenes>
     <resources>
         <image name="adshield-logo" width="231" height="231"/>
+        <image name="times-square" width="847" height="567"/>
     </resources>
 </document>

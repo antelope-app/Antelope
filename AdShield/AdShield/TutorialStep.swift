@@ -19,6 +19,12 @@ class TutorialStep: UIViewController
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var stepZeroHeader: UITextView!
     @IBOutlet weak var stepZeroSubheader: UITextView!
+    @IBOutlet weak var stepZeroHeaderImage: UIImageView!
+    
+    var colorKit = AdShieldColors()
+    
+    var overlaySoft: UIView = UIView()
+    var overlayHard: UIView = UIView()
     
     var delegate: TutorialStepDelegate?
     
@@ -27,6 +33,7 @@ class TutorialStep: UIViewController
         super.viewDidLoad()
         
         nextButton = self.primaryButtonStyle(nextButton)
+        stepZeroHeaderImage.alpha = 0
         stepZeroSubheader = self.paragraphStyle(stepZeroSubheader)
     }
 
