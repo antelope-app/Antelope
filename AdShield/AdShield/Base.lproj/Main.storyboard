@@ -140,7 +140,7 @@
                                 <animations/>
                                 <state key="normal" title="Next Step"/>
                                 <connections>
-                                    <action selector="nextStep:" destination="Ama-pF-wGJ" eventType="touchUpInside" id="O5c-N2-7pP"/>
+                                    <action selector="nextStep:" destination="Ama-pF-wGJ" eventType="touchUpInside" id="7d6-DJ-GEt"/>
                                 </connections>
                             </button>
                         </subviews>

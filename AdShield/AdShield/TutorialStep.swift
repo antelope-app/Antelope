@@ -14,10 +14,13 @@ class TutorialStep: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("tutorial step view loaded")
         
     }
     
     @IBAction func nextStep(sender: UIButton) {
-        print("TOUCHED BUTTON")
+        
+        print("next step")
     }
+
 }
