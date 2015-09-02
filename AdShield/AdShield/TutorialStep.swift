@@ -8,19 +8,43 @@
 
 import UIKit
 
-class TutorialStep: UIViewController {
+protocol TutorialStepDelegate
+{
+    func nextStep()
+}
+
+class TutorialStep: UIViewController
+{
+    @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var stepZeroHeader: UITextView!
+    @IBOutlet weak var stepZeroSubheader: UITextView!
     
-    override func viewDidLoad() {
+    var delegate: TutorialStepDelegate?
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
-        print("tutorial step view loaded")
+        nextButton = self.primaryButtonStyle(nextButton)
+    }
+
+    @IBAction func nextStep(sender: AnyObject)
+    {
+        delegate?.nextStep()
+    }
+    
+    override func viewDidAppear(animated: Bool)
+    {
         
     }
     
-    @IBAction func nextStep(sender: UIButton) {
+    func primaryButtonStyle(button: UIButton) -> UIButton {
+        button.layer.cornerRadius = 3
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.lightGrayColor().CGColor
+        button.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Normal)
         
-        print("next step")
+        return button
     }
-
 }

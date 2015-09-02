@@ -22,6 +22,8 @@ class MainViewController: UIViewController {
         
         self.addChildViewController(tutorialViewController)
         self.view.frame = UIScreen.mainScreen().bounds
+        self.view.addSubview(self.splashView)
+        self.splashView.backgroundColor = UIColor.blackColor()
         
         tutorialViewController.view.frame = UIScreen.mainScreen().bounds
         self.view.insertSubview(tutorialViewController.view, aboveSubview: self.splashView)
