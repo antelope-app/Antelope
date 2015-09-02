@@ -11,11 +11,11 @@ import UIKit
 class TutorialViewController: ScrollViewController {
     @IBOutlet weak var tutorialSplash: UIView!
     
-    var absoluteStep: NSInteger!
+    var absoluteStep: NSInteger = 0
     var step: NSInteger!
     
-    var stepOneViewController: UIViewController = UIViewController()
-    var stepTwoViewController: UIViewController = UIViewController()
+    var tutorialStepZero: TutorialStep!
+    var tutorialStepOne: UIViewController = UIViewController()
     
     var viewControllersForSteps: [UIViewController] = []
     
@@ -24,23 +24,30 @@ class TutorialViewController: ScrollViewController {
         
         print("tutorial view controller view did load")
         
-        stepOneViewController.view.backgroundColor = UIColor.blueColor()
-        stepTwoViewController.view.backgroundColor = UIColor.greenColor()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        viewControllersForSteps = [stepOneViewController, stepTwoViewController]
+        tutorialStepZero = storyboard.instantiateViewControllerWithIdentifier("TutorialStepZero") as? TutorialStep
+        
+        tutorialStepZero.view.backgroundColor = UIColor.blueColor()
+        tutorialStepOne.view.backgroundColor = UIColor.greenColor()
+        
+        viewControllersForSteps = [tutorialStepZero, tutorialStepOne]
         
         self.addChildViewControllers(viewControllersForSteps)
-    }
-    
-    func handleInterfaceForStep(index: NSInteger) {
-        
-    }
-    
-    override func scrollToViewControllerAtIndex(index: NSInteger) {
         
     }
     
     func startTutorial() {
+        handleInterfaceForStep(absoluteStep)
+    }
+    
+    override func scrollToViewControllerAtIndex(index: NSInteger) {
+        super.scrollToViewControllerAtIndex(index)
+        
+        print("controller count ", self.childViewControllers.count)
+    }
+    
+    func handleInterfaceForStep(index: NSInteger) {
         
     }
 }

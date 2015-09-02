@@ -11,6 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    var mainViewController: UIViewController!
     var tutorialViewController: TutorialViewController!
     var window: UIWindow?
     
@@ -20,8 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         print("hello")
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        tutorialViewController = storyboard.instantiateViewControllerWithIdentifier("tutorialViewController") as? TutorialViewController
+        
+        mainViewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController")
         
         return true
     }

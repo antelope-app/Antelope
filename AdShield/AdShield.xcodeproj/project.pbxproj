@@ -18,9 +18,10 @@
 		0F053E7C1B93ED9500A9EFBC /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F053E7B1B93ED9500A9EFBC /* ScrollViewController.m */; };
 		0F053E831B94066F00A9EFBC /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F053E821B94066F00A9EFBC /* SafariServices.framework */; };
 		0F053E861B940A6D00A9EFBC /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F053E851B940A6D00A9EFBC /* blockerList.json */; };
+		D41A82851B95A91100A90CFE /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A82841B95A91100A90CFE /* TutorialStep.swift */; settings = {ASSET_TAGS = (); }; };
 		D4955E2C1B958EFE0061C7D0 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D4955E2D1B958EFE0061C7D0 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4955E2A1B958EFE0061C7D0 /* TutorialViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		D4955E2E1B958EFE0061C7D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4955E2B1B958EFE0061C7D0 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D4955E2E1B958EFE0061C7D0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4955E2B1B958EFE0061C7D0 /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,9 +83,10 @@
 		0F053E7B1B93ED9500A9EFBC /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
 		0F053E821B94066F00A9EFBC /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		0F053E851B940A6D00A9EFBC /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		D41A82841B95A91100A90CFE /* TutorialStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStep.swift; sourceTree = "<group>"; };
 		D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		D4955E2A1B958EFE0061C7D0 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		D4955E2B1B958EFE0061C7D0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4955E2B1B958EFE0061C7D0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +151,8 @@
 				0F053E371B93D03000A9EFBC /* AppDelegate.swift */,
 				D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */,
 				D4955E2A1B958EFE0061C7D0 /* TutorialViewController.swift */,
-				D4955E2B1B958EFE0061C7D0 /* ViewController.swift */,
+				D41A82841B95A91100A90CFE /* TutorialStep.swift */,
+				D4955E2B1B958EFE0061C7D0 /* MainViewController.swift */,
 				0F053E3B1B93D03000A9EFBC /* Main.storyboard */,
 				0F053E3E1B93D03000A9EFBC /* Assets.xcassets */,
 				0F053E401B93D03000A9EFBC /* LaunchScreen.storyboard */,
@@ -370,7 +373,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4955E2E1B958EFE0061C7D0 /* ViewController.swift in Sources */,
+				D4955E2E1B958EFE0061C7D0 /* MainViewController.swift in Sources */,
+				D41A82851B95A91100A90CFE /* TutorialStep.swift in Sources */,
 				0F053E7C1B93ED9500A9EFBC /* ScrollViewController.m in Sources */,
 				D4955E2C1B958EFE0061C7D0 /* ScrollViewController.swift in Sources */,
 				D4955E2D1B958EFE0061C7D0 /* TutorialViewController.swift in Sources */,
