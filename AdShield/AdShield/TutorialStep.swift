@@ -27,6 +27,7 @@ class TutorialStep: UIViewController
         super.viewDidLoad()
         
         nextButton = self.primaryButtonStyle(nextButton)
+        stepZeroSubheader = self.paragraphStyle(stepZeroSubheader)
     }
 
     @IBAction func nextStep(sender: AnyObject)
@@ -46,5 +47,16 @@ class TutorialStep: UIViewController
         button.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Normal)
         
         return button
+    }
+    
+    func paragraphStyle(text: UITextView) -> UITextView {
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 5
+        let attributes = [NSParagraphStyleAttributeName: style, NSFontAttributeName: UIFont.systemFontOfSize(16)]
+        text.attributedText = NSAttributedString(string: text.text, attributes: attributes)
+        text.textColor = UIColor.lightGrayColor()
+        text.textAlignment = NSTextAlignment.Center
+        
+        return text
     }
 }

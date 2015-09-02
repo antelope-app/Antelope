@@ -171,7 +171,7 @@
                                     <constraint firstAttribute="height" constant="59" id="UcS-3w-Rfc"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="vrh-Vz-Ehw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="default">
                                     <mask key="constraints">
