@@ -167,27 +167,21 @@
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="KKY-Qa-Chs"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="59" id="Qig-2U-OTl"/>
                                     <constraint firstAttribute="height" constant="59" id="UcS-3w-Rfc"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="vrh-Vz-Ehw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="KKY-Qa-Chs"/>
-                                        <exclude reference="Qig-2U-OTl"/>
                                         <exclude reference="UcS-3w-Rfc"/>
-                                        <exclude reference="vrh-Vz-Ehw"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="50" y="-75" width="300" height="59"/>
                                     <mask key="constraints">
                                         <include reference="KKY-Qa-Chs"/>
-                                        <include reference="Qig-2U-OTl"/>
                                         <include reference="UcS-3w-Rfc"/>
-                                        <include reference="vrh-Vz-Ehw"/>
                                     </mask>
                                 </variation>
                             </textView>

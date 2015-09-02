@@ -45,6 +45,8 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
     func nextStep()
     {
         print("SUCCESS")
+        self.absoluteStep++
+        self.scrollToViewControllerAtIndex(self.absoluteStep)
     }
     
     func startTutorial()
@@ -66,18 +68,21 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
             
             stepZero.logoImage.frame.origin.y = currentPosY - 100
             }, completion: {(Bool) in
+                let headerFrame = stepZero.stepZeroHeader.frame
+                stepZero.stepZeroSubheader.frame.origin.y = headerFrame.origin.y + headerFrame.size.height
                 
+                UIView.animateWithDuration(0.7, animations: {
+                    stepZero.stepZeroHeader.alpha = 1.0
+                })
+                self.delay(1.0) {
+                    UIView.animateWithDuration(0.7, animations: {
+                        stepZero.nextButton.alpha = 1.0
+                        stepZero.stepZeroSubheader.alpha = 1.0
+                    })
+                }
         })
         
-        let headerFrame = stepZero.stepZeroHeader.frame
-        stepZero.stepZeroSubheader.frame.origin.y = headerFrame.origin.y + headerFrame.size.height
-        self.delay(0.5) {
-            UIView.animateWithDuration(0.7, animations: {
-                stepZero.nextButton.alpha = 1.0
-                stepZero.stepZeroHeader.alpha = 1.0
-                stepZero.stepZeroSubheader.alpha = 1.0
-            })
-        }
+        
     }
     
     func delay(delay:Double, closure:()->())
