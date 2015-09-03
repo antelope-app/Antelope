@@ -2,56 +2,26 @@
 //  TutorialStep.swift
 //  AdShield
 //
-//  Created by Jae Lee on 9/1/15.
+//  Created by Jae Lee on 9/2/15.
 //  Copyright © 2015 AdShield. All rights reserved.
 //
 
 import UIKit
 
-protocol TutorialStepDelegate
-{
-    func nextStep()
-}
-
 class TutorialStep: UIViewController
 {
-    @IBOutlet weak var logoImage: UIImageView!
-    @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var stepZeroHeader: UITextView!
-    @IBOutlet weak var stepZeroSubheader: UITextView!
-    @IBOutlet weak var stepZeroHeaderImage: UIImageView!
-    
     var colorKit = AdShieldColors()
-    
-    var overlaySoft: UIView = UIView()
-    var overlayHard: UIView = UIView()
-    
-    var delegate: TutorialStepDelegate?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        nextButton = self.primaryButtonStyle(nextButton)
-        stepZeroHeaderImage.alpha = 0
-        stepZeroSubheader = self.paragraphStyle(stepZeroSubheader)
-    }
-
-    @IBAction func nextStep(sender: AnyObject)
-    {
-        delegate?.nextStep()
-    }
-    
-    override func viewDidAppear(animated: Bool)
-    {
-        
     }
     
     func primaryButtonStyle(button: UIButton) -> UIButton {
         button.layer.cornerRadius = 3
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.lightGrayColor().CGColor
-        button.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Normal)
+        button.layer.borderWidth = 2
+        button.layer.borderColor = colorKit.teal.CGColor
+        button.setTitleColor(colorKit.teal, forState: UIControlState.Normal)
         
         return button
     }
@@ -65,5 +35,15 @@ class TutorialStep: UIViewController
         text.textAlignment = NSTextAlignment.Center
         
         return text
+    }
+    
+    func delay(delay:Double, closure:()->())
+    {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
     }
 }

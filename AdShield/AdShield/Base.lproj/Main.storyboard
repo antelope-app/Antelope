@@ -109,7 +109,7 @@
         <!--Tutorial Step Zero-->
         <scene sceneID="oMi-aQ-3Gp">
             <objects>
-                <viewController storyboardIdentifier="TutorialStepZero" title="Tutorial Step Zero" id="Ama-pF-wGJ" customClass="TutorialStep" customModule="AdShield" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TutorialStepZero" title="Tutorial Step Zero" id="Ama-pF-wGJ" customClass="TutorialStepZero" customModule="AdShield" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zfT-n9-dbx"/>
                         <viewControllerLayoutGuide type="bottom" id="qyk-f7-xfc"/>
@@ -201,7 +201,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ha4-vY-eHy">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ha4-vY-eHy">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -210,16 +210,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="START BLOCKING ADS">
-                                            <attributes>
-                                                <font key="NSFont" size="14" name="HelveticaNeue-Medium"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
+                                <state key="normal" title="START BLOCKING ADS"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="4gg-Xa-zDs"/>
@@ -227,6 +218,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                     <mask key="constraints">
                                         <include reference="4gg-Xa-zDs"/>
                                         <include reference="bZg-l7-Nua"/>
@@ -317,6 +309,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w09-ct-zOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="288" y="2081.25"/>
+        </scene>
+        <!--Tutorial Step One-->
+        <scene sceneID="8ek-lp-kK1">
+            <objects>
+                <viewController storyboardIdentifier="TutorialStepOne" id="q7S-y3-AeY" customClass="TutorialStepOne" customModule="AdShield" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gjb-cY-cZd"/>
+                        <viewControllerLayoutGuide type="bottom" id="pjR-uZ-nsD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZIe-BP-b0R">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NIU-NV-Hgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957" y="2082"/>
         </scene>
         <!--TutorialViewController-->
         <scene sceneID="UDl-ga-dLc">
