@@ -86,7 +86,14 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
                 
                 UIView.animateWithDuration(0.7, animations: {
                     stepZero.stepZeroHeader.alpha = 1.0
-                })
+                }, completion: {(Bool) in
+                        var line = UIView()
+                        line.backgroundColor = UIColor.grayColor()
+
+                        let subheaderFrame = stepZero.stepZeroSubheader.frame
+                        line.frame = CGRectMake(subheaderFrame.origin.y, subheaderFrame.origin.y, 100, 10)
+                    })
+                
                 self.delay(1.0) {
                     UIView.animateWithDuration(0.7, animations: {
                         stepZero.nextButton.alpha = 1.0
