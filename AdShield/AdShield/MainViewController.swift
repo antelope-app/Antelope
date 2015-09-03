@@ -9,10 +9,24 @@
 import UIKit
 import SafariServices
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
+    @IBOutlet weak var splashView: UIView!
+    var tutorialViewController: TutorialViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        tutorialViewController = storyboard.instantiateViewControllerWithIdentifier("TutorialViewController") as? TutorialViewController
+        
+        self.addChildViewController(tutorialViewController)
+        self.view.frame = UIScreen.mainScreen().bounds
+        self.view.addSubview(self.splashView)
+        self.splashView.backgroundColor = UIColor.blackColor()
+        
+        tutorialViewController.view.frame = UIScreen.mainScreen().bounds
+        self.view.insertSubview(tutorialViewController.view, aboveSubview: self.splashView)
         
         // Auto-reload content blocker when view loads
         SFContentBlockerManager.reloadContentBlockerWithIdentifier("com.adshield.AdShield.AdShield-Extension") { (error) -> Void in
