@@ -8,6 +8,6 @@ class RuleBuilder:
     def __init__(self, translator):
         self.translator = translator
 
-    def build_rule(raw_rule):
+    def build_rule(self, raw_rule):
         return self.translator.translate(raw_rule)
 

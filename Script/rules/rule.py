@@ -11,7 +11,17 @@ class Action:
             selector (string, mandatory for the css-display-none type): defines a selector list to apply on the page.
         '''    
         self.type = ""
-        self.selector = ""        
+        self.selector = ""  
+
+    def as_dict(self):
+        target = {}
+
+        target["type"] = self.type
+
+        if len(self.selector) > 0:
+            target["selector"] = self.selector 
+
+        return target     
 
 class Trigger:
     def __init__(self):
@@ -33,6 +43,25 @@ class Trigger:
         self.if_domain = []
         self.unless_domain = []
 
+    def as_dict(self):
+        target = {}
+
+        target["url-filter"] = self.url_filter
+
+        if len(self.resource_type) > 0:
+            target["resource-type"] = self.resource_type
+
+        if len(self.load_type) > 0:
+            target["load-type"] = self.load_type
+
+        if len(self.if_domain) > 0:
+            target["if-domain"] = self.if_domain
+
+        if len(self.unless_domain) > 0:
+            target["unless-domain"] = self.unless_domain
+
+        return target
+
     @classmethod
     def is_valid_resource_type(cls, resource_type):
         valid_types = set(["document", "image", "style-sheet", 
@@ -45,4 +74,10 @@ class Rule:
         self.action = Action()
         self.trigger = Trigger()
 
-        
+    def as_dict(self):
+        target = {}
+
+        target["trigger"] = self.trigger.as_dict()
+        target["action"] = self.action.as_dict()
+
+        return target

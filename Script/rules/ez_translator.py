@@ -1,5 +1,6 @@
 from rule_builder import Translator
 from rule import Rule, Action, Trigger
+import sys
 
 '''
    The core documentation for EasyList is found here:
@@ -21,9 +22,6 @@ class EZRuleType:
 class EZParseHelper:
     @staticmethod
     def split_at_string(target, splitter, right=True):
-        if splitter not in target:
-            return target
-
         separator_index = target.find(splitter)
         if right:
             non_inclusive_index = separator_index + len(splitter)
@@ -34,7 +32,7 @@ class EZParseHelper:
     @staticmethod
     def regex_for_type(ez_rule_type):
         # TODO: Make this actually RegEx to avoid ugly 'startswith' / 'in' division
-        signifier = None
+        signifier = ""
 
         if ez_rule_type is EZRuleType.comment:
             return '!'
@@ -50,7 +48,7 @@ class EZParseHelper:
         return signifier
 
     @staticmethod
-    def is_ez_negated(cls, target):
+    def is_ez_negated(target):
         return target.startswith('~')
 
 class EZRule:
@@ -78,6 +76,7 @@ class EZRule:
 
 class EZRuleParser:
     def parse(self, raw_rule):
+        raw_rule.strip()
         ez_rule = EZRule(raw_rule)
 
         ez_rule.type = EZRuleParser._type(raw_rule)
@@ -136,6 +135,7 @@ class EZRuleParser:
                 ez_rule_type = EZRuleParser._type(url_filter)
 
             regex = EZParseHelper.regex_for_type(ez_rule_type)
+
             url_filter = EZParseHelper.split_at_string(url_filter, regex)
 
         return url_filter
@@ -156,7 +156,7 @@ class EZRuleParser:
         options = None
 
         if '$' in raw_rule:
-            options = EZParseHelper.split_at_string(raw_rule, '$').split(',')
+            options = EZParseHelper.split_at_string(raw_rule, '$').split(",")
 
         return options
 
@@ -172,7 +172,7 @@ class EZRuleParser:
 
         for option in raw_options:
             if EZRuleParser._is_domain_option(option):
-                domains = EZParseHelper.split_at_string(option, '=').split('|')
+                domains = EZParseHelper.split_at_string(option, '=').split("|")
                 break
 
         return domains
@@ -222,6 +222,20 @@ class EZRuleParser:
 
 
 class EZTranslator(Translator):
+    def translate(self, raw_rule):
+        parser = EZRuleParser()
+        ez_rule = parser.parse(raw_rule)
+
+        if ez_rule.type is EZRuleType.unknown or \
+           ez_rule.type is EZRuleType.comment:
+           return None
+
+        ios_rule = Rule()
+        ios_rule.action = EZTranslator._action_from_ez(ez_rule)
+        ios_rule.trigger = EZTranslator._trigger_from_ez(ez_rule)
+
+        return ios_rule
+
     @staticmethod
     def _action_from_ez(ez_rule):
         ez_rule_type = ez_rule.type
@@ -258,6 +272,9 @@ class EZTranslator(Translator):
     def _regex_url_filter(url_filter, ez_rule_type):
         target = url_filter
 
+        # A little clean up
+        target = target.strip()
+
         # Escape periods
         if '.' in target:
             target = target.replace('.', "\.")
@@ -280,11 +297,15 @@ class EZTranslator(Translator):
            len(url_filter) is 0:
             target = ".*"
 
+        # Match beginning and end of line
         if ez_rule_type is EZRuleType.block_exact:
             target = "^" + target + "$"
 
-        # TODO: Add support for end line character (for example |)
+        # Can be any part of the string
+        if ez_rule_type is EZRuleType.block_part:
+            target = ".*" + target + ".*"
 
+        # TODO: Add support for end line character (for example |)
         return target
 
     @staticmethod
@@ -322,7 +343,7 @@ class EZTranslator(Translator):
 
         for domain in ez_rule_domains:
             if not EZParseHelper.is_ez_negated(domain):
-                if_domains.append(_prepend_http(domain))
+                if_domains.append(EZTranslator._prepend_http(domain))
 
         return if_domains
 
@@ -331,27 +352,10 @@ class EZTranslator(Translator):
         unless_domains = []
 
         for domain in ez_rule_domains:
-            if not EZParseHelper.is_ez_negated(domain):
-                unless_domains.append(_prepend_http(domain))
+            if EZParseHelper.is_ez_negated(domain):
+                unless_domains.append(EZTranslator._prepend_http(domain))
 
         return unless_domains
-
-    def translate(self, raw_rule):
-        parser = EZRuleParser()
-        ez_rule = parser.parse(raw_rule)
-
-        ios_rule = Rule()
-        ios_rule.action = EZTranslator._action_from_ez(ez_rule)
-        ios_rule.trigger = EZTranslator._trigger_from_ez(ez_rule)
-
-        return ios_rule
-
-
-def test():
-    translator = EZTranslator()
-    ios_rule = translator.translate("||jyvtidkx.com^$third-party")
-
-    return ios_rule
 
 
 
