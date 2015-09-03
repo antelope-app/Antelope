@@ -58,7 +58,7 @@ class TutorialStepZero: TutorialStep
                 UIView.animateWithDuration(0.7, animations: {
                     self.stepZeroHeader.alpha = 1.0
                     }, completion: {(Bool) in
-                        var line = UIView()
+                        let line = UIView()
                         line.backgroundColor = UIColor.grayColor()
                         
                         let subheaderFrame = self.stepZeroSubheader.frame

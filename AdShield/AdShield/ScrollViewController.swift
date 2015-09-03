@@ -36,7 +36,7 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollToViewControllerAtIndex(index: NSInteger) {
         print("scrolling to view controller at index ", index)
-        print("scroll view controller child controller count ", self.childViewControllers.count)
+        print("scroll view controller child controller count \(self.childViewControllers.count)")
         if self.childViewControllers.count >= index {
             let viewController: UIViewController = self.childViewControllers[index]
             self.scrollToViewController(viewController)
@@ -48,7 +48,7 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
         for childViewController in self.childViewControllers {
             if childViewController === viewController {
                 print("found controller")
-                print("at origin x : ", childViewController.view.frame.origin.x)
+                print("at origin x : \(childViewController.view.frame.origin.x)")
                 self.scrollView.scrollRectToVisible(childViewController.view.frame, animated: true)
             }
         }

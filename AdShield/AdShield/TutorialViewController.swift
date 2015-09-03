@@ -58,7 +58,7 @@ class TutorialViewController: ScrollViewController {
     override func scrollToViewControllerAtIndex(index: NSInteger) {
         super.scrollToViewControllerAtIndex(index)
         
-        print("controller count ", self.childViewControllers.count)
+        print("controller count \(self.childViewControllers.count)")
     }
     
     func handleTutorialStep(index: NSInteger)
