@@ -18,8 +18,6 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("scroll view controller view did load")
-        
         print(self.view.frame.size.width)
         print(self.view.frame.size.height)
         
@@ -27,6 +25,7 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
         scrollView.pagingEnabled = true
+        
         scrollView.contentSize = CGSizeMake(0, self.view.frame.size.height)
         scrollView.bounces = false
         
@@ -35,8 +34,6 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollToViewControllerAtIndex(index: NSInteger) {
-        print("scrolling to view controller at index ", index)
-        print("scroll view controller child controller count ", self.childViewControllers.count)
         if self.childViewControllers.count >= index {
             let viewController: UIViewController = self.childViewControllers[index]
             self.scrollToViewController(viewController)
@@ -45,10 +42,9 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
 
     
     func scrollToViewController(viewController: UIViewController) {
+        print("scrolling to controller")
         for childViewController in self.childViewControllers {
             if childViewController === viewController {
-                print("found controller")
-                print("at origin x : ", childViewController.view.frame.origin.x)
                 self.scrollView.scrollRectToVisible(childViewController.view.frame, animated: true)
             }
         }
@@ -56,7 +52,6 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
     
     func addChildViewControllers(viewControllers: [UIViewController]) {
         for viewController in viewControllers as [UIViewController] {
-            print("Adding child view controller")
             self.addChildViewController(viewController)
         }
     }
@@ -68,7 +63,7 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
         let childViewSize: CGSize = childView.frame.size
         let scrollViewContentSize = self.scrollView.contentSize
         
-        childView.frame = CGRectMake(self.placementOffset, 0, childViewSize.width + scrollViewContentSize.width, scrollViewContentSize.height)
+        childView.frame = CGRectMake(self.placementOffset, 0, childViewSize.width, scrollViewContentSize.height)
         self.scrollView.contentSize = CGSizeMake(childViewSize.width + scrollViewContentSize.width, scrollViewContentSize.height)
         self.placementOffset += childView.frame.size.width
         

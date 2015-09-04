@@ -26,6 +26,8 @@
 		D4955E2E1B958EFE0061C7D0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4955E2B1B958EFE0061C7D0 /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D4FF1E5F1B98138F00712B70 /* TutorialStepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF1E5E1B98138E00712B70 /* TutorialStepOne.swift */; settings = {ASSET_TAGS = (); }; };
 		D4FF1E611B9813D200712B70 /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF1E601B9813D200712B70 /* TutorialStep.swift */; settings = {ASSET_TAGS = (); }; };
+		D4FF1E651B99013200712B70 /* TutorialStepTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF1E641B99013200712B70 /* TutorialStepTwo.swift */; settings = {ASSET_TAGS = (); }; };
+		D4FF1E671B990B8E00712B70 /* TutorialStepThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF1E661B990B8E00712B70 /* TutorialStepThree.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		D4955E2B1B958EFE0061C7D0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D4FF1E5E1B98138E00712B70 /* TutorialStepOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStepOne.swift; sourceTree = "<group>"; };
 		D4FF1E601B9813D200712B70 /* TutorialStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStep.swift; sourceTree = "<group>"; };
+		D4FF1E641B99013200712B70 /* TutorialStepTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStepTwo.swift; sourceTree = "<group>"; };
+		D4FF1E661B990B8E00712B70 /* TutorialStepThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStepThree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,9 +164,8 @@
 				D4474BB41B96EB8D0021719D /* AdShieldColors.swift */,
 				D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */,
 				D4955E2A1B958EFE0061C7D0 /* TutorialViewController.swift */,
-				D41A82841B95A91100A90CFE /* TutorialStepZero.swift */,
-				D4FF1E5E1B98138E00712B70 /* TutorialStepOne.swift */,
 				D4FF1E601B9813D200712B70 /* TutorialStep.swift */,
+				D4FF1E681B990BAA00712B70 /* TutorialSteps */,
 				D4955E2B1B958EFE0061C7D0 /* MainViewController.swift */,
 				0F053E3B1B93D03000A9EFBC /* Main.storyboard */,
 				0F053E3E1B93D03000A9EFBC /* Assets.xcassets */,
@@ -219,6 +222,17 @@
 			);
 			name = Frameworks;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		D4FF1E681B990BAA00712B70 /* TutorialSteps */ = {
+			isa = PBXGroup;
+			children = (
+				D41A82841B95A91100A90CFE /* TutorialStepZero.swift */,
+				D4FF1E5E1B98138E00712B70 /* TutorialStepOne.swift */,
+				D4FF1E641B99013200712B70 /* TutorialStepTwo.swift */,
+				D4FF1E661B990B8E00712B70 /* TutorialStepThree.swift */,
+			);
+			name = TutorialSteps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,11 +400,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4FF1E651B99013200712B70 /* TutorialStepTwo.swift in Sources */,
 				D4955E2E1B958EFE0061C7D0 /* MainViewController.swift in Sources */,
 				D41A82851B95A91100A90CFE /* TutorialStepZero.swift in Sources */,
 				D4FF1E5F1B98138F00712B70 /* TutorialStepOne.swift in Sources */,
 				0F053E7C1B93ED9500A9EFBC /* ScrollViewController.m in Sources */,
 				D4FF1E611B9813D200712B70 /* TutorialStep.swift in Sources */,
+				D4FF1E671B990B8E00712B70 /* TutorialStepThree.swift in Sources */,
 				D4955E2C1B958EFE0061C7D0 /* ScrollViewController.swift in Sources */,
 				D4955E2D1B958EFE0061C7D0 /* TutorialViewController.swift in Sources */,
 				0F053E381B93D03000A9EFBC /* AppDelegate.swift in Sources */,

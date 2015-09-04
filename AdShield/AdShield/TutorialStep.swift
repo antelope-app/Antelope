@@ -8,20 +8,34 @@
 
 import UIKit
 
+protocol TutorialStepDelegate {
+    func nextStep(index: NSInteger)
+    func finishTutorial()
+}
+
 class TutorialStep: UIViewController
 {
     var colorKit = AdShieldColors()
+    var delegate: TutorialStepDelegate!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
     }
     
-    func primaryButtonStyle(button: UIButton) -> UIButton {
+    func borderButtonStyle(button: UIButton, options: NSDictionary) -> UIButton {
+        
+        if options["color"] as? String == "teal" {
+            button.layer.borderColor = colorKit.teal.CGColor
+            button.setTitleColor(colorKit.teal, forState: UIControlState.Normal)
+        }
+        else if options["color"] as? String == "white" {
+            button.layer.borderColor = colorKit.white.CGColor
+            button.setTitleColor(colorKit.white, forState: UIControlState.Normal)
+        }
         button.layer.cornerRadius = 3
         button.layer.borderWidth = 2
-        button.layer.borderColor = colorKit.teal.CGColor
-        button.setTitleColor(colorKit.teal, forState: UIControlState.Normal)
+        
         
         return button
     }

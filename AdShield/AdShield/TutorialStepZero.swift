@@ -19,21 +19,38 @@ class TutorialStepZero: TutorialStep
     var overlaySoft: UIView = UIView()
     var overlayHard: UIView = UIView()
     
+    @IBOutlet weak var barTwo: UIView!
+    @IBOutlet weak var barOne: UIView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        nextButton = self.primaryButtonStyle(nextButton)
+        let buttonOptions: [ String: String ] = [ "color": "teal" ]
+        nextButton = self.borderButtonStyle(nextButton, options: buttonOptions)
         stepZeroHeaderImage.alpha = 0
         stepZeroSubheader = self.paragraphStyle(stepZeroSubheader)
+        
+        barOne.hidden = true
+        barTwo.hidden = true
     }
     
     override func viewDidAppear(animated: Bool)
     {
         
+        
+    }
+    @IBAction func nextStep(sender: UIButton) {
+        delegate.nextStep(0)
     }
     
     func initialize() {
+        barOne.frame = CGRectMake(barOne.frame.origin.x, barOne.frame.origin.y, 0, 2)
+        barOne.backgroundColor = colorKit.veryLightGrey
+        barOne.hidden = false
+        barTwo.frame = CGRectMake(barTwo.frame.origin.x, barTwo.frame.origin.y, 0, 2)
+        barTwo.backgroundColor = colorKit.veryLightGrey
+        barTwo.hidden = false
         
         let translationDistance: CGFloat = 100.0
         
@@ -57,18 +74,16 @@ class TutorialStepZero: TutorialStep
                 
                 UIView.animateWithDuration(0.7, animations: {
                     self.stepZeroHeader.alpha = 1.0
+                    
                     }, completion: {(Bool) in
-                        var line = UIView()
-                        line.backgroundColor = UIColor.grayColor()
-                        
-                        let subheaderFrame = self.stepZeroSubheader.frame
-                        line.frame = CGRectMake(subheaderFrame.origin.y, subheaderFrame.origin.y, 100, 10)
                 })
                 
+                // sub header, then bars
                 self.delay(1.0) {
                     UIView.animateWithDuration(0.7, animations: {
                         self.nextButton.alpha = 1.0
                         self.stepZeroSubheader.alpha = 1.0
+                        
                     })
                 }
         })

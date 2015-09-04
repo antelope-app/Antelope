@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TutorialViewController: ScrollViewController {
+class TutorialViewController: ScrollViewController, TutorialStepDelegate {
     @IBOutlet weak var tutorialSplash: UIView!
     
     var absoluteStep: NSInteger = 0
@@ -16,6 +16,8 @@ class TutorialViewController: ScrollViewController {
     
     var tutorialStepZero: TutorialStepZero!
     var tutorialStepOne: TutorialStepOne!
+    var tutorialStepTwo: TutorialStepTwo!
+    var tutorialStepThree: TutorialStepThree!
     
     var viewControllersForSteps: [UIViewController] = []
     
@@ -23,18 +25,21 @@ class TutorialViewController: ScrollViewController {
     {
         super.viewDidLoad()
         
-        print("tutorial view controller view did load")
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         tutorialStepZero = storyboard.instantiateViewControllerWithIdentifier("TutorialStepZero") as? TutorialStepZero
+        tutorialStepZero.delegate = self
         
         tutorialStepOne = storyboard.instantiateViewControllerWithIdentifier("TutorialStepOne") as? TutorialStepOne
+        tutorialStepOne.delegate = self
         
-        //tutorialStepZero.view.backgroundColor = UIColor.blueColor()
-        //tutorialStepOne.view.backgroundColor = UIColor.greenColor()
+        tutorialStepTwo = storyboard.instantiateViewControllerWithIdentifier("TutorialStepTwo") as? TutorialStepTwo
+        tutorialStepTwo.delegate = self
         
-        viewControllersForSteps = [tutorialStepZero, tutorialStepOne]
+        tutorialStepThree = storyboard.instantiateViewControllerWithIdentifier("TutorialStepThree") as? TutorialStepThree
+        tutorialStepThree.delegate = self
+        
+        viewControllersForSteps = [tutorialStepZero, tutorialStepOne, tutorialStepTwo, tutorialStepThree]
         
         self.addChildViewControllers(viewControllersForSteps)
         
@@ -43,11 +48,13 @@ class TutorialViewController: ScrollViewController {
         
     }
     
-    func nextStep()
+    func nextStep(index: NSInteger)
     {
-        print("SUCCESS")
-        self.absoluteStep++
-        self.scrollToViewControllerAtIndex(self.absoluteStep)
+        
+        if self.absoluteStep < self.childViewControllers.count - 1 {
+            self.absoluteStep++
+        }
+        self.scrollToViewControllerAtIndex(index + 1)
     }
     
     func startTutorial()
@@ -55,16 +62,12 @@ class TutorialViewController: ScrollViewController {
         self.tutorialStepZero.initialize()
     }
     
-    override func scrollToViewControllerAtIndex(index: NSInteger) {
-        super.scrollToViewControllerAtIndex(index)
-        
-        print("controller count ", self.childViewControllers.count)
+    func finishTutorial() {
+        print("done :)")
     }
     
-    func handleTutorialStep(index: NSInteger)
-    {
-        
-        
-        
+    override func scrollToViewControllerAtIndex(index: NSInteger) {
+        super.scrollToViewControllerAtIndex(index)
     }
+    
 }
