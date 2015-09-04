@@ -36,6 +36,7 @@ with open('mobilelist.json', "r") as mobile_list:
         for rule in mobile_rules:
             translated_rules.append(rule)
 
+translated_rules = sorted(translated_rules, key=lambda rule: rule["action"]["type"])
 
 # This pretty prints to stdout. 
 json = json.dumps(translated_rules, sort_keys=True, indent=4, separators=(',', ': '))
