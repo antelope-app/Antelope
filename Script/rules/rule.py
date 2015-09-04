@@ -46,7 +46,7 @@ class Trigger:
     def as_dict(self):
         target = {}
 
-        target["url-filter"] = self.url_filter
+        target["url-filter"] = self.url_filter.lower()
 
         if len(self.resource_type) > 0:
             target["resource-type"] = self.resource_type
@@ -54,11 +54,12 @@ class Trigger:
         if len(self.load_type) > 0:
             target["load-type"] = self.load_type
 
-        if len(self.if_domain) > 0:
-            target["if-domain"] = self.if_domain
+        #TODO: Filter these
+        #if len(self.if_domain) > 0:
+            #target["if-domain"] = self.if_domain
 
-        if len(self.unless_domain) > 0:
-            target["unless-domain"] = self.unless_domain
+        #if len(self.unless_domain) > 0:
+            #target["unless-domain"] = self.unless_domain
 
         return target
 

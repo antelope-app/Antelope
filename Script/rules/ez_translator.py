@@ -1,5 +1,7 @@
 from rule_builder import Translator
 from rule import Rule, Action, Trigger
+
+import re
 import sys
 
 '''
@@ -9,7 +11,8 @@ import sys
 '''
 class EZRuleType:
     '''
-        See cheatsheet for explanations
+        See cheatsheet for explanations.
+        TODO: Support SelectorException and Invalid types
     '''
     unknown = 0
     comment = 1
@@ -97,7 +100,7 @@ class EZRuleParser:
     def _type(raw_rule):
         ez_rule_type = EZRuleType.unknown
 
-        if raw_rule.startswith("!"):
+        if raw_rule.startswith("!") or raw_rule.startswith("["):
             ez_rule_type = EZRuleType.comment
         elif raw_rule.startswith("||"):
             ez_rule_type = EZRuleType.block_domain
@@ -109,6 +112,9 @@ class EZRuleParser:
             ez_rule_type = EZRuleType.exception
         else: 
             ez_rule_type = EZRuleType.block_part
+
+        if "#@" in raw_rule:
+            ez_rule_type = EZRuleType.unknown
 
         return ez_rule_type
 
@@ -227,7 +233,8 @@ class EZTranslator(Translator):
         ez_rule = parser.parse(raw_rule)
 
         if ez_rule.type is EZRuleType.unknown or \
-           ez_rule.type is EZRuleType.comment:
+           ez_rule.type is EZRuleType.comment or \
+           ez_rule.type is EZRuleType.exception:
            return None
 
         ios_rule = Rule()
@@ -274,14 +281,11 @@ class EZTranslator(Translator):
 
         # A little clean up
         target = target.strip()
-
-        # Escape periods
-        if '.' in target:
-            target = target.replace('.', "\.")
+        target = re.escape(target)
 
         # ^ matches separater characters
         if '^' in target:
-            target = target.replace('^', "([./?&=:])")
+            target = target.replace('^', "[\./?&=:]")
 
         # * == .*
         if '*' in target:
@@ -310,15 +314,14 @@ class EZTranslator(Translator):
 
     @staticmethod
     def _prepend_http(target):
-        return "https?://(www.)?" + target
+        return "https?://([^/:]*\.)" + target
 
     @staticmethod
     def _resource_types(ez_content_options):
         resource_types = []
 
-        for resource_type in resource_types:
-            # Negating is extremely uncommon and ill-defined for resource types although technically supported
-            # For now we are going to ignore these cases
+        for resource_type in ez_content_options:
+            # For now we are going to ignore negating these cases
             if not EZParseHelper.is_ez_negated(resource_type) \
                and Trigger.is_valid_resource_type(resource_type):
                 resource_types.append(resource_type)
