@@ -21,12 +21,13 @@ class EZRuleType:
     block_exact = 4
     selector = 5
     exception = 6
+    selector_exception = 7
 
 class EZParseHelper:
     @staticmethod
-    def split_at_string(target, splitter, right=True):
+    def split_at_string(target, splitter, grab_right=True):
         separator_index = target.find(splitter)
-        if right:
+        if grab_right:
             non_inclusive_index = separator_index + len(splitter)
             return target[non_inclusive_index:]
         else:
@@ -47,6 +48,8 @@ class EZParseHelper:
             return '##'
         elif ez_rule_type is EZRuleType.exception:
             return '@@'
+        elif ez_rule_type is EZRuleType.selector_exception:
+            return '#@'
 
         return signifier
 
@@ -83,8 +86,9 @@ class EZRuleParser:
         ez_rule = EZRule(raw_rule)
 
         ez_rule.type = EZRuleParser._type(raw_rule)
-        if ez_rule.type is EZRuleType.selector:
-            ez_rule.selector = EZRuleParser._css_selector(raw_rule)
+        if ez_rule.type is EZRuleType.selector or \
+           ez_rule.type is EZRuleType.selector_exception:
+            ez_rule.selector = EZRuleParser._css_selector(raw_rule, ez_rule.type)
 
         raw_options = EZRuleParser._raw_options(raw_rule)
         if raw_options is not None:
@@ -100,6 +104,7 @@ class EZRuleParser:
     def _type(raw_rule):
         ez_rule_type = EZRuleType.unknown
 
+        #TODO: Convert this to use EZParseHelper ruleset
         if raw_rule.startswith("!") or raw_rule.startswith("["):
             ez_rule_type = EZRuleType.comment
         elif raw_rule.startswith("||"):
@@ -108,19 +113,18 @@ class EZRuleParser:
             ez_rule_type = EZRuleType.block_exact
         elif "##" in raw_rule:
             ez_rule_type = EZRuleType.selector
+        elif "#@" in raw_rule:
+            ez_rule_type = EZRuleType.selector_exception
         elif raw_rule.startswith("@@"):
             ez_rule_type = EZRuleType.exception
         else: 
             ez_rule_type = EZRuleType.block_part
 
-        if "#@" in raw_rule:
-            ez_rule_type = EZRuleType.unknown
-
         return ez_rule_type
 
     @staticmethod
     def _selector_url_filter(raw_rule):
-        return EZParseHelper.split_at_string(raw_rule, "##", right=False)
+        return EZParseHelper.split_at_string(raw_rule, "##", grab_right=False)
 
     @staticmethod
     def _url_filter(raw_rule, ez_rule_type):
@@ -128,7 +132,7 @@ class EZRuleParser:
 
         # Remove selectors
         if '$' in url_filter:
-            url_filter = EZParseHelper.split_at_string(url_filter, '$', right=False)
+            url_filter = EZParseHelper.split_at_string(url_filter, '$', grab_right=False)
 
         if ez_rule_type is EZRuleType.selector:
             url_filter = EZRuleParser._selector_url_filter(url_filter)
@@ -223,8 +227,7 @@ class EZRuleParser:
     @staticmethod
     def _css_selector(raw_rule, ez_rule_type=EZRuleType.selector):
         signifier = EZParseHelper.regex_for_type(ez_rule_type)
-        non_inclusive_index = (raw_rule.find("##") + 2)
-        return raw_rule[non_inclusive_index:]
+        return EZParseHelper.split_at_string(raw_rule, signifier)
 
 
 class EZTranslator(Translator):
@@ -233,8 +236,7 @@ class EZTranslator(Translator):
         ez_rule = parser.parse(raw_rule)
 
         if ez_rule.type is EZRuleType.unknown or \
-           ez_rule.type is EZRuleType.comment or \
-           ez_rule.type is EZRuleType.exception:
+           ez_rule.type is EZRuleType.comment:
            return None
 
         ios_rule = Rule()
@@ -296,10 +298,13 @@ class EZTranslator(Translator):
         if ez_rule_type is EZRuleType.block_domain or \
            ez_rule_type is EZRuleType.block_exact or \
            ez_rule_type is EZRuleType.exception or \
-           ez_rule_type is EZRuleType.selector and len(url_filter) > 0:
+           (ez_rule_type is EZRuleType.selector or \
+            ez_rule_type is EZRuleType.selector_exception) and \
+            len(url_filter) > 0:
             target = EZTranslator._prepend_http(target)
-        elif ez_rule_type is EZRuleType.selector and \
-           len(url_filter) is 0:
+        elif (ez_rule_type is EZRuleType.selector or \
+              ez_rule_type is EZRuleType.selector_exception) and \
+              len(url_filter) is 0:
             target = ".*"
 
         # Match beginning and end of line
