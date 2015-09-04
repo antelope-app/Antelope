@@ -1,9 +1,5 @@
-#!/usr/bin/python -tt
-# -*- coding: utf-8 -*-
 import json
 import sys
-import codecs
-import re
 
 from rules.ez_translator import EZTranslator
 from rules.rule_builder import RuleBuilder
@@ -16,9 +12,6 @@ def validate(translated_rules):
             re.compile(rule["trigger"]["url-filter"])
         except:
             print rule
-
-def is_ascii(s):
-    return all(ord(c) < 128 for c in s)
 
 # Get the name of filter file
 filter_file_name = sys.argv[1]
@@ -35,8 +28,7 @@ with open(filter_file_name, "r") as adblock_filter_file:
     	raw_rule = raw_rule.strip()
     	rule = rule_builder.build_rule(raw_rule)
 
-        #TODO: Conver to ascii rather than filter non-ascii rules
-    	if rule is not None and is_ascii(rule.trigger.url_filter):
+    	if rule is not None:
         	translated_rules.append(rule.as_dict())
     
 with open('mobilelist.json', "r") as mobile_list:

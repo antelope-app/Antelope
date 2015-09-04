@@ -281,6 +281,7 @@ class EZTranslator(Translator):
 
         # A little clean up
         target = target.strip()
+        target = target.encode('punycode').lower()
         target = re.escape(target)
 
         # ^ matches separater characters
@@ -346,7 +347,8 @@ class EZTranslator(Translator):
 
         for domain in ez_rule_domains:
             if not EZParseHelper.is_ez_negated(domain):
-                if_domains.append(EZTranslator._prepend_http(domain))
+                domain = EZTranslator._regex_url_filter(domain, EZRuleType.block_domain)
+                if_domains.append(domain)
 
         return if_domains
 
@@ -356,7 +358,8 @@ class EZTranslator(Translator):
 
         for domain in ez_rule_domains:
             if EZParseHelper.is_ez_negated(domain):
-                unless_domains.append(EZTranslator._prepend_http(domain))
+                domain = EZTranslator._regex_url_filter(domain, EZRuleType.block_domain)
+                unless_domains.append(domain)
 
         return unless_domains
 
