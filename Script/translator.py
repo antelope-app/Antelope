@@ -17,10 +17,10 @@ def validate(translated_rules):
 filter_file_name = sys.argv[1]
 translated_rules = []
 
+ez_translator = EZTranslator()
+rule_builder = RuleBuilder(ez_translator)
+
 with open(filter_file_name, "r") as adblock_filter_file:
-    # Accumulate all of our translated rules
-    ez_translator = EZTranslator()
-    rule_builder = RuleBuilder(ez_translator)
     
     # Go the file and return only translatable rules
     # Translate these and accumulate in translated_rules
@@ -30,6 +30,16 @@ with open(filter_file_name, "r") as adblock_filter_file:
 
     	if rule is not None:
         	translated_rules.append(rule.as_dict())
+
+print str(len(translated_rules))
+
+with open('easyprivacy.txt', "r") as tracking_filter_file:
+    for raw_rule in tracking_filter_file:
+        raw_rule = raw_rule.strip()
+        rule = rule_builder.build_rule(raw_rule)
+
+        if rule is not None:
+            translated_rules.append(rule.as_dict())
     
 with open('mobilelist.json', "r") as mobile_list:
         mobile_rules = json.load(mobile_list)
