@@ -52,5 +52,68 @@
         "trigger" : {
             "url-filter": "https?://([^/:]*\\.)buzzfeed.com"
         }
+    },
+    {
+        "action" : {
+            "type" : "css-display-none",
+            "selector" : "div[class=\"ziff-ads ATF big-box\"]"
+        },
+        "trigger" : {
+            "url-filter" : ".*"
+        }
+    },
+    {
+        "action" : {
+            "type" : "css-display-none",
+            "selector" : "div[class=\"ziff-ads BTF big-box\"]"
+        },
+        "trigger" : {
+            "url-filter" : ".*"
+        }
+    },
+    {
+        "action" : {
+            "type" : "css-display-none",
+            "selector" : "div[data-view=\"advert\"]"
+        },
+        "trigger" : {
+            "url-filter" : ".*"
+        }
+    },
+    {
+        "action" : {
+            "type" : "css-display-none",
+            "selector" : "div[class=\"bouncex_lightbox\"]"
+        },
+        "trigger" : {
+            "url-filter" : ".*"
+        }
+    },
+    {
+        "action" : {
+            "type" : "css-display-none",
+            "selector" : "div[class=\"bcx_el bg \"]"
+        },
+        "trigger" : {
+            "url-filter" : ".*"
+        }
+    },
+    {
+        "action" : {
+            "type" : "css-display-none",
+            "selector" : "div[class=\"ad-gpt medrec intro\"]"
+        },
+        "trigger" : {
+            "url-filter" : ".*"
+        }
+    },
+    {
+        "action" : {
+            "type" : "css-display-none",
+            "selector" : "div[class=\"ad-gpt interstitial\"]"
+        },
+        "trigger" : {
+            "url-filter" : ".*"
+        }
     }
 ]
