@@ -20,7 +20,7 @@
 		0F7CDDF41B9E6F65002A1F6E /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7CDDF31B9E6F65002A1F6E /* ActionRequestHandler.swift */; };
 		0F7CDDF81B9E6F65002A1F6E /* AdShield-Privacy.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F7CDDEF1B9E6F65002A1F6E /* AdShield-Privacy.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0F7CDDFD1B9E7012002A1F6E /* privacyList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDDFC1B9E7012002A1F6E /* privacyList.json */; };
-		0F7CDDFF1B9E7072002A1F6E /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDDFE1B9E7072002A1F6E /* blockerList.json */; };
+		0F7CDE0D1B9EB675002A1F6E /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDE0C1B9EB675002A1F6E /* blockerList.json */; };
 		D41A82851B95A91100A90CFE /* TutorialStepZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A82841B95A91100A90CFE /* TutorialStepZero.swift */; };
 		D4474BB51B96EB8D0021719D /* AdShieldColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4474BB41B96EB8D0021719D /* AdShieldColors.swift */; };
 		D4955E2C1B958EFE0061C7D0 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */; };
@@ -100,7 +100,7 @@
 		0F7CDDF31B9E6F65002A1F6E /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
 		0F7CDDF51B9E6F65002A1F6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F7CDDFC1B9E7012002A1F6E /* privacyList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = privacyList.json; sourceTree = "<group>"; };
-		0F7CDDFE1B9E7072002A1F6E /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		0F7CDE0C1B9EB675002A1F6E /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 		D41A82841B95A91100A90CFE /* TutorialStepZero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStepZero.swift; sourceTree = "<group>"; };
 		D4474BB41B96EB8D0021719D /* AdShieldColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdShieldColors.swift; sourceTree = "<group>"; };
 		D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 		0F053E6A1B93D04200A9EFBC /* AdShield-Extension */ = {
 			isa = PBXGroup;
 			children = (
-				0F7CDDFE1B9E7072002A1F6E /* blockerList.json */,
+				0F7CDE0C1B9EB675002A1F6E /* blockerList.json */,
 				0F053E6D1B93D04200A9EFBC /* ActionRequestHandler.swift */,
 				0F053E6F1B93D04200A9EFBC /* Info.plist */,
 			);
@@ -428,7 +428,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F7CDDFF1B9E7072002A1F6E /* blockerList.json in Resources */,
+				0F7CDE0D1B9EB675002A1F6E /* blockerList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
