@@ -17,8 +17,8 @@
 		0F053E721B93D04200A9EFBC /* AdShield-Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F053E691B93D04200A9EFBC /* AdShield-Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0F053E7C1B93ED9500A9EFBC /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F053E7B1B93ED9500A9EFBC /* ScrollViewController.m */; };
 		0F053E831B94066F00A9EFBC /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F053E821B94066F00A9EFBC /* SafariServices.framework */; };
-		0F7CDDE01B99869D002A1F6E /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDDDF1B99869D002A1F6E /* blockerList.json */; };
-		0F7CDDE11B99869D002A1F6E /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDDDF1B99869D002A1F6E /* blockerList.json */; };
+		0F7CDDE61B9E6D20002A1F6E /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDDE51B9E6D20002A1F6E /* blockerList.json */; };
+		0F7CDDE71B9E6D20002A1F6E /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDDE51B9E6D20002A1F6E /* blockerList.json */; };
 		D41A82851B95A91100A90CFE /* TutorialStepZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A82841B95A91100A90CFE /* TutorialStepZero.swift */; };
 		D4474BB51B96EB8D0021719D /* AdShieldColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4474BB41B96EB8D0021719D /* AdShieldColors.swift */; };
 		D4955E2C1B958EFE0061C7D0 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */; };
@@ -86,7 +86,7 @@
 		0F053E7A1B93ED9500A9EFBC /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
 		0F053E7B1B93ED9500A9EFBC /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
 		0F053E821B94066F00A9EFBC /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
-		0F7CDDDF1B99869D002A1F6E /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		0F7CDDE51B9E6D20002A1F6E /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 		D41A82841B95A91100A90CFE /* TutorialStepZero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStepZero.swift; sourceTree = "<group>"; };
 		D4474BB41B96EB8D0021719D /* AdShieldColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdShieldColors.swift; sourceTree = "<group>"; };
 		D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 		0F053E6A1B93D04200A9EFBC /* AdShield-Extension */ = {
 			isa = PBXGroup;
 			children = (
-				0F7CDDDF1B99869D002A1F6E /* blockerList.json */,
+				0F7CDDE51B9E6D20002A1F6E /* blockerList.json */,
 				0F053E6D1B93D04200A9EFBC /* ActionRequestHandler.swift */,
 				0F053E6F1B93D04200A9EFBC /* Info.plist */,
 			);
@@ -350,7 +350,7 @@
 			files = (
 				0F053E421B93D03000A9EFBC /* LaunchScreen.storyboard in Resources */,
 				0F053E3F1B93D03000A9EFBC /* Assets.xcassets in Resources */,
-				0F7CDDE01B99869D002A1F6E /* blockerList.json in Resources */,
+				0F7CDDE61B9E6D20002A1F6E /* blockerList.json in Resources */,
 				0F053E3D1B93D03000A9EFBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F7CDDE11B99869D002A1F6E /* blockerList.json in Resources */,
+				0F7CDDE71B9E6D20002A1F6E /* blockerList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
