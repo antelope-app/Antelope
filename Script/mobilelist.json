@@ -1,20 +1,56 @@
 [
     {
-        "action": {
+        "action" : {
             "type": "css-display-none",
             "selector": ".GoogleActiveViewClass"
         },
-        "trigger": {
+        "trigger" : {
             "url-filter": ".*"
         }
     },
     {
-        "action": {
+        "action" : {
             "type": "css-display-none",
             "selector": ".aswift_1_expand"
         },
-        "trigger": {
+        "trigger" : {
             "url-filter": ".*"
+        }
+    },
+    {
+        "action" : {
+            "type": "css-display-none",
+            "selector": "#AdSlot_BF-Right-Multi"
+        },
+        "trigger" : {
+            "url-filter": "https?://([^/:]*\\.)investopedia.com"
+        }
+    },
+    {
+        "action" : {
+            "type" : "css-display-none",
+            "selector" : ".OUTBRAIN"
+        },
+        "trigger" : {
+            "url-filter" : ".*"
+        }
+    },
+    {
+        "action" : {
+            "type" : "css-display-none",
+            "selector": "#outbrain_widget_0"
+        },
+        "trigger" : {
+            "url-filter": ".*"
+        }
+    },
+    {
+        "action" : {
+            "type" : "css-display-none",
+            "selector": ".media"
+        },
+        "trigger" : {
+            "url-filter": "https?://([^/:]*\\.)buzzfeed.com"
         }
     }
 ]

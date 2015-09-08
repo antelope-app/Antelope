@@ -26,9 +26,9 @@ class TutorialStepThree: TutorialStep
         
         let imageCeiling = header.frame.origin.y + header.frame.size.height
         let imageFloor = buttonLabel.frame.origin.y
-        let imagePosY = imageCeiling + (imageFloor - imageCeiling / 2.0) - (self.switchImage.frame.size.height / 2.0)
+        //let imagePosY = imageCeiling + (imageFloor - imageCeiling / 2.0) - (self.switchImage.frame.size.height / 2.0)
         
-        self.switchImage.frame = CGRectMake(switchImage.frame.origin.x, imagePosY, switchImage.frame.size.width, switchImage.frame.size.height)
+        //self.switchImage.frame = CGRectMake(switchImage.frame.origin.x, imagePosY, switchImage.frame.size.width, switchImage.frame.size.height)
     }
     
     @IBAction func nextStep(sender: UIButton)
