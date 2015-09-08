@@ -17,8 +17,10 @@
 		0F053E721B93D04200A9EFBC /* AdShield-Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F053E691B93D04200A9EFBC /* AdShield-Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0F053E7C1B93ED9500A9EFBC /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F053E7B1B93ED9500A9EFBC /* ScrollViewController.m */; };
 		0F053E831B94066F00A9EFBC /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F053E821B94066F00A9EFBC /* SafariServices.framework */; };
-		0F7CDDE61B9E6D20002A1F6E /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDDE51B9E6D20002A1F6E /* blockerList.json */; };
-		0F7CDDE71B9E6D20002A1F6E /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDDE51B9E6D20002A1F6E /* blockerList.json */; };
+		0F7CDDF41B9E6F65002A1F6E /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7CDDF31B9E6F65002A1F6E /* ActionRequestHandler.swift */; };
+		0F7CDDF81B9E6F65002A1F6E /* AdShield-Privacy.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F7CDDEF1B9E6F65002A1F6E /* AdShield-Privacy.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0F7CDDFD1B9E7012002A1F6E /* privacyList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDDFC1B9E7012002A1F6E /* privacyList.json */; };
+		0F7CDDFF1B9E7072002A1F6E /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDDFE1B9E7072002A1F6E /* blockerList.json */; };
 		D41A82851B95A91100A90CFE /* TutorialStepZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A82841B95A91100A90CFE /* TutorialStepZero.swift */; };
 		D4474BB51B96EB8D0021719D /* AdShieldColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4474BB41B96EB8D0021719D /* AdShieldColors.swift */; };
 		D4955E2C1B958EFE0061C7D0 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */; };
@@ -50,6 +52,13 @@
 			remoteGlobalIDString = 0F053E681B93D04200A9EFBC;
 			remoteInfo = "AdShield-Extension";
 		};
+		0F7CDDF61B9E6F65002A1F6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F053E2C1B93D03000A9EFBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F7CDDEE1B9E6F65002A1F6E;
+			remoteInfo = "AdShield-Privacy";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +69,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				0F053E721B93D04200A9EFBC /* AdShield-Extension.appex in Embed App Extensions */,
+				0F7CDDF81B9E6F65002A1F6E /* AdShield-Privacy.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,7 +96,11 @@
 		0F053E7A1B93ED9500A9EFBC /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
 		0F053E7B1B93ED9500A9EFBC /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
 		0F053E821B94066F00A9EFBC /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
-		0F7CDDE51B9E6D20002A1F6E /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		0F7CDDEF1B9E6F65002A1F6E /* AdShield-Privacy.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AdShield-Privacy.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F7CDDF31B9E6F65002A1F6E /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
+		0F7CDDF51B9E6F65002A1F6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F7CDDFC1B9E7012002A1F6E /* privacyList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = privacyList.json; sourceTree = "<group>"; };
+		0F7CDDFE1B9E7072002A1F6E /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 		D41A82841B95A91100A90CFE /* TutorialStepZero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStepZero.swift; sourceTree = "<group>"; };
 		D4474BB41B96EB8D0021719D /* AdShieldColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdShieldColors.swift; sourceTree = "<group>"; };
 		D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +140,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0F7CDDEC1B9E6F65002A1F6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -136,6 +157,7 @@
 				0F053E4B1B93D03000A9EFBC /* AdShieldTests */,
 				0F053E561B93D03000A9EFBC /* AdShieldUITests */,
 				0F053E6A1B93D04200A9EFBC /* AdShield-Extension */,
+				0F7CDDF01B9E6F65002A1F6E /* AdShield-Privacy */,
 				0F053E351B93D03000A9EFBC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -147,6 +169,7 @@
 				0F053E481B93D03000A9EFBC /* AdShieldTests.xctest */,
 				0F053E531B93D03000A9EFBC /* AdShieldUITests.xctest */,
 				0F053E691B93D04200A9EFBC /* AdShield-Extension.appex */,
+				0F7CDDEF1B9E6F65002A1F6E /* AdShield-Privacy.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,7 +216,7 @@
 		0F053E6A1B93D04200A9EFBC /* AdShield-Extension */ = {
 			isa = PBXGroup;
 			children = (
-				0F7CDDE51B9E6D20002A1F6E /* blockerList.json */,
+				0F7CDDFE1B9E7072002A1F6E /* blockerList.json */,
 				0F053E6D1B93D04200A9EFBC /* ActionRequestHandler.swift */,
 				0F053E6F1B93D04200A9EFBC /* Info.plist */,
 			);
@@ -219,6 +242,16 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		0F7CDDF01B9E6F65002A1F6E /* AdShield-Privacy */ = {
+			isa = PBXGroup;
+			children = (
+				0F7CDDFC1B9E7012002A1F6E /* privacyList.json */,
+				0F7CDDF31B9E6F65002A1F6E /* ActionRequestHandler.swift */,
+				0F7CDDF51B9E6F65002A1F6E /* Info.plist */,
+			);
+			path = "AdShield-Privacy";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -235,6 +268,7 @@
 			);
 			dependencies = (
 				0F053E711B93D04200A9EFBC /* PBXTargetDependency */,
+				0F7CDDF71B9E6F65002A1F6E /* PBXTargetDependency */,
 			);
 			name = AdShield;
 			productName = AdShield;
@@ -294,6 +328,23 @@
 			productReference = 0F053E691B93D04200A9EFBC /* AdShield-Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		0F7CDDEE1B9E6F65002A1F6E /* AdShield-Privacy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F7CDDF91B9E6F65002A1F6E /* Build configuration list for PBXNativeTarget "AdShield-Privacy" */;
+			buildPhases = (
+				0F7CDDEB1B9E6F65002A1F6E /* Sources */,
+				0F7CDDEC1B9E6F65002A1F6E /* Frameworks */,
+				0F7CDDED1B9E6F65002A1F6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AdShield-Privacy";
+			productName = "AdShield-Privacy";
+			productReference = 0F7CDDEF1B9E6F65002A1F6E /* AdShield-Privacy.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -320,6 +371,10 @@
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = VPTZL53UP2;
 					};
+					0F7CDDEE1B9E6F65002A1F6E = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = VPTZL53UP2;
+					};
 				};
 			};
 			buildConfigurationList = 0F053E2F1B93D03000A9EFBC /* Build configuration list for PBXProject "AdShield" */;
@@ -339,6 +394,7 @@
 				0F053E471B93D03000A9EFBC /* AdShieldTests */,
 				0F053E521B93D03000A9EFBC /* AdShieldUITests */,
 				0F053E681B93D04200A9EFBC /* AdShield-Extension */,
+				0F7CDDEE1B9E6F65002A1F6E /* AdShield-Privacy */,
 			);
 		};
 /* End PBXProject section */
@@ -350,7 +406,6 @@
 			files = (
 				0F053E421B93D03000A9EFBC /* LaunchScreen.storyboard in Resources */,
 				0F053E3F1B93D03000A9EFBC /* Assets.xcassets in Resources */,
-				0F7CDDE61B9E6D20002A1F6E /* blockerList.json in Resources */,
 				0F053E3D1B93D03000A9EFBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +428,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F7CDDE71B9E6D20002A1F6E /* blockerList.json in Resources */,
+				0F7CDDFF1B9E7072002A1F6E /* blockerList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F7CDDED1B9E6F65002A1F6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F7CDDFD1B9E7012002A1F6E /* privacyList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +483,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0F7CDDEB1B9E6F65002A1F6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F7CDDF41B9E6F65002A1F6E /* ActionRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -437,6 +508,11 @@
 			isa = PBXTargetDependency;
 			target = 0F053E681B93D04200A9EFBC /* AdShield-Extension */;
 			targetProxy = 0F053E701B93D04200A9EFBC /* PBXContainerItemProxy */;
+		};
+		0F7CDDF71B9E6F65002A1F6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F7CDDEE1B9E6F65002A1F6E /* AdShield-Privacy */;
+			targetProxy = 0F7CDDF61B9E6F65002A1F6E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -658,6 +734,32 @@
 			};
 			name = Release;
 		};
+		0F7CDDFA1B9E6F65002A1F6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "AdShield-Privacy/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adshield.AdShield.AdShield-Privacy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0F7CDDFB1B9E6F65002A1F6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "AdShield-Privacy/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adshield.AdShield.AdShield-Privacy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -705,6 +807,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		0F7CDDF91B9E6F65002A1F6E /* Build configuration list for PBXNativeTarget "AdShield-Privacy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F7CDDFA1B9E6F65002A1F6E /* Debug */,
+				0F7CDDFB1B9E6F65002A1F6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

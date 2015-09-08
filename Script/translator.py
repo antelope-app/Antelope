@@ -30,16 +30,6 @@ with open(filter_file_name, "r") as adblock_filter_file:
 
     	if rule is not None:
         	translated_rules.append(rule.as_dict())
-
-print str(len(translated_rules))
-
-with open('easyprivacy.txt', "r") as tracking_filter_file:
-    for raw_rule in tracking_filter_file:
-        raw_rule = raw_rule.strip()
-        rule = rule_builder.build_rule(raw_rule)
-
-        if rule is not None:
-            translated_rules.append(rule.as_dict())
     
 with open('mobilelist.json', "r") as mobile_list:
         mobile_rules = json.load(mobile_list)
