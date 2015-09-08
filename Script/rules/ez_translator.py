@@ -284,6 +284,11 @@ class EZTranslator(Translator):
         # A little clean up
         target = target.strip()
         target = target.encode('punycode').lower()
+
+        # Punycode sometimes arbitrarily prepends '-'
+        if target.endswith('-'):
+            target = target[:len(target) - 1]
+
         target = re.escape(target)
 
         # ^ matches separater characters
