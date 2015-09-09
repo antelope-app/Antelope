@@ -12,6 +12,8 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
     @IBOutlet weak var tutorialSplash: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    var colorKit = AdShieldColors()
+    
     var absoluteStep: NSInteger = 0
     var step: NSInteger!
     
@@ -86,8 +88,10 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         print("did scroll")
+        
         let totalWidth: CGFloat = self.scrollView.frame.size.width
         let pageNumber: Int = Int(floor(self.scrollView.contentOffset.x - totalWidth/50) / totalWidth + 1)
+        
         self.pageControl.currentPage = pageNumber
     }
     
