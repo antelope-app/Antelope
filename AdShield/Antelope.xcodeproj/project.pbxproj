@@ -391,7 +391,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0F053E2F1B93D03000A9EFBC /* Build configuration list for PBXProject "AdShield" */;
+			buildConfigurationList = 0F053E2F1B93D03000A9EFBC /* Build configuration list for PBXProject "Antelope" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -777,7 +777,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0F053E2F1B93D03000A9EFBC /* Build configuration list for PBXProject "AdShield" */ = {
+		0F053E2F1B93D03000A9EFBC /* Build configuration list for PBXProject "Antelope" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F053E5A1B93D03000A9EFBC /* Debug */,

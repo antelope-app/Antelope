@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:AdShield.xcodeproj">
+      location = "self:/Users/jaelee/Projects/ios_projects/AdShield/AdShield/Antelope.xcodeproj">
    </FileRef>
 </Workspace>

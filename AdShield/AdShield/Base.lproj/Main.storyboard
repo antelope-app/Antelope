@@ -752,6 +752,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="adshield-logo" width="463" height="463"/>
+        <image name="adshield-logo" width="300" height="300"/>
     </resources>
 </document>
