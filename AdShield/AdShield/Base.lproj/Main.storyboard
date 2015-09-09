@@ -708,9 +708,43 @@
                     <view key="view" contentMode="scaleToFill" id="hLQ-RC-wrr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="E6f-0X-bv9">
+                                <rect key="frame" x="-19" y="-18" width="39" height="37"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="pageChanged:" destination="ZIz-Zu-egq" eventType="valueChanged" id="pgA-x0-Bwd"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QH1-eH-vKb" firstAttribute="top" secondItem="E6f-0X-bv9" secondAttribute="bottom" constant="20" id="6dh-bc-RJV"/>
+                            <constraint firstItem="E6f-0X-bv9" firstAttribute="centerX" secondItem="hLQ-RC-wrr" secondAttribute="centerX" id="VBw-DI-iS2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="E6f-0X-bv9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6dh-bc-RJV"/>
+                                <exclude reference="VBw-DI-iS2"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="E6f-0X-bv9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6dh-bc-RJV"/>
+                                <include reference="VBw-DI-iS2"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="E6f-0X-bv9" id="eG2-4x-i8J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLW-bV-hIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

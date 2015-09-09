@@ -10,6 +10,7 @@ import UIKit
 
 class TutorialViewController: ScrollViewController, TutorialStepDelegate {
     @IBOutlet weak var tutorialSplash: UIView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     var absoluteStep: NSInteger = 0
     var step: NSInteger!
@@ -29,6 +30,8 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
+        self.scrollView.delegate = self
+        
         tutorialStepZero = storyboard.instantiateViewControllerWithIdentifier("TutorialStepZero") as? TutorialStepZero
         tutorialStepZero.delegate = self
         
@@ -42,6 +45,7 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
         tutorialStepThree.delegate = self
         
         viewControllersForSteps = [tutorialStepZero, tutorialStepOne, tutorialStepTwo, tutorialStepThree]
+        self.pageControl.numberOfPages = viewControllersForSteps.count
         
         self.addChildViewControllers(viewControllersForSteps)
         
@@ -64,7 +68,8 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
         self.tutorialStepZero.initialize()
     }
     
-    func finishTutorial() {
+    func finishTutorial()
+    {
         
         UIView.animateWithDuration(0.5, animations: {
             self.view.frame.origin.y = UIScreen.mainScreen().bounds.size.height
@@ -79,7 +84,21 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
         })
     }
     
-    override func scrollToViewControllerAtIndex(index: NSInteger) {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        print("did scroll")
+        let totalWidth: CGFloat = self.scrollView.frame.size.width
+        let pageNumber: Int = Int(floor(self.scrollView.contentOffset.x - totalWidth/50) / totalWidth + 1)
+        self.pageControl.currentPage = pageNumber
+    }
+    
+    @IBAction func pageChanged(sender: AnyObject) {
+        print("page changed")
+        let pageNumber: Int = self.pageControl.currentPage
+        self.scrollToViewControllerAtIndex(pageNumber)
+    }
+    
+    override func scrollToViewControllerAtIndex(index: NSInteger)
+    {
         super.scrollToViewControllerAtIndex(index)
     }
     
