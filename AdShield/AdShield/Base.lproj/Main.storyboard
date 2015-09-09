@@ -134,9 +134,8 @@
                                         <exclude reference="pua-xc-GOZ"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
-                                    <rect key="frame" x="42" y="375" width="316" height="52"/>
                                     <mask key="constraints">
                                         <include reference="JfV-l4-FbQ"/>
                                         <include reference="pua-xc-GOZ"/>

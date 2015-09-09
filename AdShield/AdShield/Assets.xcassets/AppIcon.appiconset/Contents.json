@@ -1,9 +1,8 @@
 {
   "images" : [
     {
-      "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "adshield-app-icon.png",
+      "size" : "29x29",
       "scale" : "2x"
     },
     {
@@ -22,8 +21,9 @@
       "scale" : "3x"
     },
     {
-      "idiom" : "iphone",
       "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "antelope-green.png",
       "scale" : "2x"
     },
     {
