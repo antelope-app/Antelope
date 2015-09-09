@@ -18,6 +18,8 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("tutorial view controller view did load")
+        
         print(self.view.frame.size.width)
         print(self.view.frame.size.height)
         
@@ -30,6 +32,8 @@ class ScrollViewController: UIViewController, UIScrollViewDelegate {
         scrollView.bounces = false
         
         self.view.addSubview(scrollView)
+        
+        print("added scrollview")
         
     }
     

@@ -25,6 +25,8 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
     {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.redColor()
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         tutorialStepZero = storyboard.instantiateViewControllerWithIdentifier("TutorialStepZero") as? TutorialStepZero
@@ -63,18 +65,17 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
     }
     
     func finishTutorial() {
-        print("done :)")
         
-        if let settingsURL: NSURL = NSURL(string: UIApplicationOpenSettingsURLString) {
-            let application: UIApplication = UIApplication.sharedApplication()
-            if (application.canOpenURL(settingsURL)) {
-                application.openURL(settingsURL)
-            }
-        }
-        
-        UIView.animateWithDuration(1.0, animations: {
-            self.scrollView.frame.origin.y = UIScreen.mainScreen().bounds.size.height
+        UIView.animateWithDuration(0.5, animations: {
+            self.view.frame.origin.y = UIScreen.mainScreen().bounds.size.height
             }, completion: {(Bool) in
+                
+                if let settingsURL: NSURL = NSURL(string: UIApplicationOpenSettingsURLString) {
+                    let application: UIApplication = UIApplication.sharedApplication()
+                    if (application.canOpenURL(settingsURL)) {
+                        application.openURL(settingsURL)
+                    }
+                }
         })
     }
     

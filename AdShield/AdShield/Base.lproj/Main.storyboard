@@ -340,7 +340,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7D-Ys-oWZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7D-Ys-oWZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -659,14 +659,14 @@
                                 <exclude reference="ceI-V5-uml"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="f5Y-Yn-HYm"/>
+                                <exclude reference="8qM-CS-o4k"/>
+                                <exclude reference="gsY-5D-V1F"/>
+                                <exclude reference="A8k-qT-Uz7"/>
                                 <exclude reference="T8B-Y1-DAM"/>
                                 <exclude reference="Yd9-bA-1Y9"/>
                                 <exclude reference="jEd-Jp-3QT"/>
                                 <exclude reference="ztD-aW-KsK"/>
-                                <exclude reference="A8k-qT-Uz7"/>
-                                <exclude reference="8qM-CS-o4k"/>
-                                <exclude reference="gsY-5D-V1F"/>
-                                <exclude reference="f5Y-Yn-HYm"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -676,14 +676,14 @@
                                 <include reference="ceI-V5-uml"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="f5Y-Yn-HYm"/>
+                                <include reference="8qM-CS-o4k"/>
+                                <include reference="gsY-5D-V1F"/>
+                                <include reference="A8k-qT-Uz7"/>
                                 <include reference="T8B-Y1-DAM"/>
                                 <exclude reference="Yd9-bA-1Y9"/>
                                 <include reference="jEd-Jp-3QT"/>
                                 <exclude reference="ztD-aW-KsK"/>
-                                <include reference="A8k-qT-Uz7"/>
-                                <include reference="8qM-CS-o4k"/>
-                                <include reference="gsY-5D-V1F"/>
-                                <include reference="f5Y-Yn-HYm"/>
                             </mask>
                         </variation>
                     </view>
@@ -708,27 +708,8 @@
                     <view key="view" contentMode="scaleToFill" id="hLQ-RC-wrr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="nGl-O8-M3I">
-                                <rect key="frame" x="-19" y="-18" width="39" height="37"/>
-                                <animations/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="181" y="690" width="39" height="37"/>
-                                </variation>
-                            </pageControl>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="nGl-O8-M3I"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="nGl-O8-M3I"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLW-bV-hIR" userLabel="First Responder" sceneMemberID="firstResponder"/>

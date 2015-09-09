@@ -16,17 +16,18 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        print("main view controller view did load")
         
-        tutorialViewController = storyboard.instantiateViewControllerWithIdentifier("TutorialViewController") as? TutorialViewController
-        
-        self.addChildViewController(tutorialViewController)
         self.view.frame = UIScreen.mainScreen().bounds
         self.view.addSubview(self.splashView)
         self.splashView.backgroundColor = UIColor.blackColor()
         
-        tutorialViewController.view.frame = UIScreen.mainScreen().bounds
-        self.view.insertSubview(tutorialViewController.view, aboveSubview: self.splashView)
+        if !NSUserDefaults.standardUserDefaults().boolForKey("HasLaunchedOnce") || true {
+            self.startTutorial()
+            
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasLaunchedOnce")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
         
         // Auto-reload content blocker when view loads
         SFContentBlockerManager.reloadContentBlockerWithIdentifier("com.adshield.AdShield.AdShield-Extension") { (error) -> Void in
@@ -36,6 +37,19 @@ class MainViewController: UIViewController {
                 print("Loaded successfully.")
             }
         }
+    }
+    
+    func startTutorial() {
+        
+        print("starting tutorial")
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        tutorialViewController = storyboard.instantiateViewControllerWithIdentifier("TutorialViewController") as? TutorialViewController
+        
+        self.addChildViewController(tutorialViewController)
+        
+        tutorialViewController.view.frame = UIScreen.mainScreen().bounds
+        self.view.insertSubview(tutorialViewController.view, aboveSubview: self.splashView)
     }
 
     override func didReceiveMemoryWarning() {
