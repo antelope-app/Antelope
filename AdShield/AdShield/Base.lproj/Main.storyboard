@@ -645,6 +645,8 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="5"/>
                             </constraint>
                             <constraint firstItem="l0T-To-OKq" firstAttribute="centerX" secondItem="W38-D1-EAu" secondAttribute="centerX" id="A8k-qT-Uz7"/>
+                            <constraint firstItem="ceI-V5-uml" firstAttribute="top" secondItem="96x-yz-4zI" secondAttribute="bottom" constant="100" id="T8B-Y1-DAM"/>
+                            <constraint firstItem="ceI-V5-uml" firstAttribute="top" secondItem="96x-yz-4zI" secondAttribute="bottom" constant="100" id="Yd9-bA-1Y9"/>
                             <constraint firstItem="x2k-1E-ZFx" firstAttribute="top" secondItem="3xp-Y7-S7b" secondAttribute="bottom" constant="100" id="f5Y-Yn-HYm"/>
                             <constraint firstItem="3xp-Y7-S7b" firstAttribute="centerX" secondItem="W38-D1-EAu" secondAttribute="centerX" id="gsY-5D-V1F"/>
                             <constraint firstItem="ceI-V5-uml" firstAttribute="centerX" secondItem="W38-D1-EAu" secondAttribute="centerX" id="jEd-Jp-3QT"/>
@@ -657,12 +659,14 @@
                                 <exclude reference="ceI-V5-uml"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="f5Y-Yn-HYm"/>
-                                <exclude reference="8qM-CS-o4k"/>
-                                <exclude reference="gsY-5D-V1F"/>
-                                <exclude reference="A8k-qT-Uz7"/>
+                                <exclude reference="T8B-Y1-DAM"/>
+                                <exclude reference="Yd9-bA-1Y9"/>
                                 <exclude reference="jEd-Jp-3QT"/>
                                 <exclude reference="ztD-aW-KsK"/>
+                                <exclude reference="A8k-qT-Uz7"/>
+                                <exclude reference="8qM-CS-o4k"/>
+                                <exclude reference="gsY-5D-V1F"/>
+                                <exclude reference="f5Y-Yn-HYm"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -672,12 +676,14 @@
                                 <include reference="ceI-V5-uml"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="f5Y-Yn-HYm"/>
+                                <include reference="T8B-Y1-DAM"/>
+                                <exclude reference="Yd9-bA-1Y9"/>
+                                <include reference="jEd-Jp-3QT"/>
+                                <exclude reference="ztD-aW-KsK"/>
+                                <include reference="A8k-qT-Uz7"/>
                                 <include reference="8qM-CS-o4k"/>
                                 <include reference="gsY-5D-V1F"/>
-                                <include reference="A8k-qT-Uz7"/>
-                                <include reference="jEd-Jp-3QT"/>
-                                <include reference="ztD-aW-KsK"/>
+                                <include reference="f5Y-Yn-HYm"/>
                             </mask>
                         </variation>
                     </view>
@@ -731,6 +737,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="adshield-logo" width="231" height="231"/>
+        <image name="adshield-logo" width="463" height="463"/>
     </resources>
 </document>

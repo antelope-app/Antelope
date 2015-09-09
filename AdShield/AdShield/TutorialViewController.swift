@@ -64,6 +64,18 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
     
     func finishTutorial() {
         print("done :)")
+        
+        if let settingsURL: NSURL = NSURL(string: UIApplicationOpenSettingsURLString) {
+            let application: UIApplication = UIApplication.sharedApplication()
+            if (application.canOpenURL(settingsURL)) {
+                application.openURL(settingsURL)
+            }
+        }
+        
+        UIView.animateWithDuration(1.0, animations: {
+            self.scrollView.frame.origin.y = UIScreen.mainScreen().bounds.size.height
+            }, completion: {(Bool) in
+        })
     }
     
     override func scrollToViewControllerAtIndex(index: NSInteger) {

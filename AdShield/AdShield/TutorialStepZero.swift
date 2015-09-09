@@ -76,11 +76,6 @@ class TutorialStepZero: TutorialStep
                     self.stepZeroHeader.alpha = 1.0
                     
                     }, completion: {(Bool) in
-                        var line = UIView()
-                        line.backgroundColor = UIColor.grayColor()
-                        
-                        let subheaderFrame = self.stepZeroSubheader.frame
-                        line.frame = CGRectMake(subheaderFrame.origin.y, subheaderFrame.origin.y, 100, 10)
                 })
                 
                 // sub header, then bars
