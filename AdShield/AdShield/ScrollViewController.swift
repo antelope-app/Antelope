@@ -1,9 +1,9 @@
 //
 //  ScrollViewController.swift
-//  AdShield
+//  Antelope
 //
 //  Created by Jae Lee on 8/30/15.
-//  Copyright © 2015 AdShield. All rights reserved.
+//  Copyright © 2015 Antelope. All rights reserved.
 //
 
 import UIKit

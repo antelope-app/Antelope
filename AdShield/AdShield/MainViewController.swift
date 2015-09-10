@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  AdShield
+//  Antelope
 //
 //  Created by Adam Gluck on 8/30/15.
-//  Copyright © 2015 AdShield. All rights reserved.
+//  Copyright © 2015 Antelope. All rights reserved.
 //
 
 import UIKit
@@ -30,7 +30,15 @@ class MainViewController: UIViewController {
         }
         
         // Auto-reload content blocker when view loads
-        SFContentBlockerManager.reloadContentBlockerWithIdentifier("com.adshield.AdShield.AdShield-Extension") { (error) -> Void in
+        SFContentBlockerManager.reloadContentBlockerWithIdentifier("com.antelope.Antelope.Block-Ads") { (error) -> Void in
+            if let error = error {
+                print("Failed to load with \(error).")
+            } else {
+                print("Loaded successfully.")
+            }
+        }
+        
+        SFContentBlockerManager.reloadContentBlockerWithIdentifier("com.antelope.Antelope.Block-Trackers") { (error) -> Void in
             if let error = error {
                 print("Failed to load with \(error).")
             } else {
