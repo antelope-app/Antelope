@@ -118,15 +118,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" editable="NO" text="Welcome to Antelope" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eG9-gY-LqZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" editable="NO" text="Antelope makes Safari faster." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eG9-gY-LqZ">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="316" id="JfV-l4-FbQ"/>
+                                    <constraint firstAttribute="width" constant="350" id="JfV-l4-FbQ"/>
                                     <constraint firstAttribute="height" constant="50" id="pua-xc-GOZ"/>
                                 </constraints>
                                 <color key="textColor" red="0.32150550828970326" green="0.32150550828970326" blue="0.32150550828970326" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -135,14 +135,14 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                     <mask key="constraints">
                                         <include reference="JfV-l4-FbQ"/>
                                         <include reference="pua-xc-GOZ"/>
                                     </mask>
                                 </variation>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Antelope stops Safari from downloading ads and tracking scripts, making websites feel cleaner and load faster." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QPA-Ex-r0c">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="It stops Safari from downloading ads and tracking scripts, making websites lighter to load." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QPA-Ex-r0c">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
