@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="S1h-WZ-hAu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -365,12 +364,12 @@
                                     <action selector="nextStep:" destination="q7S-y3-AeY" eventType="touchUpInside" id="TMC-KH-Sdw"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="First, go to your settings." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Rn-iK-K4C">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="First, go to your device's settings." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Rn-iK-K4C">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="316" id="UPo-Cd-155"/>
-                                    <constraint firstAttribute="height" constant="50" id="u8o-Wx-ghG"/>
+                                    <constraint firstAttribute="height" constant="80" id="u8o-Wx-ghG"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
@@ -419,7 +418,7 @@
                             <constraint firstItem="O7D-Ys-oWZ" firstAttribute="centerX" secondItem="ZIe-BP-b0R" secondAttribute="centerX" id="kzq-Gb-fat"/>
                             <constraint firstItem="KCX-Q8-9IC" firstAttribute="centerY" secondItem="ZIe-BP-b0R" secondAttribute="centerY" id="spS-Cu-nch"/>
                             <constraint firstItem="6Rn-iK-K4C" firstAttribute="top" secondItem="ZIe-BP-b0R" secondAttribute="topMargin" constant="30" id="yc0-q5-jd4">
-                                <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
                             </constraint>
                         </constraints>
                         <variation key="default">
@@ -526,8 +525,8 @@
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="Omp-eR-pU3"/>
-                                        <include reference="fUv-bu-adK"/>
-                                        <include reference="feN-B0-WRL"/>
+                                        <exclude reference="fUv-bu-adK"/>
+                                        <exclude reference="feN-B0-WRL"/>
                                         <include reference="meI-mM-81F"/>
                                     </mask>
                                 </variation>
@@ -559,7 +558,7 @@
                             <constraint firstItem="geq-Gk-dD4" firstAttribute="top" secondItem="eDD-aG-bMZ" secondAttribute="bottom" constant="100" id="4XO-wh-blF"/>
                             <constraint firstItem="eDD-aG-bMZ" firstAttribute="centerX" secondItem="yhi-qn-xzc" secondAttribute="centerX" id="7ec-cK-jeN"/>
                             <constraint firstItem="InG-93-g6B" firstAttribute="centerX" secondItem="yhi-qn-xzc" secondAttribute="centerX" id="81U-BQ-YKh"/>
-                            <constraint firstItem="InG-93-g6B" firstAttribute="top" secondItem="yhi-qn-xzc" secondAttribute="topMargin" constant="100" id="8Ds-jC-3aj"/>
+                            <constraint firstItem="InG-93-g6B" firstAttribute="top" secondItem="yhi-qn-xzc" secondAttribute="topMargin" constant="80" id="8Ds-jC-3aj"/>
                             <constraint firstItem="lKU-s7-GM1" firstAttribute="centerX" secondItem="yhi-qn-xzc" secondAttribute="centerX" id="Bw2-2D-zbi"/>
                             <constraint firstItem="lKU-s7-GM1" firstAttribute="centerY" secondItem="yhi-qn-xzc" secondAttribute="centerY" id="IH8-27-Zch"/>
                         </constraints>
@@ -747,6 +746,7 @@ Block Ads / Block Trackers</string>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="oFy-mF-tYR" firstAttribute="centerX" secondItem="W38-D1-EAu" secondAttribute="centerX" id="8RP-2K-7kV"/>
                             <constraint firstItem="3xp-Y7-S7b" firstAttribute="top" secondItem="l0T-To-OKq" secondAttribute="bottom" constant="8" id="8qM-CS-o4k">
@@ -755,7 +755,7 @@ Block Ads / Block Trackers</string>
                             <constraint firstItem="l0T-To-OKq" firstAttribute="centerX" secondItem="W38-D1-EAu" secondAttribute="centerX" id="A8k-qT-Uz7"/>
                             <constraint firstItem="YuF-tw-7Lr" firstAttribute="centerX" secondItem="W38-D1-EAu" secondAttribute="centerX" id="Mr4-iP-eqf"/>
                             <constraint firstItem="YuF-tw-7Lr" firstAttribute="centerY" secondItem="W38-D1-EAu" secondAttribute="centerY" id="QG4-3f-1z5"/>
-                            <constraint firstItem="ceI-V5-uml" firstAttribute="top" secondItem="96x-yz-4zI" secondAttribute="bottom" constant="80" id="T8B-Y1-DAM"/>
+                            <constraint firstItem="ceI-V5-uml" firstAttribute="top" secondItem="96x-yz-4zI" secondAttribute="bottom" constant="90" id="T8B-Y1-DAM"/>
                             <constraint firstItem="ceI-V5-uml" firstAttribute="top" secondItem="96x-yz-4zI" secondAttribute="bottom" constant="100" id="Yd9-bA-1Y9"/>
                             <constraint firstItem="oFy-mF-tYR" firstAttribute="top" secondItem="YuF-tw-7Lr" secondAttribute="bottom" id="ZGr-vo-E7x"/>
                             <constraint firstItem="x2k-1E-ZFx" firstAttribute="top" secondItem="3xp-Y7-S7b" secondAttribute="bottom" constant="100" id="f5Y-Yn-HYm"/>
@@ -880,8 +880,8 @@ Block Ads / Block Trackers</string>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="IcU-FG-7Rn"/>
-                                        <include reference="TnY-VW-Btp"/>
+                                        <exclude reference="IcU-FG-7Rn"/>
+                                        <exclude reference="TnY-VW-Btp"/>
                                         <include reference="buO-gj-qCH"/>
                                         <include reference="iUv-xS-QbL"/>
                                     </mask>
@@ -916,7 +916,7 @@ Block Ads / Block Trackers</string>
                             <constraint firstItem="vXL-l9-PnJ" firstAttribute="centerX" secondItem="gtV-Jg-3ST" secondAttribute="centerX" id="Bv6-LQ-j09"/>
                             <constraint firstItem="J5w-vg-NyO" firstAttribute="top" secondItem="wdI-jD-iQD" secondAttribute="bottom" constant="100" id="MsH-hT-u4c"/>
                             <constraint firstItem="jAo-1E-yNj" firstAttribute="centerY" secondItem="gtV-Jg-3ST" secondAttribute="centerY" id="VgH-dk-axh"/>
-                            <constraint firstItem="vXL-l9-PnJ" firstAttribute="top" secondItem="QxQ-yv-Chc" secondAttribute="bottom" constant="100" id="YgC-00-70A"/>
+                            <constraint firstItem="vXL-l9-PnJ" firstAttribute="top" secondItem="QxQ-yv-Chc" secondAttribute="bottom" constant="90" id="YgC-00-70A"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">

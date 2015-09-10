@@ -53,7 +53,7 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
         let shareViewController = ShareViewController()
         
         viewControllersForSteps = [tutorialStepZero, tutorialStepOne, tutorialStepTwo, tutorialStepFour, tutorialStepThree, shareViewController]
-        self.pageControl.numberOfPages = viewControllersForSteps.count
+        self.pageControl.numberOfPages = Int(viewControllersForSteps.count) - 1
         
         self.addChildViewControllers(viewControllersForSteps)
         
@@ -79,16 +79,15 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
     func finishTutorial()
     {
         
-        UIView.animateWithDuration(0.5, animations: {
-            self.view.frame.origin.y = UIScreen.mainScreen().bounds.size.height
-            }, completion: {(Bool) in
-                
-                if let settingsURL: NSURL = NSURL(string: UIApplicationOpenSettingsURLString) {
-                    let application: UIApplication = UIApplication.sharedApplication()
-                    if (application.canOpenURL(settingsURL)) {
-                        application.openURL(settingsURL)
-                    }
-                }
+        if let settingsURL: NSURL = NSURL(string: UIApplicationOpenSettingsURLString) {
+            let application: UIApplication = UIApplication.sharedApplication()
+            if (application.canOpenURL(settingsURL)) {
+                application.openURL(settingsURL)
+            }
+        }
+        
+        self.tutorialStepZero.delay(1.0, closure: {
+            self.scrollToViewControllerAtIndex(Int(self.childViewControllers.count) - 1)
         })
     }
     
