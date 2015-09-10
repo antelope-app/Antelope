@@ -50,7 +50,9 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
         tutorialStepThree = storyboard.instantiateViewControllerWithIdentifier("TutorialStepThree") as? TutorialStepThree
         tutorialStepThree.delegate = self
         
-        viewControllersForSteps = [tutorialStepZero, tutorialStepOne, tutorialStepTwo, tutorialStepFour, tutorialStepThree]
+        let shareViewController = ShareViewController()
+        
+        viewControllersForSteps = [tutorialStepZero, tutorialStepOne, tutorialStepTwo, tutorialStepFour, tutorialStepThree, shareViewController]
         self.pageControl.numberOfPages = viewControllersForSteps.count
         
         self.addChildViewControllers(viewControllersForSteps)
