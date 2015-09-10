@@ -20,7 +20,6 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
     var tutorialStepZero: TutorialStepZero!
     var tutorialStepOne: TutorialStepOne!
     var tutorialStepTwo: TutorialStepTwo!
-    var tutorialStepFour: TutorialStepFour!
     var tutorialStepThree: TutorialStepThree!
     
     var viewControllersForSteps: [UIViewController] = []
@@ -44,13 +43,10 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
         tutorialStepTwo = storyboard.instantiateViewControllerWithIdentifier("TutorialStepTwo") as? TutorialStepTwo
         tutorialStepTwo.delegate = self
         
-        tutorialStepFour = storyboard.instantiateViewControllerWithIdentifier("TutorialStepFour") as? TutorialStepFour
-        tutorialStepFour.delegate = self
-        
         tutorialStepThree = storyboard.instantiateViewControllerWithIdentifier("TutorialStepThree") as? TutorialStepThree
         tutorialStepThree.delegate = self
         
-        viewControllersForSteps = [tutorialStepZero, tutorialStepOne, tutorialStepTwo, tutorialStepFour, tutorialStepThree]
+        viewControllersForSteps = [tutorialStepZero, tutorialStepOne, tutorialStepTwo, tutorialStepThree]
         self.pageControl.numberOfPages = viewControllersForSteps.count
         
         self.addChildViewControllers(viewControllersForSteps)

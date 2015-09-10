@@ -23,7 +23,6 @@
 		0F7CDE0D1B9EB675002A1F6E /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDE0C1B9EB675002A1F6E /* blockerList.json */; };
 		D41A82851B95A91100A90CFE /* TutorialStepZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A82841B95A91100A90CFE /* TutorialStepZero.swift */; };
 		D4474BB51B96EB8D0021719D /* AdShieldColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4474BB41B96EB8D0021719D /* AdShieldColors.swift */; };
-		D48872AD1BA027D000337AEA /* TutorialStepFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48872AC1BA027D000337AEA /* TutorialStepFour.swift */; settings = {ASSET_TAGS = (); }; };
 		D4955E2C1B958EFE0061C7D0 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */; };
 		D4955E2D1B958EFE0061C7D0 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4955E2A1B958EFE0061C7D0 /* TutorialViewController.swift */; };
 		D4955E2E1B958EFE0061C7D0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4955E2B1B958EFE0061C7D0 /* MainViewController.swift */; };
@@ -106,7 +105,6 @@
 		0F7CDE0C1B9EB675002A1F6E /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 		D41A82841B95A91100A90CFE /* TutorialStepZero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStepZero.swift; sourceTree = "<group>"; };
 		D4474BB41B96EB8D0021719D /* AdShieldColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdShieldColors.swift; sourceTree = "<group>"; };
-		D48872AC1BA027D000337AEA /* TutorialStepFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStepFour.swift; sourceTree = "<group>"; };
 		D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		D4955E2A1B958EFE0061C7D0 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		D4955E2B1B958EFE0061C7D0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -264,7 +262,6 @@
 				D4FF1E5E1B98138E00712B70 /* TutorialStepOne.swift */,
 				D4FF1E641B99013200712B70 /* TutorialStepTwo.swift */,
 				D4FF1E661B990B8E00712B70 /* TutorialStepThree.swift */,
-				D48872AC1BA027D000337AEA /* TutorialStepFour.swift */,
 			);
 			name = TutorialSteps;
 			sourceTree = "<group>";
@@ -465,7 +462,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4FF1E651B99013200712B70 /* TutorialStepTwo.swift in Sources */,
-				D48872AD1BA027D000337AEA /* TutorialStepFour.swift in Sources */,
 				D4955E2E1B958EFE0061C7D0 /* MainViewController.swift in Sources */,
 				D41A82851B95A91100A90CFE /* TutorialStepZero.swift in Sources */,
 				D4FF1E5F1B98138F00712B70 /* TutorialStepOne.swift in Sources */,

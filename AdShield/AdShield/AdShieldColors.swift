@@ -13,8 +13,7 @@ class AdShieldColors {
     var white: UIColor = UIColor.whiteColor()
     var veryLightGrey: UIColor = UIColor(netHex: 0xcccccc)
     var teal: UIColor = UIColor(netHex: 0x75bfa4)
-    var yellow: UIColor = UIColor(netHex: 0xfeda5a)
-    var orange: UIColor = UIColor(netHex: 0xefa85b)
+    var yellow: UIColor = UIColor(netHex: 0x4d4d4d)
     var magenta: UIColor = UIColor(netHex: 0xef6586)
 }
 

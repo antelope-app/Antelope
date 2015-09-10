@@ -142,12 +142,12 @@
                                     </mask>
                                 </variation>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Antelope stops Safari from downloading ads and tracking scripts, making websites feel cleaner and load faster." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QPA-Ex-r0c">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Antelope removes ads from Safari, and makes your browser load faster." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QPA-Ex-r0c">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="KKY-Qa-Chs"/>
-                                    <constraint firstAttribute="height" constant="100" id="UcS-3w-Rfc"/>
+                                    <constraint firstAttribute="height" constant="59" id="UcS-3w-Rfc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -602,7 +602,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="then turn on Antelope -- Extension and Antelope -- Privacy" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ceI-V5-uml" userLabel="Header">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Turn on Antelope!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ceI-V5-uml" userLabel="Header">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
@@ -610,7 +610,7 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="316" id="D4k-7Z-bq8"/>
                                     <constraint firstAttribute="width" constant="316" id="JlM-0s-fjI"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="316" id="VFG-fa-OKC"/>
-                                    <constraint firstAttribute="height" constant="100" id="av6-PP-V26"/>
+                                    <constraint firstAttribute="height" constant="50" id="av6-PP-V26"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="oQe-JK-trG"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -695,116 +695,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SzL-ys-46L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3073.5" y="2082"/>
-        </scene>
-        <!--Tutorial Step Four-->
-        <scene sceneID="gqN-Jx-kcC">
-            <objects>
-                <viewController storyboardIdentifier="TutorialStepFour" id="GzM-nd-OGG" customClass="TutorialStepFour" customModule="AdShield" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QxQ-yv-Chc"/>
-                        <viewControllerLayoutGuide type="bottom" id="J5w-vg-NyO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gtV-Jg-3ST">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdI-jD-iQD">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="D3w-2R-Olf"/>
-                                    <constraint firstAttribute="width" constant="200" id="aYJ-TH-F5a"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <state key="normal" title="CONTINUE"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="D3w-2R-Olf"/>
-                                        <exclude reference="aYJ-TH-F5a"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="D3w-2R-Olf"/>
-                                        <include reference="aYJ-TH-F5a"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="nextStep:" destination="fz5-ob-Quj" eventType="touchUpInside" id="brJ-83-YRZ"/>
-                                    <action selector="nextStep:" destination="GzM-nd-OGG" eventType="touchUpInside" id="jOt-Hb-O9a"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Click Content Blockers" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vXL-l9-PnJ" userLabel="Headline">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="316" id="IcU-FG-7Rn"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="TnY-VW-Btp"/>
-                                    <constraint firstAttribute="height" constant="50" id="buO-gj-qCH"/>
-                                    <constraint firstAttribute="width" constant="316" id="iUv-xS-QbL"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="iUv-xS-QbL"/>
-                                        <exclude reference="IcU-FG-7Rn"/>
-                                        <exclude reference="TnY-VW-Btp"/>
-                                        <exclude reference="buO-gj-qCH"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="iUv-xS-QbL"/>
-                                        <include reference="IcU-FG-7Rn"/>
-                                        <include reference="TnY-VW-Btp"/>
-                                        <include reference="buO-gj-qCH"/>
-                                    </mask>
-                                </variation>
-                            </textView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="wdI-jD-iQD" firstAttribute="centerX" secondItem="gtV-Jg-3ST" secondAttribute="centerX" id="0pl-zd-cmW"/>
-                            <constraint firstItem="vXL-l9-PnJ" firstAttribute="centerX" secondItem="gtV-Jg-3ST" secondAttribute="centerX" id="Bv6-LQ-j09"/>
-                            <constraint firstItem="J5w-vg-NyO" firstAttribute="top" secondItem="wdI-jD-iQD" secondAttribute="bottom" constant="100" id="MsH-hT-u4c"/>
-                            <constraint firstItem="vXL-l9-PnJ" firstAttribute="top" secondItem="QxQ-yv-Chc" secondAttribute="bottom" constant="100" id="YgC-00-70A"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="wdI-jD-iQD"/>
-                                <exclude reference="vXL-l9-PnJ"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="Bv6-LQ-j09"/>
-                                <exclude reference="YgC-00-70A"/>
-                                <exclude reference="0pl-zd-cmW"/>
-                                <exclude reference="MsH-hT-u4c"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="wdI-jD-iQD"/>
-                                <include reference="vXL-l9-PnJ"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="Bv6-LQ-j09"/>
-                                <include reference="YgC-00-70A"/>
-                                <include reference="0pl-zd-cmW"/>
-                                <include reference="MsH-hT-u4c"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <outlet property="header" destination="vXL-l9-PnJ" id="ff5-LF-4L3"/>
-                        <outlet property="nextButton" destination="wdI-jD-iQD" id="gpE-LF-1NZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ky9-Sy-UY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2350.5" y="2082"/>
+            <point key="canvasLocation" x="2311.5" y="2082"/>
         </scene>
         <!--TutorialViewController-->
         <scene sceneID="UDl-ga-dLc">

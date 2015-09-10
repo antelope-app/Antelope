@@ -19,12 +19,10 @@ class TutorialStepThree: TutorialStep
     {
         super.viewDidLoad()
         
-        let grayColor: UIColor = UIColor(netHex: 0x4d4d4d)
-        
         self.nextButton.backgroundColor = colorKit.white
-        self.nextButton.setTitleColor(grayColor, forState: UIControlState.Normal)
+        self.nextButton.setTitleColor(colorKit.yellow, forState: UIControlState.Normal)
         self.nextButton.layer.cornerRadius = 20.0
-        self.view.backgroundColor = grayColor
+        self.view.backgroundColor = colorKit.yellow
         
         let imageCeiling = header.frame.origin.y + header.frame.size.height
         let imageFloor = buttonLabel.frame.origin.y
