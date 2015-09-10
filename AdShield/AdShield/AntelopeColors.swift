@@ -8,13 +8,14 @@
 
 import UIKit
 
-class AdShieldColors {
+class AntelopeColors {
     var red: UIColor = UIColor.redColor()
     var white: UIColor = UIColor.whiteColor()
     var veryLightGrey: UIColor = UIColor(netHex: 0xcccccc)
     var teal: UIColor = UIColor(netHex: 0x75bfa4)
     var yellow: UIColor = UIColor(netHex: 0x4d4d4d)
     var magenta: UIColor = UIColor(netHex: 0xef6586)
+    var orange: UIColor = UIColor(netHex: 0xe08648)
 }
 
 extension UIColor {

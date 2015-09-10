@@ -15,7 +15,7 @@ protocol TutorialStepDelegate {
 
 class TutorialStep: UIViewController
 {
-    var colorKit = AdShieldColors()
+    var colorKit = AntelopeColors()
     var delegate: TutorialStepDelegate!
     
     override func viewDidLoad()
