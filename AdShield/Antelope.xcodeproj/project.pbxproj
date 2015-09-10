@@ -21,6 +21,14 @@
 		0F7CDDF81B9E6F65002A1F6E /* Block Trackers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F7CDDEF1B9E6F65002A1F6E /* Block Trackers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0F7CDDFD1B9E7012002A1F6E /* privacyList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDDFC1B9E7012002A1F6E /* privacyList.json */; };
 		0F7CDE0D1B9EB675002A1F6E /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDE0C1B9EB675002A1F6E /* blockerList.json */; };
+		0FF518481BA15D87006069CC /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF518471BA15D87006069CC /* ShareViewController.swift */; };
+		0FF5185F1BA1617F006069CC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF518581BA1617F006069CC /* Bolts.framework */; };
+		0FF518601BA1617F006069CC /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0FF518591BA1617F006069CC /* FacebookSDKStrings.bundle */; };
+		0FF518611BA1617F006069CC /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF5185A1BA1617F006069CC /* FBAudienceNetwork.framework */; };
+		0FF518621BA1617F006069CC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF5185B1BA1617F006069CC /* FBSDKCoreKit.framework */; };
+		0FF518631BA1617F006069CC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF5185C1BA1617F006069CC /* FBSDKLoginKit.framework */; };
+		0FF518641BA1617F006069CC /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF5185D1BA1617F006069CC /* FBSDKMessengerShareKit.framework */; };
+		0FF518651BA1617F006069CC /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF5185E1BA1617F006069CC /* FBSDKShareKit.framework */; };
 		D41A82851B95A91100A90CFE /* TutorialStepZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A82841B95A91100A90CFE /* TutorialStepZero.swift */; };
 		D4474BB51B96EB8D0021719D /* AntelopeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4474BB41B96EB8D0021719D /* AntelopeColors.swift */; };
 		D4955E2C1B958EFE0061C7D0 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */; };
@@ -104,6 +112,14 @@
 		0F7CDDF51B9E6F65002A1F6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F7CDDFC1B9E7012002A1F6E /* privacyList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = privacyList.json; sourceTree = "<group>"; };
 		0F7CDE0C1B9EB675002A1F6E /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		0FF518471BA15D87006069CC /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		0FF518581BA1617F006069CC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
+		0FF518591BA1617F006069CC /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = Frameworks/FacebookSDKStrings.bundle; sourceTree = "<group>"; };
+		0FF5185A1BA1617F006069CC /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = Frameworks/FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		0FF5185B1BA1617F006069CC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		0FF5185C1BA1617F006069CC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Frameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		0FF5185D1BA1617F006069CC /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = Frameworks/FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
+		0FF5185E1BA1617F006069CC /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Frameworks/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		D41A82841B95A91100A90CFE /* TutorialStepZero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStepZero.swift; sourceTree = "<group>"; };
 		D4474BB41B96EB8D0021719D /* AntelopeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AntelopeColors.swift; sourceTree = "<group>"; };
 		D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +137,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF518631BA1617F006069CC /* FBSDKLoginKit.framework in Frameworks */,
+				0FF5185F1BA1617F006069CC /* Bolts.framework in Frameworks */,
+				0FF518651BA1617F006069CC /* FBSDKShareKit.framework in Frameworks */,
+				0FF518621BA1617F006069CC /* FBSDKCoreKit.framework in Frameworks */,
+				0FF518611BA1617F006069CC /* FBAudienceNetwork.framework in Frameworks */,
+				0FF518641BA1617F006069CC /* FBSDKMessengerShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +212,7 @@
 				D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */,
 				D4955E2A1B958EFE0061C7D0 /* TutorialViewController.swift */,
 				D4FF1E601B9813D200712B70 /* TutorialStep.swift */,
+				0FF518471BA15D87006069CC /* ShareViewController.swift */,
 				D4FF1E681B990BAA00712B70 /* TutorialSteps */,
 				0F053E3B1B93D03000A9EFBC /* Main.storyboard */,
 				0F053E3E1B93D03000A9EFBC /* Assets.xcassets */,
@@ -245,6 +268,7 @@
 		0F053E841B94067C00A9EFBC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0FF518491BA15FC5006069CC /* Facebook SDK iOS 9 Beta */,
 				0F053E821B94066F00A9EFBC /* SafariServices.framework */,
 			);
 			name = Frameworks;
@@ -260,6 +284,20 @@
 			);
 			name = "Block Trackers";
 			path = "AdShield-Privacy";
+			sourceTree = "<group>";
+		};
+		0FF518491BA15FC5006069CC /* Facebook SDK iOS 9 Beta */ = {
+			isa = PBXGroup;
+			children = (
+				0FF518581BA1617F006069CC /* Bolts.framework */,
+				0FF518591BA1617F006069CC /* FacebookSDKStrings.bundle */,
+				0FF5185A1BA1617F006069CC /* FBAudienceNetwork.framework */,
+				0FF5185B1BA1617F006069CC /* FBSDKCoreKit.framework */,
+				0FF5185C1BA1617F006069CC /* FBSDKLoginKit.framework */,
+				0FF5185D1BA1617F006069CC /* FBSDKMessengerShareKit.framework */,
+				0FF5185E1BA1617F006069CC /* FBSDKShareKit.framework */,
+			);
+			name = "Facebook SDK iOS 9 Beta";
 			sourceTree = "<group>";
 		};
 		D4FF1E681B990BAA00712B70 /* TutorialSteps */ = {
@@ -427,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F053E421B93D03000A9EFBC /* LaunchScreen.storyboard in Resources */,
+				0FF518601BA1617F006069CC /* FacebookSDKStrings.bundle in Resources */,
 				0F053E3F1B93D03000A9EFBC /* Assets.xcassets in Resources */,
 				0F053E3D1B93D03000A9EFBC /* Main.storyboard in Resources */,
 			);
@@ -476,6 +515,7 @@
 				D4FF1E5F1B98138F00712B70 /* TutorialStepOne.swift in Sources */,
 				0F053E7C1B93ED9500A9EFBC /* ScrollViewController.m in Sources */,
 				D4FF1E611B9813D200712B70 /* TutorialStep.swift in Sources */,
+				0FF518481BA15D87006069CC /* ShareViewController.swift in Sources */,
 				D4FF1E671B990B8E00712B70 /* TutorialStepThree.swift in Sources */,
 				D4955E2C1B958EFE0061C7D0 /* ScrollViewController.swift in Sources */,
 				D4955E2D1B958EFE0061C7D0 /* TutorialViewController.swift in Sources */,
@@ -650,6 +690,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = AdShield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.antelope.Antelope;
@@ -668,6 +713,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = AdShield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.antelope.Antelope;
