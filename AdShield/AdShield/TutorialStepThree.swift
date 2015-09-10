@@ -14,7 +14,7 @@ class TutorialStepThree: TutorialStep
     @IBOutlet weak var header: UITextView!
     @IBOutlet weak var switchImage: UIImageView!
     @IBOutlet weak var buttonLabel: UILabel!
-
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()

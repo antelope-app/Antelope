@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="adshield-logo" translatesAutoresizingMaskIntoConstraints="NO" id="MT4-83-utd">
-                                <rect key="frame" x="143" y="167" width="114" height="114"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adshield-logo" translatesAutoresizingMaskIntoConstraints="NO" id="MT4-83-utd">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="6bG-WE-JYj"/>
@@ -40,21 +40,9 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MT4-83-utd" firstAttribute="centerY" secondItem="xWY-Op-7Gg" secondAttribute="centerY" id="kgI-dc-tjU"/>
-                            <constraint firstItem="MT4-83-utd" firstAttribute="centerX" secondItem="xWY-Op-7Gg" secondAttribute="centerX" id="sKE-Ks-eUB"/>
+                            <constraint firstItem="MT4-83-utd" firstAttribute="centerX" secondItem="xWY-Op-7Gg" secondAttribute="centerX" id="aCe-el-Wi3"/>
+                            <constraint firstItem="MT4-83-utd" firstAttribute="centerY" secondItem="xWY-Op-7Gg" secondAttribute="centerY" id="mei-pB-fcN"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="kgI-dc-tjU"/>
-                                <exclude reference="sKE-Ks-eUB"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="kgI-dc-tjU"/>
-                                <include reference="sKE-Ks-eUB"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
