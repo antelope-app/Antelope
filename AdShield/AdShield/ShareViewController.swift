@@ -11,13 +11,15 @@ import Foundation
 
 class ShareViewController : UIViewController {
     override func viewDidLoad() {
+        super.viewDidLoad()
         
+        configureShareButton()
     }
     
     
-    func generateShareButton() {
+    func configureShareButton() {
         let content = FBSDKShareLinkContent()
-        content.contentURL = NSURL(string: "https://www.getantelope.com/")
+        content.contentURL = NSURL(string: "https://www.facebook.com/")
         
         // TODO: add content.imageUrl for a nice shareable image
         
