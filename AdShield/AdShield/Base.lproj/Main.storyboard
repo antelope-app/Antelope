@@ -169,8 +169,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="EhK-nC-2CB"/>
-                                    <constraint firstAttribute="width" constant="150" id="u7L-ZQ-Gaf"/>
+                                    <constraint firstAttribute="height" constant="100" id="EhK-nC-2CB"/>
+                                    <constraint firstAttribute="width" constant="100" id="u7L-ZQ-Gaf"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
