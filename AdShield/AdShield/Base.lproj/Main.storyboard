@@ -169,8 +169,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="EhK-nC-2CB"/>
-                                    <constraint firstAttribute="width" constant="100" id="u7L-ZQ-Gaf"/>
+                                    <constraint firstAttribute="height" constant="150" id="EhK-nC-2CB"/>
+                                    <constraint firstAttribute="width" constant="150" id="u7L-ZQ-Gaf"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -503,7 +503,7 @@
                                     <action selector="nextStep:" destination="fz5-ob-Quj" eventType="touchUpInside" id="U7S-dn-gN1"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Next, tap on Safari" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="InG-93-g6B">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Next, tap on Safari." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="InG-93-g6B">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
@@ -675,8 +675,8 @@
                                     <constraint firstAttribute="height" constant="100" id="av6-PP-V26"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="oQe-JK-trG"/>
                                 </constraints>
-                                <string key="text">Then turn on
-Antelope -- Block Ads / Antelope -- Block Trackers</string>
+                                <string key="text">then turn on
+Block Ads / Block Trackers</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -858,7 +858,7 @@ Antelope -- Block Ads / Antelope -- Block Trackers</string>
                                     <action selector="nextStep:" destination="GzM-nd-OGG" eventType="touchUpInside" id="jOt-Hb-O9a"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Click Content Blockers" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vXL-l9-PnJ" userLabel="Headline">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Click Content Blockers," textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vXL-l9-PnJ" userLabel="Headline">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
