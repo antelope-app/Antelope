@@ -1,9 +1,9 @@
 //
 //  ActionRequestHandler.swift
-//  AdShield-Privacy
+//  Block Trackers
 //
 //  Created by Adam Gluck on 9/7/15.
-//  Copyright © 2015 AdShield. All rights reserved.
+//  Copyright © 2015 Antelope. All rights reserved.
 //
 
 import UIKit

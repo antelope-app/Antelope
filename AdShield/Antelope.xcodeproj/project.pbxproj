@@ -11,19 +11,18 @@
 		0F053E3D1B93D03000A9EFBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F053E3B1B93D03000A9EFBC /* Main.storyboard */; };
 		0F053E3F1B93D03000A9EFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F053E3E1B93D03000A9EFBC /* Assets.xcassets */; };
 		0F053E421B93D03000A9EFBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F053E401B93D03000A9EFBC /* LaunchScreen.storyboard */; };
-		0F053E4D1B93D03000A9EFBC /* AdShieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F053E4C1B93D03000A9EFBC /* AdShieldTests.swift */; };
-		0F053E581B93D03000A9EFBC /* AdShieldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F053E571B93D03000A9EFBC /* AdShieldUITests.swift */; };
+		0F053E4D1B93D03000A9EFBC /* AntelopeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F053E4C1B93D03000A9EFBC /* AntelopeTests.swift */; };
+		0F053E581B93D03000A9EFBC /* AntelopeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F053E571B93D03000A9EFBC /* AntelopeUITests.swift */; };
 		0F053E6E1B93D04200A9EFBC /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F053E6D1B93D04200A9EFBC /* ActionRequestHandler.swift */; };
-		0F053E721B93D04200A9EFBC /* AdShield-Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F053E691B93D04200A9EFBC /* AdShield-Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0F053E721B93D04200A9EFBC /* Block Ads.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F053E691B93D04200A9EFBC /* Block Ads.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0F053E7C1B93ED9500A9EFBC /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F053E7B1B93ED9500A9EFBC /* ScrollViewController.m */; };
 		0F053E831B94066F00A9EFBC /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F053E821B94066F00A9EFBC /* SafariServices.framework */; };
 		0F7CDDF41B9E6F65002A1F6E /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7CDDF31B9E6F65002A1F6E /* ActionRequestHandler.swift */; };
-		0F7CDDF81B9E6F65002A1F6E /* AdShield-Privacy.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F7CDDEF1B9E6F65002A1F6E /* AdShield-Privacy.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0F7CDDF81B9E6F65002A1F6E /* Block Trackers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0F7CDDEF1B9E6F65002A1F6E /* Block Trackers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0F7CDDFD1B9E7012002A1F6E /* privacyList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDDFC1B9E7012002A1F6E /* privacyList.json */; };
 		0F7CDE0D1B9EB675002A1F6E /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F7CDE0C1B9EB675002A1F6E /* blockerList.json */; };
 		D41A82851B95A91100A90CFE /* TutorialStepZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A82841B95A91100A90CFE /* TutorialStepZero.swift */; };
-		D4474BB51B96EB8D0021719D /* AdShieldColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4474BB41B96EB8D0021719D /* AdShieldColors.swift */; };
-		D48872AD1BA027D000337AEA /* TutorialStepFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48872AC1BA027D000337AEA /* TutorialStepFour.swift */; settings = {ASSET_TAGS = (); }; };
+		D4474BB51B96EB8D0021719D /* AntelopeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4474BB41B96EB8D0021719D /* AntelopeColors.swift */; };
 		D4955E2C1B958EFE0061C7D0 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */; };
 		D4955E2D1B958EFE0061C7D0 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4955E2A1B958EFE0061C7D0 /* TutorialViewController.swift */; };
 		D4955E2E1B958EFE0061C7D0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4955E2B1B958EFE0061C7D0 /* MainViewController.swift */; };
@@ -71,8 +70,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				0F053E721B93D04200A9EFBC /* AdShield-Extension.appex in Embed App Extensions */,
-				0F7CDDF81B9E6F65002A1F6E /* AdShield-Privacy.appex in Embed App Extensions */,
+				0F053E721B93D04200A9EFBC /* Block Ads.appex in Embed App Extensions */,
+				0F7CDDF81B9E6F65002A1F6E /* Block Trackers.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,33 +79,32 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0F053E341B93D03000A9EFBC /* AdShield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdShield.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F053E341B93D03000A9EFBC /* Antelope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Antelope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F053E371B93D03000A9EFBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F053E3C1B93D03000A9EFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F053E3E1B93D03000A9EFBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F053E411B93D03000A9EFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F053E431B93D03000A9EFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0F053E481B93D03000A9EFBC /* AdShieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdShieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F053E4C1B93D03000A9EFBC /* AdShieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdShieldTests.swift; sourceTree = "<group>"; };
+		0F053E481B93D03000A9EFBC /* AntelopeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AntelopeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F053E4C1B93D03000A9EFBC /* AntelopeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntelopeTests.swift; sourceTree = "<group>"; };
 		0F053E4E1B93D03000A9EFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0F053E531B93D03000A9EFBC /* AdShieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdShieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F053E571B93D03000A9EFBC /* AdShieldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdShieldUITests.swift; sourceTree = "<group>"; };
+		0F053E531B93D03000A9EFBC /* AntelopeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AntelopeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F053E571B93D03000A9EFBC /* AntelopeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntelopeUITests.swift; sourceTree = "<group>"; };
 		0F053E591B93D03000A9EFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0F053E691B93D04200A9EFBC /* AdShield-Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AdShield-Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F053E691B93D04200A9EFBC /* Block Ads.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Block Ads.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F053E6D1B93D04200A9EFBC /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
 		0F053E6F1B93D04200A9EFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F053E791B93ED9400A9EFBC /* AdShield-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdShield-Bridging-Header.h"; sourceTree = "<group>"; };
 		0F053E7A1B93ED9500A9EFBC /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
 		0F053E7B1B93ED9500A9EFBC /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
 		0F053E821B94066F00A9EFBC /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
-		0F7CDDEF1B9E6F65002A1F6E /* AdShield-Privacy.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AdShield-Privacy.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F7CDDEF1B9E6F65002A1F6E /* Block Trackers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Block Trackers.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7CDDF31B9E6F65002A1F6E /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
 		0F7CDDF51B9E6F65002A1F6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F7CDDFC1B9E7012002A1F6E /* privacyList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = privacyList.json; sourceTree = "<group>"; };
 		0F7CDE0C1B9EB675002A1F6E /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 		D41A82841B95A91100A90CFE /* TutorialStepZero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStepZero.swift; sourceTree = "<group>"; };
-		D4474BB41B96EB8D0021719D /* AdShieldColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdShieldColors.swift; sourceTree = "<group>"; };
-		D48872AC1BA027D000337AEA /* TutorialStepFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStepFour.swift; sourceTree = "<group>"; };
+		D4474BB41B96EB8D0021719D /* AntelopeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AntelopeColors.swift; sourceTree = "<group>"; };
 		D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		D4955E2A1B958EFE0061C7D0 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		D4955E2B1B958EFE0061C7D0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -159,11 +157,11 @@
 		0F053E2B1B93D03000A9EFBC = {
 			isa = PBXGroup;
 			children = (
-				0F053E361B93D03000A9EFBC /* AdShield */,
-				0F053E4B1B93D03000A9EFBC /* AdShieldTests */,
-				0F053E561B93D03000A9EFBC /* AdShieldUITests */,
-				0F053E6A1B93D04200A9EFBC /* AdShield-Extension */,
-				0F7CDDF01B9E6F65002A1F6E /* AdShield-Privacy */,
+				0F053E361B93D03000A9EFBC /* Antelope */,
+				0F053E4B1B93D03000A9EFBC /* AntelopeTests */,
+				0F053E561B93D03000A9EFBC /* AntelopeUITests */,
+				0F053E6A1B93D04200A9EFBC /* Block Ads */,
+				0F7CDDF01B9E6F65002A1F6E /* Block Trackers */,
 				0F053E351B93D03000A9EFBC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -171,21 +169,21 @@
 		0F053E351B93D03000A9EFBC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0F053E341B93D03000A9EFBC /* AdShield.app */,
-				0F053E481B93D03000A9EFBC /* AdShieldTests.xctest */,
-				0F053E531B93D03000A9EFBC /* AdShieldUITests.xctest */,
-				0F053E691B93D04200A9EFBC /* AdShield-Extension.appex */,
-				0F7CDDEF1B9E6F65002A1F6E /* AdShield-Privacy.appex */,
+				0F053E341B93D03000A9EFBC /* Antelope.app */,
+				0F053E481B93D03000A9EFBC /* AntelopeTests.xctest */,
+				0F053E531B93D03000A9EFBC /* AntelopeUITests.xctest */,
+				0F053E691B93D04200A9EFBC /* Block Ads.appex */,
+				0F7CDDEF1B9E6F65002A1F6E /* Block Trackers.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0F053E361B93D03000A9EFBC /* AdShield */ = {
+		0F053E361B93D03000A9EFBC /* Antelope */ = {
 			isa = PBXGroup;
 			children = (
 				0F053E7D1B93EDA400A9EFBC /* ObjC */,
 				0F053E371B93D03000A9EFBC /* AppDelegate.swift */,
-				D4474BB41B96EB8D0021719D /* AdShieldColors.swift */,
+				D4474BB41B96EB8D0021719D /* AntelopeColors.swift */,
 				D4955E2B1B958EFE0061C7D0 /* MainViewController.swift */,
 				D4955E291B958EFE0061C7D0 /* ScrollViewController.swift */,
 				D4955E2A1B958EFE0061C7D0 /* TutorialViewController.swift */,
@@ -197,34 +195,38 @@
 				0F053E431B93D03000A9EFBC /* Info.plist */,
 				0F053E841B94067C00A9EFBC /* Frameworks */,
 			);
+			name = Antelope;
 			path = AdShield;
 			sourceTree = "<group>";
 		};
-		0F053E4B1B93D03000A9EFBC /* AdShieldTests */ = {
+		0F053E4B1B93D03000A9EFBC /* AntelopeTests */ = {
 			isa = PBXGroup;
 			children = (
-				0F053E4C1B93D03000A9EFBC /* AdShieldTests.swift */,
+				0F053E4C1B93D03000A9EFBC /* AntelopeTests.swift */,
 				0F053E4E1B93D03000A9EFBC /* Info.plist */,
 			);
+			name = AntelopeTests;
 			path = AdShieldTests;
 			sourceTree = "<group>";
 		};
-		0F053E561B93D03000A9EFBC /* AdShieldUITests */ = {
+		0F053E561B93D03000A9EFBC /* AntelopeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				0F053E571B93D03000A9EFBC /* AdShieldUITests.swift */,
+				0F053E571B93D03000A9EFBC /* AntelopeUITests.swift */,
 				0F053E591B93D03000A9EFBC /* Info.plist */,
 			);
+			name = AntelopeUITests;
 			path = AdShieldUITests;
 			sourceTree = "<group>";
 		};
-		0F053E6A1B93D04200A9EFBC /* AdShield-Extension */ = {
+		0F053E6A1B93D04200A9EFBC /* Block Ads */ = {
 			isa = PBXGroup;
 			children = (
 				0F7CDE0C1B9EB675002A1F6E /* blockerList.json */,
 				0F053E6D1B93D04200A9EFBC /* ActionRequestHandler.swift */,
 				0F053E6F1B93D04200A9EFBC /* Info.plist */,
 			);
+			name = "Block Ads";
 			path = "AdShield-Extension";
 			sourceTree = "<group>";
 		};
@@ -247,13 +249,14 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		0F7CDDF01B9E6F65002A1F6E /* AdShield-Privacy */ = {
+		0F7CDDF01B9E6F65002A1F6E /* Block Trackers */ = {
 			isa = PBXGroup;
 			children = (
 				0F7CDDFC1B9E7012002A1F6E /* privacyList.json */,
 				0F7CDDF31B9E6F65002A1F6E /* ActionRequestHandler.swift */,
 				0F7CDDF51B9E6F65002A1F6E /* Info.plist */,
 			);
+			name = "Block Trackers";
 			path = "AdShield-Privacy";
 			sourceTree = "<group>";
 		};
@@ -264,7 +267,6 @@
 				D4FF1E5E1B98138E00712B70 /* TutorialStepOne.swift */,
 				D4FF1E641B99013200712B70 /* TutorialStepTwo.swift */,
 				D4FF1E661B990B8E00712B70 /* TutorialStepThree.swift */,
-				D48872AC1BA027D000337AEA /* TutorialStepFour.swift */,
 			);
 			name = TutorialSteps;
 			sourceTree = "<group>";
@@ -272,9 +274,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0F053E331B93D03000A9EFBC /* AdShield */ = {
+		0F053E331B93D03000A9EFBC /* Antelope */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F053E5C1B93D03000A9EFBC /* Build configuration list for PBXNativeTarget "AdShield" */;
+			buildConfigurationList = 0F053E5C1B93D03000A9EFBC /* Build configuration list for PBXNativeTarget "Antelope" */;
 			buildPhases = (
 				0F053E301B93D03000A9EFBC /* Sources */,
 				0F053E311B93D03000A9EFBC /* Frameworks */,
@@ -287,14 +289,14 @@
 				0F053E711B93D04200A9EFBC /* PBXTargetDependency */,
 				0F7CDDF71B9E6F65002A1F6E /* PBXTargetDependency */,
 			);
-			name = AdShield;
+			name = Antelope;
 			productName = AdShield;
-			productReference = 0F053E341B93D03000A9EFBC /* AdShield.app */;
+			productReference = 0F053E341B93D03000A9EFBC /* Antelope.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0F053E471B93D03000A9EFBC /* AdShieldTests */ = {
+		0F053E471B93D03000A9EFBC /* AntelopeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F053E5F1B93D03000A9EFBC /* Build configuration list for PBXNativeTarget "AdShieldTests" */;
+			buildConfigurationList = 0F053E5F1B93D03000A9EFBC /* Build configuration list for PBXNativeTarget "AntelopeTests" */;
 			buildPhases = (
 				0F053E441B93D03000A9EFBC /* Sources */,
 				0F053E451B93D03000A9EFBC /* Frameworks */,
@@ -305,14 +307,14 @@
 			dependencies = (
 				0F053E4A1B93D03000A9EFBC /* PBXTargetDependency */,
 			);
-			name = AdShieldTests;
+			name = AntelopeTests;
 			productName = AdShieldTests;
-			productReference = 0F053E481B93D03000A9EFBC /* AdShieldTests.xctest */;
+			productReference = 0F053E481B93D03000A9EFBC /* AntelopeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0F053E521B93D03000A9EFBC /* AdShieldUITests */ = {
+		0F053E521B93D03000A9EFBC /* AntelopeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F053E621B93D03000A9EFBC /* Build configuration list for PBXNativeTarget "AdShieldUITests" */;
+			buildConfigurationList = 0F053E621B93D03000A9EFBC /* Build configuration list for PBXNativeTarget "AntelopeUITests" */;
 			buildPhases = (
 				0F053E4F1B93D03000A9EFBC /* Sources */,
 				0F053E501B93D03000A9EFBC /* Frameworks */,
@@ -323,14 +325,14 @@
 			dependencies = (
 				0F053E551B93D03000A9EFBC /* PBXTargetDependency */,
 			);
-			name = AdShieldUITests;
+			name = AntelopeUITests;
 			productName = AdShieldUITests;
-			productReference = 0F053E531B93D03000A9EFBC /* AdShieldUITests.xctest */;
+			productReference = 0F053E531B93D03000A9EFBC /* AntelopeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		0F053E681B93D04200A9EFBC /* AdShield-Extension */ = {
+		0F053E681B93D04200A9EFBC /* Block Ads */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F053E731B93D04200A9EFBC /* Build configuration list for PBXNativeTarget "AdShield-Extension" */;
+			buildConfigurationList = 0F053E731B93D04200A9EFBC /* Build configuration list for PBXNativeTarget "Block Ads" */;
 			buildPhases = (
 				0F053E651B93D04200A9EFBC /* Sources */,
 				0F053E661B93D04200A9EFBC /* Frameworks */,
@@ -340,14 +342,14 @@
 			);
 			dependencies = (
 			);
-			name = "AdShield-Extension";
+			name = "Block Ads";
 			productName = "AdShield-Extension";
-			productReference = 0F053E691B93D04200A9EFBC /* AdShield-Extension.appex */;
+			productReference = 0F053E691B93D04200A9EFBC /* Block Ads.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		0F7CDDEE1B9E6F65002A1F6E /* AdShield-Privacy */ = {
+		0F7CDDEE1B9E6F65002A1F6E /* Block Trackers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F7CDDF91B9E6F65002A1F6E /* Build configuration list for PBXNativeTarget "AdShield-Privacy" */;
+			buildConfigurationList = 0F7CDDF91B9E6F65002A1F6E /* Build configuration list for PBXNativeTarget "Block Trackers" */;
 			buildPhases = (
 				0F7CDDEB1B9E6F65002A1F6E /* Sources */,
 				0F7CDDEC1B9E6F65002A1F6E /* Frameworks */,
@@ -357,9 +359,9 @@
 			);
 			dependencies = (
 			);
-			name = "AdShield-Privacy";
+			name = "Block Trackers";
 			productName = "AdShield-Privacy";
-			productReference = 0F7CDDEF1B9E6F65002A1F6E /* AdShield-Privacy.appex */;
+			productReference = 0F7CDDEF1B9E6F65002A1F6E /* Block Trackers.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -407,11 +409,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0F053E331B93D03000A9EFBC /* AdShield */,
-				0F053E471B93D03000A9EFBC /* AdShieldTests */,
-				0F053E521B93D03000A9EFBC /* AdShieldUITests */,
-				0F053E681B93D04200A9EFBC /* AdShield-Extension */,
-				0F7CDDEE1B9E6F65002A1F6E /* AdShield-Privacy */,
+				0F053E331B93D03000A9EFBC /* Antelope */,
+				0F053E471B93D03000A9EFBC /* AntelopeTests */,
+				0F053E521B93D03000A9EFBC /* AntelopeUITests */,
+				0F7CDDEE1B9E6F65002A1F6E /* Block Trackers */,
+				0F053E681B93D04200A9EFBC /* Block Ads */,
 			);
 		};
 /* End PBXProject section */
@@ -465,7 +467,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4FF1E651B99013200712B70 /* TutorialStepTwo.swift in Sources */,
-				D48872AD1BA027D000337AEA /* TutorialStepFour.swift in Sources */,
 				D4955E2E1B958EFE0061C7D0 /* MainViewController.swift in Sources */,
 				D41A82851B95A91100A90CFE /* TutorialStepZero.swift in Sources */,
 				D4FF1E5F1B98138F00712B70 /* TutorialStepOne.swift in Sources */,
@@ -475,7 +476,7 @@
 				D4955E2C1B958EFE0061C7D0 /* ScrollViewController.swift in Sources */,
 				D4955E2D1B958EFE0061C7D0 /* TutorialViewController.swift in Sources */,
 				0F053E381B93D03000A9EFBC /* AppDelegate.swift in Sources */,
-				D4474BB51B96EB8D0021719D /* AdShieldColors.swift in Sources */,
+				D4474BB51B96EB8D0021719D /* AntelopeColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F053E4D1B93D03000A9EFBC /* AdShieldTests.swift in Sources */,
+				0F053E4D1B93D03000A9EFBC /* AntelopeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F053E581B93D03000A9EFBC /* AdShieldUITests.swift in Sources */,
+				0F053E581B93D03000A9EFBC /* AntelopeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,22 +517,22 @@
 /* Begin PBXTargetDependency section */
 		0F053E4A1B93D03000A9EFBC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0F053E331B93D03000A9EFBC /* AdShield */;
+			target = 0F053E331B93D03000A9EFBC /* Antelope */;
 			targetProxy = 0F053E491B93D03000A9EFBC /* PBXContainerItemProxy */;
 		};
 		0F053E551B93D03000A9EFBC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0F053E331B93D03000A9EFBC /* AdShield */;
+			target = 0F053E331B93D03000A9EFBC /* Antelope */;
 			targetProxy = 0F053E541B93D03000A9EFBC /* PBXContainerItemProxy */;
 		};
 		0F053E711B93D04200A9EFBC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0F053E681B93D04200A9EFBC /* AdShield-Extension */;
+			target = 0F053E681B93D04200A9EFBC /* Block Ads */;
 			targetProxy = 0F053E701B93D04200A9EFBC /* PBXContainerItemProxy */;
 		};
 		0F7CDDF71B9E6F65002A1F6E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0F7CDDEE1B9E6F65002A1F6E /* AdShield-Privacy */;
+			target = 0F7CDDEE1B9E6F65002A1F6E /* Block Trackers */;
 			targetProxy = 0F7CDDF61B9E6F65002A1F6E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -647,7 +648,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = AdShield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adshield.AdShield;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antelope.Antelope;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AdShield/AdShield-Bridging-Header.h";
@@ -665,7 +666,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = AdShield/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adshield.AdShield;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antelope.Antelope;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AdShield/AdShield-Bridging-Header.h";
@@ -729,7 +730,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "AdShield-Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.adshield.AdShield.AdShield-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope.Block-Ads";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -745,7 +746,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "AdShield-Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.adshield.AdShield.AdShield-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope.Block-Ads";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -759,7 +760,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "AdShield-Privacy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.adshield.AdShield.AdShield-Privacy";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope.Block-Trackers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -772,7 +773,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "AdShield-Privacy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.adshield.AdShield.AdShield-Privacy";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope.Block-Trackers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -790,7 +791,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F053E5C1B93D03000A9EFBC /* Build configuration list for PBXNativeTarget "AdShield" */ = {
+		0F053E5C1B93D03000A9EFBC /* Build configuration list for PBXNativeTarget "Antelope" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F053E5D1B93D03000A9EFBC /* Debug */,
@@ -799,7 +800,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F053E5F1B93D03000A9EFBC /* Build configuration list for PBXNativeTarget "AdShieldTests" */ = {
+		0F053E5F1B93D03000A9EFBC /* Build configuration list for PBXNativeTarget "AntelopeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F053E601B93D03000A9EFBC /* Debug */,
@@ -808,7 +809,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F053E621B93D03000A9EFBC /* Build configuration list for PBXNativeTarget "AdShieldUITests" */ = {
+		0F053E621B93D03000A9EFBC /* Build configuration list for PBXNativeTarget "AntelopeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F053E631B93D03000A9EFBC /* Debug */,
@@ -817,7 +818,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F053E731B93D04200A9EFBC /* Build configuration list for PBXNativeTarget "AdShield-Extension" */ = {
+		0F053E731B93D04200A9EFBC /* Build configuration list for PBXNativeTarget "Block Ads" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F053E741B93D04200A9EFBC /* Debug */,
@@ -826,7 +827,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F7CDDF91B9E6F65002A1F6E /* Build configuration list for PBXNativeTarget "AdShield-Privacy" */ = {
+		0F7CDDF91B9E6F65002A1F6E /* Build configuration list for PBXNativeTarget "Block Trackers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F7CDDFA1B9E6F65002A1F6E /* Debug */,

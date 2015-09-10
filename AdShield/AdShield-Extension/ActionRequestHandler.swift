@@ -1,9 +1,9 @@
 //
 //  ActionRequestHandler.swift
-//  AdShield-Extension
+//  Block Ads
 //
 //  Created by Adam Gluck on 8/30/15.
-//  Copyright © 2015 AdShield. All rights reserved.
+//  Copyright © 2015 Antelope. All rights reserved.
 //
 
 import UIKit
