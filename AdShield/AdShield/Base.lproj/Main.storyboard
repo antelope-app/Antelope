@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="S1h-WZ-hAu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="S1h-WZ-hAu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -142,12 +142,12 @@
                                     </mask>
                                 </variation>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Antelope removes ads from Safari, and makes your browser load faster." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QPA-Ex-r0c">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Antelope stops Safari from downloading ads and tracking scripts, making websites feel cleaner and load faster." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QPA-Ex-r0c">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="KKY-Qa-Chs"/>
-                                    <constraint firstAttribute="height" constant="59" id="UcS-3w-Rfc"/>
+                                    <constraint firstAttribute="height" constant="100" id="UcS-3w-Rfc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -664,7 +664,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Turn on Antelope!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ceI-V5-uml" userLabel="Header">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="then turn on Antelope -- Extension and Antelope -- Privacy" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ceI-V5-uml" userLabel="Header">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
@@ -672,7 +672,7 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="316" id="D4k-7Z-bq8"/>
                                     <constraint firstAttribute="width" constant="316" id="JlM-0s-fjI"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="316" id="VFG-fa-OKC"/>
-                                    <constraint firstAttribute="height" constant="50" id="av6-PP-V26"/>
+                                    <constraint firstAttribute="height" constant="100" id="av6-PP-V26"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="oQe-JK-trG"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -762,7 +762,7 @@
         <!--Tutorial Step Four-->
         <scene sceneID="gqN-Jx-kcC">
             <objects>
-                <viewController storyboardIdentifier="TutorialStepFour" id="GzM-nd-OGG" customClass="TutorialStepFour" customModule="AdShield" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TutorialStepFour" id="GzM-nd-OGG" customClass="TutorialStepFour" customModule="Antelope" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QxQ-yv-Chc"/>
                         <viewControllerLayoutGuide type="bottom" id="J5w-vg-NyO"/>
@@ -826,37 +826,65 @@
                                     </mask>
                                 </variation>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="content-blocker-screenshot" translatesAutoresizingMaskIntoConstraints="NO" id="jAo-1E-yNj">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="8qU-mG-qkS"/>
+                                    <constraint firstAttribute="width" constant="240" id="aHq-Ln-WSz"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8qU-mG-qkS"/>
+                                        <exclude reference="aHq-Ln-WSz"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8qU-mG-qkS"/>
+                                        <include reference="aHq-Ln-WSz"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wdI-jD-iQD" firstAttribute="centerX" secondItem="gtV-Jg-3ST" secondAttribute="centerX" id="0pl-zd-cmW"/>
+                            <constraint firstItem="jAo-1E-yNj" firstAttribute="centerX" secondItem="gtV-Jg-3ST" secondAttribute="centerX" id="6Dr-4s-pYc"/>
                             <constraint firstItem="vXL-l9-PnJ" firstAttribute="centerX" secondItem="gtV-Jg-3ST" secondAttribute="centerX" id="Bv6-LQ-j09"/>
                             <constraint firstItem="J5w-vg-NyO" firstAttribute="top" secondItem="wdI-jD-iQD" secondAttribute="bottom" constant="100" id="MsH-hT-u4c"/>
+                            <constraint firstItem="jAo-1E-yNj" firstAttribute="centerY" secondItem="gtV-Jg-3ST" secondAttribute="centerY" id="VgH-dk-axh"/>
                             <constraint firstItem="vXL-l9-PnJ" firstAttribute="top" secondItem="QxQ-yv-Chc" secondAttribute="bottom" constant="100" id="YgC-00-70A"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="wdI-jD-iQD"/>
                                 <exclude reference="vXL-l9-PnJ"/>
+                                <exclude reference="jAo-1E-yNj"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="MsH-hT-u4c"/>
-                                <exclude reference="0pl-zd-cmW"/>
                                 <exclude reference="Bv6-LQ-j09"/>
                                 <exclude reference="YgC-00-70A"/>
+                                <exclude reference="6Dr-4s-pYc"/>
+                                <exclude reference="VgH-dk-axh"/>
+                                <exclude reference="0pl-zd-cmW"/>
+                                <exclude reference="MsH-hT-u4c"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="wdI-jD-iQD"/>
                                 <include reference="vXL-l9-PnJ"/>
+                                <include reference="jAo-1E-yNj"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="MsH-hT-u4c"/>
-                                <include reference="0pl-zd-cmW"/>
                                 <include reference="Bv6-LQ-j09"/>
                                 <include reference="YgC-00-70A"/>
+                                <include reference="6Dr-4s-pYc"/>
+                                <include reference="VgH-dk-axh"/>
+                                <include reference="0pl-zd-cmW"/>
+                                <include reference="MsH-hT-u4c"/>
                             </mask>
                         </variation>
                     </view>
@@ -925,6 +953,7 @@
     </scenes>
     <resources>
         <image name="adshield-logo" width="300" height="300"/>
+        <image name="content-blocker-screenshot" width="500" height="500"/>
         <image name="safari-screenshot" width="500" height="500"/>
         <image name="settings-icon" width="256" height="256"/>
     </resources>

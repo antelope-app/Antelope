@@ -52,7 +52,7 @@ class TutorialStepZero: TutorialStep
         barTwo.backgroundColor = colorKit.veryLightGrey
         barTwo.hidden = false
         
-        let translationDistance: CGFloat = 125.0
+        let translationDistance: CGFloat = 140.0
         
         let headerFrame = self.stepZeroHeader.frame
         self.stepZeroSubheader.frame.origin.y = headerFrame.origin.y + headerFrame.size.height
