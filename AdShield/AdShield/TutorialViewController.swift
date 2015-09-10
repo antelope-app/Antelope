@@ -46,6 +46,7 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
         tutorialStepThree = storyboard.instantiateViewControllerWithIdentifier("TutorialStepThree") as? TutorialStepThree
         tutorialStepThree.delegate = self
         
+        
         viewControllersForSteps = [tutorialStepZero, tutorialStepOne, tutorialStepTwo, tutorialStepThree]
         self.pageControl.numberOfPages = viewControllersForSteps.count
         
