@@ -388,12 +388,12 @@
                                     </mask>
                                 </variation>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings-icon" translatesAutoresizingMaskIntoConstraints="NO" id="KCX-Q8-9IC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings-screenshot" translatesAutoresizingMaskIntoConstraints="NO" id="KCX-Q8-9IC">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="1MZ-e4-dAI"/>
-                                    <constraint firstAttribute="width" constant="120" id="IYz-dR-vZu"/>
+                                    <constraint firstAttribute="height" constant="186" id="1MZ-e4-dAI"/>
+                                    <constraint firstAttribute="width" constant="240" id="IYz-dR-vZu"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -664,7 +664,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="then turn on Antelope -- Extension and Antelope -- Privacy" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ceI-V5-uml" userLabel="Header">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ceI-V5-uml" userLabel="Header">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
@@ -675,6 +675,8 @@
                                     <constraint firstAttribute="height" constant="100" id="av6-PP-V26"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="oQe-JK-trG"/>
                                 </constraints>
+                                <string key="text">Then turn on
+Antelope -- Block Ads / Antelope -- Block Trackers</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -699,16 +701,63 @@
                                     </mask>
                                 </variation>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="switches-screenshot" translatesAutoresizingMaskIntoConstraints="NO" id="YuF-tw-7Lr">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="3Uq-wg-Z2n"/>
+                                    <constraint firstAttribute="height" constant="186" id="iNf-sn-NhP"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="iNf-sn-NhP"/>
+                                        <exclude reference="3Uq-wg-Z2n"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="iNf-sn-NhP"/>
+                                        <include reference="3Uq-wg-Z2n"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Afterwards, wait a minute and restart Safari" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oFy-mF-tYR">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="M8a-FE-9Uj"/>
+                                    <constraint firstAttribute="width" constant="280" id="bD8-E7-JDh"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="M8a-FE-9Uj"/>
+                                        <exclude reference="bD8-E7-JDh"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="M8a-FE-9Uj"/>
+                                        <include reference="bD8-E7-JDh"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oFy-mF-tYR" firstAttribute="centerX" secondItem="W38-D1-EAu" secondAttribute="centerX" id="8RP-2K-7kV"/>
                             <constraint firstItem="3xp-Y7-S7b" firstAttribute="top" secondItem="l0T-To-OKq" secondAttribute="bottom" constant="8" id="8qM-CS-o4k">
                                 <variation key="heightClass=regular-widthClass=compact" constant="5"/>
                             </constraint>
                             <constraint firstItem="l0T-To-OKq" firstAttribute="centerX" secondItem="W38-D1-EAu" secondAttribute="centerX" id="A8k-qT-Uz7"/>
-                            <constraint firstItem="ceI-V5-uml" firstAttribute="top" secondItem="96x-yz-4zI" secondAttribute="bottom" constant="100" id="T8B-Y1-DAM"/>
+                            <constraint firstItem="YuF-tw-7Lr" firstAttribute="centerX" secondItem="W38-D1-EAu" secondAttribute="centerX" id="Mr4-iP-eqf"/>
+                            <constraint firstItem="YuF-tw-7Lr" firstAttribute="centerY" secondItem="W38-D1-EAu" secondAttribute="centerY" id="QG4-3f-1z5"/>
+                            <constraint firstItem="ceI-V5-uml" firstAttribute="top" secondItem="96x-yz-4zI" secondAttribute="bottom" constant="80" id="T8B-Y1-DAM"/>
                             <constraint firstItem="ceI-V5-uml" firstAttribute="top" secondItem="96x-yz-4zI" secondAttribute="bottom" constant="100" id="Yd9-bA-1Y9"/>
+                            <constraint firstItem="oFy-mF-tYR" firstAttribute="top" secondItem="YuF-tw-7Lr" secondAttribute="bottom" id="ZGr-vo-E7x"/>
                             <constraint firstItem="x2k-1E-ZFx" firstAttribute="top" secondItem="3xp-Y7-S7b" secondAttribute="bottom" constant="100" id="f5Y-Yn-HYm"/>
                             <constraint firstItem="3xp-Y7-S7b" firstAttribute="centerX" secondItem="W38-D1-EAu" secondAttribute="centerX" id="gsY-5D-V1F"/>
                             <constraint firstItem="ceI-V5-uml" firstAttribute="centerX" secondItem="W38-D1-EAu" secondAttribute="centerX" id="jEd-Jp-3QT"/>
@@ -719,16 +768,22 @@
                                 <exclude reference="3xp-Y7-S7b"/>
                                 <exclude reference="l0T-To-OKq"/>
                                 <exclude reference="ceI-V5-uml"/>
+                                <exclude reference="YuF-tw-7Lr"/>
+                                <exclude reference="oFy-mF-tYR"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="f5Y-Yn-HYm"/>
-                                <exclude reference="8qM-CS-o4k"/>
-                                <exclude reference="gsY-5D-V1F"/>
-                                <exclude reference="A8k-qT-Uz7"/>
                                 <exclude reference="T8B-Y1-DAM"/>
                                 <exclude reference="Yd9-bA-1Y9"/>
                                 <exclude reference="jEd-Jp-3QT"/>
                                 <exclude reference="ztD-aW-KsK"/>
+                                <exclude reference="Mr4-iP-eqf"/>
+                                <exclude reference="QG4-3f-1z5"/>
+                                <exclude reference="8RP-2K-7kV"/>
+                                <exclude reference="ZGr-vo-E7x"/>
+                                <exclude reference="A8k-qT-Uz7"/>
+                                <exclude reference="8qM-CS-o4k"/>
+                                <exclude reference="gsY-5D-V1F"/>
+                                <exclude reference="f5Y-Yn-HYm"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -736,16 +791,22 @@
                                 <include reference="3xp-Y7-S7b"/>
                                 <include reference="l0T-To-OKq"/>
                                 <include reference="ceI-V5-uml"/>
+                                <include reference="YuF-tw-7Lr"/>
+                                <include reference="oFy-mF-tYR"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="f5Y-Yn-HYm"/>
-                                <include reference="8qM-CS-o4k"/>
-                                <include reference="gsY-5D-V1F"/>
-                                <include reference="A8k-qT-Uz7"/>
                                 <include reference="T8B-Y1-DAM"/>
                                 <exclude reference="Yd9-bA-1Y9"/>
                                 <include reference="jEd-Jp-3QT"/>
                                 <exclude reference="ztD-aW-KsK"/>
+                                <include reference="Mr4-iP-eqf"/>
+                                <include reference="QG4-3f-1z5"/>
+                                <include reference="8RP-2K-7kV"/>
+                                <include reference="ZGr-vo-E7x"/>
+                                <include reference="A8k-qT-Uz7"/>
+                                <include reference="8qM-CS-o4k"/>
+                                <include reference="gsY-5D-V1F"/>
+                                <include reference="f5Y-Yn-HYm"/>
                             </mask>
                         </variation>
                     </view>
@@ -955,6 +1016,7 @@
         <image name="adshield-logo" width="300" height="300"/>
         <image name="content-blocker-screenshot" width="500" height="500"/>
         <image name="safari-screenshot" width="500" height="500"/>
-        <image name="settings-icon" width="256" height="256"/>
+        <image name="settings-screenshot" width="500" height="386"/>
+        <image name="switches-screenshot" width="500" height="387"/>
     </resources>
 </document>

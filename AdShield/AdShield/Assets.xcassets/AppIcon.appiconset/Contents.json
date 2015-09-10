@@ -1,8 +1,9 @@
 {
   "images" : [
     {
-      "idiom" : "iphone",
       "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "antelope-green-58.png",
       "scale" : "2x"
     },
     {
@@ -11,8 +12,9 @@
       "scale" : "3x"
     },
     {
-      "idiom" : "iphone",
       "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "antelope-green-80.png",
       "scale" : "2x"
     },
     {
@@ -23,7 +25,7 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "pink-yellow.png",
+      "filename" : "antelope-green-120.png",
       "scale" : "2x"
     },
     {
