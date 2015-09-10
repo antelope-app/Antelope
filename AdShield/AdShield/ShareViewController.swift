@@ -19,11 +19,12 @@ class ShareViewController : UIViewController {
     
     func configureShareButton() {
         let content = FBSDKShareLinkContent()
-        content.contentURL = NSURL(string: "https://www.facebook.com/")
-        
+        content.contentURL = NSURL(string: "http://www.getantelope.com/")
+
         // TODO: add content.imageUrl for a nice shareable image
         
         let shareButton = FBSDKShareButton()
+        shareButton.shareContent = content
         shareButton.center = self.view.center
         self.view.addSubview(shareButton)
     }
