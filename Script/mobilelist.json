@@ -115,5 +115,14 @@
         "trigger" : {
             "url-filter" : ".*"
         }
+    },
+    {
+        "action" : {
+            "type" : "css-display-none",
+            "selector" : "div[class=\"ad top-left-ad\"]"
+        },
+        "trigger" : {
+            "url-filter" : "https?://([^/:]*\\.)nytimes.com"
+        }
     }
 ]
