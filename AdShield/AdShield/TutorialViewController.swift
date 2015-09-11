@@ -75,7 +75,7 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate, ShareV
     }
     
     func restartTutorial() {
-        self.scrollToViewControllerAtIndex(0)
+        self.scrollToViewControllerAtIndex(1)
     }
     
     func finishTutorial()

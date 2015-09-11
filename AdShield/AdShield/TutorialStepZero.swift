@@ -15,6 +15,8 @@ class TutorialStepZero: TutorialStep
     @IBOutlet weak var stepZeroHeader: UITextView!
     @IBOutlet weak var stepZeroSubheader: UITextView!
     @IBOutlet weak var stepZeroHeaderImage: UIImageView!
+    @IBOutlet weak var secondSubHeader: UITextView!
+    @IBOutlet weak var thirdSubHeader: UITextView!
     
     var overlaySoft: UIView = UIView()
     var overlayHard: UIView = UIView()
@@ -27,11 +29,15 @@ class TutorialStepZero: TutorialStep
         
         let buttonOptions: [ String: String ] = [ "color": "teal" ]
         nextButton = self.borderButtonStyle(nextButton, options: buttonOptions)
-        //stepZeroHeaderImage.alpha = 0
         stepZeroSubheader = self.paragraphStyle(stepZeroSubheader)
         
-        barOne.hidden = true
-        barTwo.hidden = true
+        secondSubHeader.hidden = true
+        secondSubHeader.text = "You'll use less data, see way fewer ads, have better battery life, and stop being tracked on the web."
+        secondSubHeader = self.paragraphStyle(secondSubHeader)
+        
+        thirdSubHeader.hidden = true
+        thirdSubHeader.text = "Antelope receives none of your browsing data, and it's entirely open-source."
+        thirdSubHeader = self.paragraphStyle(thirdSubHeader)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -44,21 +50,35 @@ class TutorialStepZero: TutorialStep
     }
     
     func initialize() {
-        barOne.frame = CGRectMake(barOne.frame.origin.x, barOne.frame.origin.y, 0, 2)
-        barOne.backgroundColor = colorKit.veryLightGrey
-        barOne.hidden = false
-        barTwo.frame = CGRectMake(barTwo.frame.origin.x, barTwo.frame.origin.y, 0, 2)
-        barTwo.backgroundColor = colorKit.veryLightGrey
-        barTwo.hidden = false
         
         let translationDistance: CGFloat = 140.0
         
         let headerFrame = self.stepZeroHeader.frame
         self.stepZeroSubheader.frame.origin.y = headerFrame.origin.y + headerFrame.size.height
-        let inset: CGFloat = 25.0
-        let distanceFromToBeLogoToTop = self.logoImage.frame.origin.y - translationDistance
-        //self.stepZeroHeaderImage.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, 0)
-        //self.stepZeroHeaderImage.alpha = 0.15
+        
+        self.secondSubHeader.frame = stepZeroSubheader.frame
+        self.secondSubHeader.frame.origin.x = self.view.frame.size.width
+        self.secondSubHeader.hidden = false
+        
+        self.delay(5.0, closure: {
+            UIView.animateWithDuration(0.5, animations: {
+                let anchor = self.stepZeroSubheader.frame.origin.x
+                self.stepZeroSubheader.frame.origin.x = 0 - self.stepZeroSubheader.frame.size.width
+                self.secondSubHeader.frame.origin.x = anchor
+            })
+        })
+        
+        self.thirdSubHeader.frame = self.secondSubHeader.frame
+        self.thirdSubHeader.frame.origin.x = self.view.frame.size.width
+        self.thirdSubHeader.hidden = false
+        
+        self.delay(10.0, closure: {
+            UIView.animateWithDuration(0.5, animations: {
+                let anchor = self.secondSubHeader.frame.origin.x
+                self.secondSubHeader.frame.origin.x = 0 - self.secondSubHeader.frame.size.width
+                self.thirdSubHeader.frame.origin.x = anchor
+            })
+        })
         
         UIView.animateWithDuration(0.7, delay: 0, options: .CurveEaseInOut, animations: {
             // LOGO MOVING

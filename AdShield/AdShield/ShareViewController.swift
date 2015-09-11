@@ -66,7 +66,7 @@ class ShareViewController : UIViewController {
         shareHeader.center.y = fbShareImage.frame.origin.y - (fbShareImage.frame.origin.y - topFrame.frame.size.height) / 2
         shareHeader.textAlignment = NSTextAlignment.Center
         shareHeader.textColor = colorKit.charcoal
-        shareHeader.font = UIFont.systemFontOfSize(20.0)
+        shareHeader.font = UIFont.systemFontOfSize(22.0)
         shareHeader.text = "Or, share with friends."
         self.view.addSubview(shareHeader)
         
@@ -75,6 +75,10 @@ class ShareViewController : UIViewController {
         fbShareText.frame.origin.x = self.view.center.x - 25
         fbShareText.frame.origin.y = fbShareImage.frame.origin.y - 10
         fbShareText.text = self.fbShareDescription
+        let textStyle = NSMutableParagraphStyle()
+        textStyle.lineSpacing = 3
+        let attributes = [NSParagraphStyleAttributeName: textStyle, NSFontAttributeName: UIFont.systemFontOfSize(11.0)]
+        fbShareText.attributedText = NSAttributedString(string: fbShareText.text, attributes: attributes)
         fbShareText.textColor = colorKit.charcoal
         fbShareText.userInteractionEnabled = false
         self.view.addSubview(fbShareText)
