@@ -13,13 +13,11 @@ protocol TutorialStepDelegate {
     func finishTutorial()
 }
 
-class TutorialStep: UIViewController
-{
+class TutorialStep: UIViewController {
     var colorKit = AntelopeColors()
     var delegate: TutorialStepDelegate!
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
     }
     
@@ -51,8 +49,7 @@ class TutorialStep: UIViewController
         return text
     }
     
-    func delay(delay:Double, closure:()->())
-    {
+    func delay(delay:Double, closure:()->()) {
         dispatch_after(
             dispatch_time(
                 DISPATCH_TIME_NOW,

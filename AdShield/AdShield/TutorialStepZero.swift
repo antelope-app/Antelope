@@ -22,8 +22,7 @@ class TutorialStepZero: TutorialStep
     @IBOutlet weak var barTwo: UIView!
     @IBOutlet weak var barOne: UIView!
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         let buttonOptions: [ String: String ] = [ "color": "teal" ]
@@ -35,11 +34,11 @@ class TutorialStepZero: TutorialStep
         barTwo.hidden = true
     }
     
-    override func viewDidAppear(animated: Bool)
-    {
+    override func viewDidAppear(animated: Bool) {
         
         
     }
+    
     @IBAction func nextStep(sender: UIButton) {
         delegate.nextStep(0)
     }

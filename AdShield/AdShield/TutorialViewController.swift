@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TutorialViewController: ScrollViewController, TutorialStepDelegate {
+class TutorialViewController: ScrollViewController, TutorialStepDelegate, ShareViewDelegate {
     @IBOutlet weak var tutorialSplash: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -25,8 +25,7 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
     
     var viewControllersForSteps: [UIViewController] = []
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.redColor()
@@ -51,6 +50,7 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
         tutorialStepThree.delegate = self
         
         let shareViewController = ShareViewController()
+        shareViewController.delegate = self
         
         viewControllersForSteps = [tutorialStepZero, tutorialStepOne, tutorialStepTwo, tutorialStepFour, tutorialStepThree, shareViewController]
         self.pageControl.numberOfPages = Int(viewControllersForSteps.count) - 1
@@ -62,8 +62,7 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
         
     }
     
-    func nextStep(index: NSInteger)
-    {
+    func nextStep(index: NSInteger) {
         
         if self.absoluteStep < self.childViewControllers.count - 1 {
             self.absoluteStep++
@@ -71,9 +70,12 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
         self.scrollToViewControllerAtIndex(index + 1)
     }
     
-    func startTutorial()
-    {
+    func startTutorial() {
         self.tutorialStepZero.initialize()
+    }
+    
+    func restartTutorial() {
+        self.scrollToViewControllerAtIndex(0)
     }
     
     func finishTutorial()
@@ -106,8 +108,7 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
         self.scrollToViewControllerAtIndex(pageNumber)
     }
     
-    override func scrollToViewControllerAtIndex(index: NSInteger)
-    {
+    override func scrollToViewControllerAtIndex(index: NSInteger) {
         super.scrollToViewControllerAtIndex(index)
     }
     

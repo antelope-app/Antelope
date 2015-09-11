@@ -13,8 +13,7 @@ class TutorialStepOne: TutorialStep
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var headline: UITextView!
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         let buttonOptions: [String: String] = ["color": "white"]
@@ -26,17 +25,14 @@ class TutorialStepOne: TutorialStep
     }
     
     
-    @IBAction func nextStep(sender: UIButton)
-    {
+    @IBAction func nextStep(sender: UIButton) {
         print(self.view.frame.size.width)
         delegate.nextStep(1)
     }
     
-    override func viewDidAppear(animated: Bool)
-    {
+    override func viewDidAppear(animated: Bool) {
     }
     
-    func initialize()
-    {
+    func initialize() {
     }
 }
