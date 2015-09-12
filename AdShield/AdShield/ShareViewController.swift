@@ -68,6 +68,7 @@ class ShareViewController : UIViewController {
         shareHeader.textColor = colorKit.charcoal
         shareHeader.font = UIFont.systemFontOfSize(22.0)
         shareHeader.text = "Or, share with friends."
+        shareHeader.userInteractionEnabled = false
         self.view.addSubview(shareHeader)
         
         let fbShareText = UITextView()
