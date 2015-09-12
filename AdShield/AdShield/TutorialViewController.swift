@@ -94,8 +94,6 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate, ShareV
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        print("did scroll")
-        
         let totalWidth: CGFloat = self.scrollView.frame.size.width
         let pageNumber: Int = Int(floor(self.scrollView.contentOffset.x - totalWidth/50) / totalWidth + 1)
         
@@ -103,7 +101,6 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate, ShareV
     }
     
     @IBAction func pageChanged(sender: AnyObject) {
-        print("page changed")
         let pageNumber: Int = self.pageControl.currentPage
         self.scrollToViewControllerAtIndex(pageNumber)
     }
