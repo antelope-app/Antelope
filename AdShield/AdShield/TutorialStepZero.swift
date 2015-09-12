@@ -60,7 +60,7 @@ class TutorialStepZero: TutorialStep
         self.secondSubHeader.frame.origin.x = self.view.frame.size.width
         self.secondSubHeader.hidden = false
         
-        self.delay(5.0, closure: {
+        self.delay(7.0, closure: {
             UIView.animateWithDuration(0.5, animations: {
                 let anchor = self.stepZeroSubheader.frame.origin.x
                 self.stepZeroSubheader.frame.origin.x = 0 - self.stepZeroSubheader.frame.size.width
@@ -72,7 +72,7 @@ class TutorialStepZero: TutorialStep
         self.thirdSubHeader.frame.origin.x = self.view.frame.size.width
         self.thirdSubHeader.hidden = false
         
-        self.delay(10.0, closure: {
+        self.delay(14.0, closure: {
             UIView.animateWithDuration(0.5, animations: {
                 let anchor = self.secondSubHeader.frame.origin.x
                 self.secondSubHeader.frame.origin.x = 0 - self.secondSubHeader.frame.size.width

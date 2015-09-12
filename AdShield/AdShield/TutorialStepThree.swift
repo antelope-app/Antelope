@@ -33,12 +33,10 @@ class TutorialStepThree: TutorialStep
         //self.switchImage.frame = CGRectMake(switchImage.frame.origin.x, imagePosY, switchImage.frame.size.width, switchImage.frame.size.height)
     }
     
-    @IBAction func nextStep(sender: UIButton)
-    {
+    @IBAction func nextStep(sender: UIButton) {
         delegate.finishTutorial()
     }
     
-    func initialize()
-    {
+    func initialize() {
     }
 }
