@@ -30,7 +30,7 @@ class MainViewController: UIViewController {
         }
         
         // Auto-reload content blocker when view loads
-        SFContentBlockerManager.reloadContentBlockerWithIdentifier("com.antelope.Antelope.Block-Ads") { (error) -> Void in
+        SFContentBlockerManager.reloadContentBlockerWithIdentifier("com.antelope.Antelope-Ad-Blocker.Block-Ads") { (error) -> Void in
             if let error = error {
                 print("Failed to load with \(error).")
             } else {
@@ -38,7 +38,7 @@ class MainViewController: UIViewController {
             }
         }
         
-        SFContentBlockerManager.reloadContentBlockerWithIdentifier("com.antelope.Antelope.Block-Trackers") { (error) -> Void in
+        SFContentBlockerManager.reloadContentBlockerWithIdentifier("com.antelope.Antelope-Ad-Blocker.Block-Trackers") { (error) -> Void in
             if let error = error {
                 print("Failed to load with \(error).")
             } else {
