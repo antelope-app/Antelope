@@ -169,8 +169,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="EhK-nC-2CB"/>
-                                    <constraint firstAttribute="width" constant="100" id="u7L-ZQ-Gaf"/>
+                                    <constraint firstAttribute="height" constant="110" id="EhK-nC-2CB"/>
+                                    <constraint firstAttribute="width" constant="110" id="u7L-ZQ-Gaf"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -282,14 +282,14 @@
                                 <exclude reference="mJj-31-Pqa"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="BkN-P2-D1g"/>
+                                <exclude reference="vIg-Ht-hNS"/>
                                 <exclude reference="gLA-0a-8lH"/>
-                                <exclude reference="5KF-jX-E5l"/>
                                 <exclude reference="2Mf-JQ-V0s"/>
                                 <exclude reference="Qcg-9z-YZb"/>
+                                <exclude reference="BkN-P2-D1g"/>
+                                <exclude reference="5KF-jX-E5l"/>
                                 <exclude reference="O3J-Nj-EBV"/>
                                 <exclude reference="bQe-Tx-IQm"/>
-                                <exclude reference="vIg-Ht-hNS"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -302,14 +302,14 @@
                                 <include reference="mJj-31-Pqa"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="BkN-P2-D1g"/>
+                                <include reference="vIg-Ht-hNS"/>
                                 <include reference="gLA-0a-8lH"/>
-                                <include reference="5KF-jX-E5l"/>
                                 <include reference="2Mf-JQ-V0s"/>
                                 <include reference="Qcg-9z-YZb"/>
+                                <include reference="BkN-P2-D1g"/>
+                                <include reference="5KF-jX-E5l"/>
                                 <include reference="O3J-Nj-EBV"/>
                                 <include reference="bQe-Tx-IQm"/>
-                                <include reference="vIg-Ht-hNS"/>
                             </mask>
                         </variation>
                     </view>
