@@ -54,7 +54,7 @@ class ShareViewController : UIViewController {
         let fbShareImage = UIImageView()
         fbShareImage.frame.size = CGSizeMake(100, 100)
         fbShareImage.center.y = topFrame.frame.size.height + (self.view.frame.size.height - topFrame.frame.size.height) / 2
-        fbShareImage.frame.origin.x = self.view.center.x - fbShareImage.frame.size.width - 30
+        fbShareImage.frame.origin.x = self.view.center.x - fbShareImage.frame.size.width - 45
         fbShareImage.contentMode = UIViewContentMode.ScaleAspectFill
         let image = UIImage(named: "antelope-green-large.png")
         fbShareImage.image = image
@@ -71,10 +71,21 @@ class ShareViewController : UIViewController {
         shareHeader.userInteractionEnabled = false
         self.view.addSubview(shareHeader)
         
+        let fbShareTitle = UITextView()
+        fbShareTitle.frame.size = CGSizeMake(self.view.frame.size.width - (fbShareImage.frame.origin.x * 2) - fbShareImage.frame.size.width - 10, 45)
+        fbShareTitle.frame.origin.x = self.view.center.x - 35
+        fbShareTitle.frame.origin.y = fbShareImage.frame.origin.y - 10
+        fbShareTitle.text = self.fbShareTitle
+        let titleAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(14.0)]
+        fbShareTitle.attributedText = NSAttributedString(string: fbShareTitle.text, attributes: titleAttributes)
+        fbShareTitle.textColor = colorKit.charcoal
+        fbShareTitle.userInteractionEnabled = false
+        self.view.addSubview(fbShareTitle)
+        
         let fbShareText = UITextView()
         fbShareText.frame.size = CGSizeMake(self.view.frame.size.width - (fbShareImage.frame.origin.x * 2) - fbShareImage.frame.size.width - 10, 150)
-        fbShareText.frame.origin.x = self.view.center.x - 25
-        fbShareText.frame.origin.y = fbShareImage.frame.origin.y - 10
+        fbShareText.frame.origin.x = self.view.center.x - 35
+        fbShareText.frame.origin.y = fbShareImage.frame.origin.y + fbShareTitle.frame.size.height - 15
         fbShareText.text = self.fbShareDescription
         let textStyle = NSMutableParagraphStyle()
         textStyle.lineSpacing = 3
