@@ -16,8 +16,6 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("main view controller view did load")
-        
         self.view.frame = UIScreen.mainScreen().bounds
         self.view.addSubview(self.splashView)
         self.splashView.backgroundColor = UIColor.blackColor()
@@ -48,9 +46,6 @@ class MainViewController: UIViewController {
     }
     
     func startTutorial() {
-        
-        print("starting tutorial")
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         tutorialViewController = storyboard.instantiateViewControllerWithIdentifier("TutorialViewController") as? TutorialViewController
         

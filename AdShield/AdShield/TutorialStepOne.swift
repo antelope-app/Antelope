@@ -26,7 +26,6 @@ class TutorialStepOne: TutorialStep
     
     
     @IBAction func nextStep(sender: UIButton) {
-        print(self.view.frame.size.width)
         delegate.nextStep(1)
     }
     
