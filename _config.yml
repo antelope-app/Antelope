@@ -7,8 +7,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "/AdShield" # the subpath of your site, e.g. /blog/
 url: "http://www.getantelope.com" # the base hostname & protocol for your site
-twitter_username: adshield
-github_username:  adshield
+twitter_username: antelope
+github_username:  antelope
 
 # Build settings
 markdown: kramdown
