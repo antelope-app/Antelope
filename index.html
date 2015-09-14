@@ -18,7 +18,7 @@ js: index
 
     var secondExampleStartKeyFrame = firstAsyncLoadKeyFrame + withoutAntelopeAsyncLoadTime + 2200
     var secondLoadKeyFrame = 3300
-    var withAntelopeLoadTime = 2000
+    var withAntelopeLoadTime = 2040
     /*
     var oldHeight = $('#top-section').height()
     var wHeight = $(window).height()
@@ -32,6 +32,8 @@ js: index
     }, 2000)
 
     function startVideoPresentation() {
+
+      $("#video-container").addClass("shift")
 
       var video = $('#video').get(0).play()
 
@@ -100,7 +102,13 @@ js: index
         $('#with-antelope-subheader').addClass("show")
 
         barCounter.start(function() {
+          $('#with-antelope-async-load-bar').addClass("expanded")
+          $('#with-antelope-async-load-bar').addClass("show")
           $('#with-antelope-subheader').text("Done at " + loadTimeInSeconds + " seconds")
+
+          $timeout(function() {
+            $('#methodology-description').addClass("show")
+          }, 1500)
         })
 
       }, secondLoadKeyFrame)
@@ -128,7 +136,7 @@ js: index
         <img src="{{ site.baseurl }}/images/phone-frame.png" width="280" height="auto"/>
         <video width="260" height="auto" id="video">
           <source src="{{ site.baseurl }}/images/PhoneScreenView.mp4" type="video/mp4">
-          Videos not supported in your browser.
+          Videos not supported by your browser.
         </video>
 
         <div id="video-text-container">
@@ -156,6 +164,14 @@ js: index
           <div class="bar" id="with-antelope-load-bar">
             <div class="bar-timer" id="with-antelope-load-bar-counter">0.0s</div>
           </div>
+
+          <div class="bar magenta" id="with-antelope-async-load-bar">
+            <div class="bar-timer" id="with-antelope-async-load-bar-counter">0.0s</div>
+          </div>
+
+          <p id="methodology-description">
+            The browser cache was cleared both times before loading using the same Internet connection.
+          </p>
 
         </div>
 
