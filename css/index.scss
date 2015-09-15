@@ -230,7 +230,7 @@ section#top-section {
 
 		#methodology-description {
 			font-size: 10px;
-			max-width: 180px;
+			max-width: 220px;
 			margin-top: 80px;
 		}
 
@@ -251,5 +251,39 @@ section#top-section {
 
 section#second-section {
 	background-color: $antelope-teal;
-	height: 500px;
+	padding: 160px 0px;
+	color: white;
+
+	h2 {
+		font-weight: 300;
+	}
+
+	hr {
+		border-top: 1px solid rgba(255, 255, 255, 0.8);
+		width: 30px;
+		float: right;
+		margin-top: 10px;
+		margin-bottom: 0px;
+	}
+
+	#white-antelope {
+		margin-left: 20px;
+		margin-top: 86px;
+		opacity: 0.98;
+	}
+
+	#site-will-bullet-points {
+		float: right;
+		clear: both;
+
+		li {
+			font-size: 18px;
+			list-style: none;
+			margin: 20px 0px;
+		}
+	}
+
+	@media (max-width: 480px) {
+
+	}
 }

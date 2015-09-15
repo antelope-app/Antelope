@@ -1,8 +1,22 @@
 ---
 ---
 
+$antelope-teal: #75bfa4;
+
 #footer {
+	text-align: center;
 	padding: 60px 0px;
+
+	#footer-download-button {
+		border: 2px solid $antelope-teal;
+		padding: 8px 30px;
+		font-size: 16px;
+		font-weight: 400;
+		background-color: white;
+		color: $antelope-teal;
+		border-radius: 4px;
+		margin-bottom: 60px;
+	}
 
 	p {
 	}
