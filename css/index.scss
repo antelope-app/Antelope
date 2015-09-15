@@ -47,6 +47,15 @@ section#top-section {
 		position: relative;
 	}
 
+	#logo-container {
+		margin: 20px 0px;
+		img {
+			border-radius: 50%;
+
+			@include cubic-bezier-transition();
+		}
+	}
+
 	@media (min-width: 650px) {
 		#video-container.shift {
 			-webkit-transform: translate(-50%, 0);
