@@ -87,7 +87,7 @@ js: index
       }
 
       function onFinish() {
-        $('#without-antelope-subheader').text("Done at " + (withoutAntelopeDOMLoadTime + withoutAntelopeAsyncLoadTime) / 1000.0 + " seconds")
+        $('#without-antelope-subheader').text("Done at " + ((withoutAntelopeDOMLoadTime + withoutAntelopeAsyncLoadTime) / 1000.0).toFixed(2) + " seconds")
 
         $('#without-antelope-total-label .label-value').text(((withoutAntelopeDOMLoadTime + withoutAntelopeAsyncLoadTime) / 1000.0) + ' seconds') 
         $('#without-antelope-total-label').addClass("show")
@@ -200,7 +200,7 @@ js: index
               load much faster,
             </li>
             <li>
-              look cleaner,
+              look cleaner without ads,
             </li>
             <li>
               use less data.
@@ -209,7 +209,7 @@ js: index
         </div>
 
         <div class="col-xs-6">
-          <img id="white-antelope" src="{{ site.baseurl }}/images/white-antelope.png" width="160px" height="auto"/>
+          <img id="white-antelope" src="{{ site.baseurl }}/images/white-antelope.png" height="auto"/>
         </div>
       </div>
 
