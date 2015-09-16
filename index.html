@@ -27,9 +27,14 @@ js: index
     */
     var $timeout = window.setTimeout
 
-    $timeout(function() {
-      startVideoPresentation()
-    }, 2000)
+    var video = document.getElementById('video');
+
+    video.addEventListener('loadedmetadata', function() {
+      $timeout(function() {
+        startVideoPresentation()
+      }, 2000)
+    }, false)
+    
 
     function startVideoPresentation() {
 
