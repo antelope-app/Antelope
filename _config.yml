@@ -8,7 +8,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 download_url: "/download_antelope"
 url: "http://www.getantelope.com" # the base hostname & protocol for your site
-twitter_username: antelope
+twitter_username: getantelope
 github_username:  antelope
 
 # Build settings
