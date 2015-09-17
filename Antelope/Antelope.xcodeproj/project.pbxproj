@@ -37,6 +37,7 @@
 		0FCC49091BAAA0C000A46C4B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCC49031BAAA0C000A46C4B /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
 		0FCC490B1BAAA0C800A46C4B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCC490A1BAAA0C800A46C4B /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
 		0FCC490D1BAAA20A00A46C4B /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC490C1BAAA20A00A46C4B /* FacebookSDKStrings.bundle */; };
+		0FCC490F1BAAA41C00A46C4B /* settings-screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC490E1BAAA41C00A46C4B /* settings-screenshot.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		0FCC49031BAAA0C000A46C4B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Antelope/Frameworks/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		0FCC490A1BAAA0C800A46C4B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Antelope/Frameworks/Bolts.framework; sourceTree = "<group>"; };
 		0FCC490C1BAAA20A00A46C4B /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = ../../../../../../../../../Users/adamgluck/Desktop/Projects/AdShield/Antelope/Antelope/Antelope/FacebookSDKStrings.bundle; sourceTree = SDKROOT; };
+		0FCC490E1BAAA41C00A46C4B /* settings-screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-screenshot.png"; path = "Antelope/settings-screenshot.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 		0F053E361B93D03000A9EFBC /* Antelope */ = {
 			isa = PBXGroup;
 			children = (
+				0FCC490E1BAAA41C00A46C4B /* settings-screenshot.png */,
 				0F7C7E3B1BAA9031005D85CD /* AntelopeColors.swift */,
 				0F7C7E3C1BAA9031005D85CD /* AppDelegate.swift */,
 				0F7C7E421BAA9031005D85CD /* LaunchScreen.storyboard */,
@@ -366,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FCC490F1BAAA41C00A46C4B /* settings-screenshot.png in Resources */,
 				0FCC490D1BAAA20A00A46C4B /* FacebookSDKStrings.bundle in Resources */,
 				0F7C7E4A1BAA9031005D85CD /* Main.storyboard in Resources */,
 				0F7C7E491BAA9031005D85CD /* Assets.xcassets in Resources */,
