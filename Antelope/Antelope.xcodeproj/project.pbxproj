@@ -21,7 +21,6 @@
 		0F7C7E4A1BAA9031005D85CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7C7E3F1BAA9031005D85CD /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		0F7C7E4C1BAA9031005D85CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7C7E421BAA9031005D85CD /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		0F7C7E4D1BAA9031005D85CD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E431BAA9031005D85CD /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E4E1BAA9031005D85CD /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E451BAA9031005D85CD /* ScrollViewController.m */; settings = {ASSET_TAGS = (); }; };
 		0F7C7E4F1BAA9031005D85CD /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E461BAA9031005D85CD /* ScrollViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0F7C7E931BAA9456005D85CD /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F053E821B94066F00A9EFBC /* SafariServices.framework */; settings = {ASSET_TAGS = (); }; };
 		0FCC48E01BAA9F1300A46C4B /* Block Ads.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0FCC48D71BAA9F1200A46C4B /* Block Ads.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -91,8 +90,6 @@
 		0F7C7E411BAA9031005D85CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Antelope/Info.plist; sourceTree = SOURCE_ROOT; };
 		0F7C7E421BAA9031005D85CD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Antelope/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		0F7C7E431BAA9031005D85CD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Antelope/MainViewController.swift; sourceTree = SOURCE_ROOT; };
-		0F7C7E441BAA9031005D85CD /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollViewController.h; path = Antelope/ScrollViewController.h; sourceTree = SOURCE_ROOT; };
-		0F7C7E451BAA9031005D85CD /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrollViewController.m; path = Antelope/ScrollViewController.m; sourceTree = SOURCE_ROOT; };
 		0F7C7E461BAA9031005D85CD /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollViewController.swift; path = Antelope/ScrollViewController.swift; sourceTree = SOURCE_ROOT; };
 		0FCC48D71BAA9F1200A46C4B /* Block Ads.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Block Ads.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCC48DD1BAA9F1300A46C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -189,8 +186,6 @@
 		0F053E7D1B93EDA400A9EFBC /* ObjC */ = {
 			isa = PBXGroup;
 			children = (
-				0F7C7E441BAA9031005D85CD /* ScrollViewController.h */,
-				0F7C7E451BAA9031005D85CD /* ScrollViewController.m */,
 				0F7C7E3A1BAA9031005D85CD /* Antelope-Bridging-Header.h */,
 			);
 			name = ObjC;
@@ -403,7 +398,6 @@
 				0F7C7E321BAA9013005D85CD /* ShareViewController.swift in Sources */,
 				0F7C7E4D1BAA9031005D85CD /* MainViewController.swift in Sources */,
 				0F7C7E331BAA9013005D85CD /* TutorialStep.swift in Sources */,
-				0F7C7E4E1BAA9031005D85CD /* ScrollViewController.m in Sources */,
 				0F7C7E381BAA9013005D85CD /* TutorialStepZero.swift in Sources */,
 				0F7C7E391BAA9013005D85CD /* TutorialViewController.swift in Sources */,
 				0F7C7E351BAA9013005D85CD /* TutorialStepOne.swift in Sources */,
