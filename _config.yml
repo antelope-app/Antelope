@@ -9,7 +9,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 download_url: "/download_antelope"
 url: "http://www.getantelope.com" # the base hostname & protocol for your site
 twitter_username: getantelope
-github_username:  antelope
+github_username:  "antelope-app/Antelope"
 
 # Build settings
 markdown: kramdown
