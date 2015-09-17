@@ -28,26 +28,32 @@ js: index
     var $timeout = window.setTimeout
 
     var video = document.getElementById('video');
-    if (userAgentIsMobile()) {
-      var videoSource = $('#video-source')
-      console.log(videoSource)
-      var currentSource = videoSource.attr('src')
-      console.log(currentSource)
+    var videoSource = $('#video-source')
+    var currentSource = videoSource.attr('src')
 
-      var array = currentSource.split('.mp4')
-      array[array.length - 1] = '-mobile.mp4'
-      var newSource = array.join('')
-      console.log(newSource)
+    var videoPromise = new Promise(function(resolve, reject) {
+      if (userAgentIsMobile()) {
 
-      videoSource.attr('src', newSource)
+        var array = currentSource.split('.mp4')
+        array[array.length - 1] = '-mobile.mp4'
+        var newSource = array.join('')
+        console.log(newSource)
 
-    }
+        videoSource.attr('src', newSource)
+        resolve()
 
-    video.addEventListener('loadedmetadata', function() {
-      $timeout(function() {
-        startVideoPresentation()
-      }, 2000)
-    }, false)
+      } else {
+        resolve()
+      }
+    })
+
+    videoPromise.then(function() {
+      video.addEventListener('loadedmetadata', function() {
+        $timeout(function() {
+          startVideoPresentation()
+        }, 2000)
+      }, false)
+    })
     
 
     function startVideoPresentation() {
