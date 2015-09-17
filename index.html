@@ -40,6 +40,7 @@ js: index
         console.log(newSource)
 
         videoSource.attr('src', newSource)
+        $('#video')[0].load()
         resolve()
 
       } else {
