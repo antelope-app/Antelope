@@ -249,6 +249,7 @@ class EZTranslator(Translator):
 
         return ez_rule.type is not EZRuleType.unknown and \
                ez_rule.type is not EZRuleType.comment and \
+               ez_rule.type is not EZRuleType.exception and \
                not len(ez_rule.url_filter.split(",")) > 1
 
 
