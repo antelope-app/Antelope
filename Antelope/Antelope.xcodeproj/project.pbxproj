@@ -25,6 +25,7 @@
 		0F7C7E931BAA9456005D85CD /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F053E821B94066F00A9EFBC /* SafariServices.framework */; settings = {ASSET_TAGS = (); }; };
 		0FCC48E01BAA9F1300A46C4B /* Block Ads.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0FCC48D71BAA9F1200A46C4B /* Block Ads.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0FCC48E71BAA9F5500A46C4B /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC48E51BAA9F5500A46C4B /* ActionRequestHandler.swift */; settings = {ASSET_TAGS = (); }; };
+		0FCC48F61BAA9FAA00A46C4B /* Block Trackers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0FCC48ED1BAA9FAA00A46C4B /* Block Trackers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0FCC48FB1BAA9FCA00A46C4B /* privacyList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC48FA1BAA9FCA00A46C4B /* privacyList.json */; settings = {ASSET_TAGS = (); }; };
 		0FCC48FD1BAA9FD100A46C4B /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC48FC1BAA9FD100A46C4B /* ActionRequestHandler.swift */; settings = {ASSET_TAGS = (); }; };
 		0FCC49051BAAA0C000A46C4B /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCC48FF1BAAA0C000A46C4B /* FBAudienceNetwork.framework */; settings = {ASSET_TAGS = (); }; };
@@ -47,6 +48,13 @@
 			remoteGlobalIDString = 0FCC48D61BAA9F1200A46C4B;
 			remoteInfo = "Block-Ads";
 		};
+		0FCC48F41BAA9FAA00A46C4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F053E2C1B93D03000A9EFBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FCC48EC1BAA9FAA00A46C4B;
+			remoteInfo = "Block Trackers";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +64,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				0FCC48F61BAA9FAA00A46C4B /* Block Trackers.appex in Embed App Extensions */,
 				0FCC48E01BAA9F1300A46C4B /* Block Ads.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -268,6 +277,7 @@
 			);
 			dependencies = (
 				0FCC48DF1BAA9F1300A46C4B /* PBXTargetDependency */,
+				0FCC48F51BAA9FAA00A46C4B /* PBXTargetDependency */,
 			);
 			name = Antelope;
 			productName = AdShield;
@@ -427,6 +437,11 @@
 			isa = PBXTargetDependency;
 			target = 0FCC48D61BAA9F1200A46C4B /* Block Ads */;
 			targetProxy = 0FCC48DE1BAA9F1300A46C4B /* PBXContainerItemProxy */;
+		};
+		0FCC48F51BAA9FAA00A46C4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0FCC48EC1BAA9FAA00A46C4B /* Block Trackers */;
+			targetProxy = 0FCC48F41BAA9FAA00A46C4B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
