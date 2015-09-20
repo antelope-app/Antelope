@@ -25,7 +25,6 @@
 		0F7C7E931BAA9456005D85CD /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F053E821B94066F00A9EFBC /* SafariServices.framework */; settings = {ASSET_TAGS = (); }; };
 		0FCC48E01BAA9F1300A46C4B /* Block Ads.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0FCC48D71BAA9F1200A46C4B /* Block Ads.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0FCC48E71BAA9F5500A46C4B /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC48E51BAA9F5500A46C4B /* ActionRequestHandler.swift */; settings = {ASSET_TAGS = (); }; };
-		0FCC48E81BAA9F5500A46C4B /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC48E61BAA9F5500A46C4B /* blockerList.json */; settings = {ASSET_TAGS = (); }; };
 		0FCC48F61BAA9FAA00A46C4B /* Block Trackers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0FCC48ED1BAA9FAA00A46C4B /* Block Trackers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0FCC48FB1BAA9FCA00A46C4B /* privacyList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC48FA1BAA9FCA00A46C4B /* privacyList.json */; settings = {ASSET_TAGS = (); }; };
 		0FCC48FD1BAA9FD100A46C4B /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC48FC1BAA9FD100A46C4B /* ActionRequestHandler.swift */; settings = {ASSET_TAGS = (); }; };
@@ -37,6 +36,8 @@
 		0FCC490B1BAAA0C800A46C4B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCC490A1BAAA0C800A46C4B /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
 		0FCC490D1BAAA20A00A46C4B /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC490C1BAAA20A00A46C4B /* FacebookSDKStrings.bundle */; };
 		0FCC490F1BAAA41C00A46C4B /* settings-screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC490E1BAAA41C00A46C4B /* settings-screenshot.png */; settings = {ASSET_TAGS = (); }; };
+		0FCC49131BAF55B800A46C4B /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC49121BAF55B800A46C4B /* blockerList.json */; settings = {ASSET_TAGS = (); }; };
+		0FCC49141BAF568C00A46C4B /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC49121BAF55B800A46C4B /* blockerList.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +95,6 @@
 		0FCC48D71BAA9F1200A46C4B /* Block Ads.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Block Ads.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCC48DD1BAA9F1300A46C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FCC48E51BAA9F5500A46C4B /* ActionRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
-		0FCC48E61BAA9F5500A46C4B /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 		0FCC48ED1BAA9FAA00A46C4B /* Block Trackers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Block Trackers.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCC48F31BAA9FAA00A46C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FCC48FA1BAA9FCA00A46C4B /* privacyList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = privacyList.json; sourceTree = "<group>"; };
@@ -107,6 +107,7 @@
 		0FCC490A1BAAA0C800A46C4B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Antelope/Frameworks/Bolts.framework; sourceTree = "<group>"; };
 		0FCC490C1BAAA20A00A46C4B /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = ../../../../../../../../../Users/adamgluck/Desktop/Projects/AdShield/Antelope/Antelope/Antelope/FacebookSDKStrings.bundle; sourceTree = SDKROOT; };
 		0FCC490E1BAAA41C00A46C4B /* settings-screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-screenshot.png"; path = "Antelope/settings-screenshot.png"; sourceTree = SOURCE_ROOT; };
+		0FCC49121BAF55B800A46C4B /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,8 +214,8 @@
 		0FCC48D81BAA9F1300A46C4B /* Block Ads */ = {
 			isa = PBXGroup;
 			children = (
+				0FCC49121BAF55B800A46C4B /* blockerList.json */,
 				0FCC48E51BAA9F5500A46C4B /* ActionRequestHandler.swift */,
-				0FCC48E61BAA9F5500A46C4B /* blockerList.json */,
 				0FCC48DD1BAA9F1300A46C4B /* Info.plist */,
 			);
 			name = "Block Ads";
@@ -364,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FCC49131BAF55B800A46C4B /* blockerList.json in Resources */,
 				0FCC490F1BAAA41C00A46C4B /* settings-screenshot.png in Resources */,
 				0FCC490D1BAAA20A00A46C4B /* FacebookSDKStrings.bundle in Resources */,
 				0F7C7E4A1BAA9031005D85CD /* Main.storyboard in Resources */,
@@ -376,7 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FCC48E81BAA9F5500A46C4B /* blockerList.json in Resources */,
+				0FCC49141BAF568C00A46C4B /* blockerList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
