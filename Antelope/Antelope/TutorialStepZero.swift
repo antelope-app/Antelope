@@ -29,6 +29,7 @@ class TutorialStepZero: TutorialStep
         
         let buttonOptions: [ String: String ] = [ "color": "teal" ]
         nextButton = self.borderButtonStyle(nextButton, options: buttonOptions)
+        
         stepZeroSubheader = self.paragraphStyle(stepZeroSubheader)
         
         secondSubHeader.hidden = true
@@ -38,6 +39,9 @@ class TutorialStepZero: TutorialStep
         thirdSubHeader.hidden = true
         thirdSubHeader.text = "Antelope receives none of your browsing data, and it's entirely open-source."
         thirdSubHeader = self.paragraphStyle(thirdSubHeader)
+        
+        self.constrainButton(nextButton)
+        self.view.layoutSubviews()
     }
     
     override func viewDidAppear(animated: Bool) {

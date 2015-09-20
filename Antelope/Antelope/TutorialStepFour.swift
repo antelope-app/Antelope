@@ -17,6 +17,13 @@ class TutorialStepFour: TutorialStep {
         
         self.view.backgroundColor = colorKit.orange
         nextButton = borderButtonStyle(nextButton, options: [ "color": "white" ])
+        
+        self.view.addSubview(nextButton)
+        self.view.addSubview(header)
+        
+        self.constrainButton(nextButton)
+        self.constrainHeader(header)
+        self.view.layoutSubviews()
     }
     
     @IBAction func nextStep(sender: UIButton) {
