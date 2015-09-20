@@ -21,15 +21,35 @@ ez_translator = EZTranslator()
 rule_builder = RuleBuilder(ez_translator)
 
 with open(filter_file_name, "r") as adblock_filter_file:
-    
+
+    active_rules = set()
+    with open("deprecatedlist.txt", "r") as deprecated_list:
+        raw_rules = []
+        for raw_rule in adblock_filter_file:
+            raw_rules.append(raw_rule)
+
+        deprecated_rules = []
+        for deprecated_rule in deprecated_list:
+            deprecated_rules.append(deprecated_rule)
+
+        active_rules = set(raw_rules) - set(deprecated_rules)
+
     # Go the file and return only translatable rules
     # Translate these and accumulate in translated_rules
-    for raw_rule in adblock_filter_file:
+    for raw_rule in active_rules:
     	raw_rule = raw_rule.strip()
     	rule = rule_builder.build_rule(raw_rule)
 
     	if rule is not None:
         	translated_rules.append(rule.as_dict())
+
+with open("easyprivacy.txt") as privacy_list:
+    for raw_rule in privacy_list:
+        raw_rule = raw_rule.strip()
+        rule = rule_builder.build_rule(raw_rule)
+
+        if rule is not None:
+            translated_rules.append(rule.as_dict())
     
 with open('mobilelist.json', "r") as mobile_list:
     mobile_rules = json.load(mobile_list)
