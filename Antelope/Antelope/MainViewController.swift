@@ -35,14 +35,6 @@ class MainViewController: UIViewController {
                 print("Loaded successfully.")
             }
         }
-        
-        SFContentBlockerManager.reloadContentBlockerWithIdentifier("com.antelope.Antelope-Ad-Blocker.Block-Trackers") { (error) -> Void in
-            if let error = error {
-                print("Failed to load with \(error).")
-            } else {
-                print("Loaded successfully.")
-            }
-        }
     }
     
     func startTutorial() {

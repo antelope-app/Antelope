@@ -124,5 +124,23 @@
         "trigger" : {
             "url-filter" : "https?://([^/:]*\\.)nytimes.com"
         }
+    },
+    {
+        "action" : {
+            "type" : "css-display-none",
+            "selector" : "div[class=\"ad top-left-ad dyperf dyMonitor\"]"
+        },
+        "trigger" : {
+            "url-filter": "https?://([^/:]*\\.)nytimes.com"
+        }
+    },
+    {
+        "action" : {
+            "type" : "css-display-none",
+            "selector" : "div[class=\"ad top-right-ad dyperf dyMonitor\"]"
+        },
+        "trigger" : {
+            "url-filter": "https?://([^/:]*\\.)nytimes.com"
+        }
     }
 ]
