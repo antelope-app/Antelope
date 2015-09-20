@@ -26,11 +26,12 @@ class TutorialStepThree: TutorialStep
         self.nextButton.layer.cornerRadius = 20.0
         self.view.backgroundColor = grayColor
         
-        let imageCeiling = header.frame.origin.y + header.frame.size.height
-        let imageFloor = buttonLabel.frame.origin.y
-        //let imagePosY = imageCeiling + (imageFloor - imageCeiling / 2.0) - (self.switchImage.frame.size.height / 2.0)
+        self.view.addSubview(nextButton)
+        self.view.addSubview(header)
         
-        //self.switchImage.frame = CGRectMake(switchImage.frame.origin.x, imagePosY, switchImage.frame.size.width, switchImage.frame.size.height)
+        self.constrainButton(nextButton)
+        self.constrainHeader(header)
+        self.view.layoutSubviews()
     }
     
     @IBAction func nextStep(sender: UIButton) {

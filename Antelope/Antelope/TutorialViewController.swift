@@ -56,6 +56,7 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate, ShareV
         self.pageControl.numberOfPages = Int(viewControllersForSteps.count) - 1
         
         self.addChildViewControllers(viewControllersForSteps)
+        self.view.bringSubviewToFront(self.pageControl)
         
         // START TUTORIAL
         _ = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "startTutorial", userInfo: nil, repeats: false)
@@ -101,6 +102,7 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate, ShareV
     }
     
     @IBAction func pageChanged(sender: AnyObject) {
+        print("page changed")
         let pageNumber: Int = self.pageControl.currentPage
         self.scrollToViewControllerAtIndex(pageNumber)
     }
