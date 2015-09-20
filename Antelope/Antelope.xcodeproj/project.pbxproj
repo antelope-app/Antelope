@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F6E05741BAF7B03000CE6CC /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F6E05731BAF7B03000CE6CC /* blockerList.json */; settings = {ASSET_TAGS = (); }; };
+		0F6E05751BAF7CC4000CE6CC /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F6E05731BAF7B03000CE6CC /* blockerList.json */; };
 		0F7C7E321BAA9013005D85CD /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2A1BAA9013005D85CD /* ShareViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0F7C7E331BAA9013005D85CD /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2B1BAA9013005D85CD /* TutorialStep.swift */; settings = {ASSET_TAGS = (); }; };
 		0F7C7E341BAA9013005D85CD /* TutorialStepFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2C1BAA9013005D85CD /* TutorialStepFour.swift */; settings = {ASSET_TAGS = (); }; };
@@ -369,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F6E05751BAF7CC4000CE6CC /* blockerList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
