@@ -235,8 +235,7 @@ class EZTranslator(Translator):
         parser = EZRuleParser()
         ez_rule = parser.parse(raw_rule)
 
-        if ez_rule.type is EZRuleType.unknown or \
-           ez_rule.type is EZRuleType.comment:
+        if not EZTranslator._is_valid_rule(ez_rule):
            return None
 
         ios_rule = Rule()
@@ -244,6 +243,15 @@ class EZTranslator(Translator):
         ios_rule.trigger = EZTranslator._trigger_from_ez(ez_rule)
 
         return ios_rule
+
+    @staticmethod
+    def _is_valid_rule(ez_rule):
+
+        return ez_rule.type is not EZRuleType.unknown and \
+               ez_rule.type is not EZRuleType.comment and \
+               ez_rule.type is not EZRuleType.exception and \
+               not len(ez_rule.url_filter.split(",")) > 1
+
 
     @staticmethod
     def _action_from_ez(ez_rule):

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F6E056E1BAF630A000CE6CC /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F6E056D1BAF630A000CE6CC /* blockerList.json */; settings = {ASSET_TAGS = (); }; };
+		0F6E056F1BAF631F000CE6CC /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F6E056D1BAF630A000CE6CC /* blockerList.json */; };
 		0F7C7E321BAA9013005D85CD /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2A1BAA9013005D85CD /* ShareViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0F7C7E331BAA9013005D85CD /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2B1BAA9013005D85CD /* TutorialStep.swift */; settings = {ASSET_TAGS = (); }; };
 		0F7C7E341BAA9013005D85CD /* TutorialStepFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2C1BAA9013005D85CD /* TutorialStepFour.swift */; settings = {ASSET_TAGS = (); }; };
@@ -25,8 +27,6 @@
 		0F7C7E931BAA9456005D85CD /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F053E821B94066F00A9EFBC /* SafariServices.framework */; settings = {ASSET_TAGS = (); }; };
 		0FCC48E01BAA9F1300A46C4B /* Block Ads.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0FCC48D71BAA9F1200A46C4B /* Block Ads.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0FCC48E71BAA9F5500A46C4B /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC48E51BAA9F5500A46C4B /* ActionRequestHandler.swift */; settings = {ASSET_TAGS = (); }; };
-		0FCC48E81BAA9F5500A46C4B /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC48E61BAA9F5500A46C4B /* blockerList.json */; settings = {ASSET_TAGS = (); }; };
-		0FCC48F61BAA9FAA00A46C4B /* Block Trackers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0FCC48ED1BAA9FAA00A46C4B /* Block Trackers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0FCC48FB1BAA9FCA00A46C4B /* privacyList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC48FA1BAA9FCA00A46C4B /* privacyList.json */; settings = {ASSET_TAGS = (); }; };
 		0FCC48FD1BAA9FD100A46C4B /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC48FC1BAA9FD100A46C4B /* ActionRequestHandler.swift */; settings = {ASSET_TAGS = (); }; };
 		0FCC49051BAAA0C000A46C4B /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCC48FF1BAAA0C000A46C4B /* FBAudienceNetwork.framework */; settings = {ASSET_TAGS = (); }; };
@@ -47,13 +47,6 @@
 			remoteGlobalIDString = 0FCC48D61BAA9F1200A46C4B;
 			remoteInfo = "Block-Ads";
 		};
-		0FCC48F41BAA9FAA00A46C4B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F053E2C1B93D03000A9EFBC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0FCC48EC1BAA9FAA00A46C4B;
-			remoteInfo = "Block Trackers";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,7 +56,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				0FCC48F61BAA9FAA00A46C4B /* Block Trackers.appex in Embed App Extensions */,
 				0FCC48E01BAA9F1300A46C4B /* Block Ads.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -74,6 +66,7 @@
 /* Begin PBXFileReference section */
 		0F053E341B93D03000A9EFBC /* Antelope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Antelope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F053E821B94066F00A9EFBC /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		0F6E056D1BAF630A000CE6CC /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 		0F7C7E2A1BAA9013005D85CD /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShareViewController.swift; path = Antelope/ShareViewController.swift; sourceTree = SOURCE_ROOT; };
 		0F7C7E2B1BAA9013005D85CD /* TutorialStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialStep.swift; path = Antelope/TutorialStep.swift; sourceTree = SOURCE_ROOT; };
 		0F7C7E2C1BAA9013005D85CD /* TutorialStepFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialStepFour.swift; path = Antelope/TutorialStepFour.swift; sourceTree = SOURCE_ROOT; };
@@ -94,7 +87,6 @@
 		0FCC48D71BAA9F1200A46C4B /* Block Ads.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Block Ads.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCC48DD1BAA9F1300A46C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FCC48E51BAA9F5500A46C4B /* ActionRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
-		0FCC48E61BAA9F5500A46C4B /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
 		0FCC48ED1BAA9FAA00A46C4B /* Block Trackers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Block Trackers.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCC48F31BAA9FAA00A46C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FCC48FA1BAA9FCA00A46C4B /* privacyList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = privacyList.json; sourceTree = "<group>"; };
@@ -215,8 +207,8 @@
 		0FCC48D81BAA9F1300A46C4B /* Block Ads */ = {
 			isa = PBXGroup;
 			children = (
+				0F6E056D1BAF630A000CE6CC /* blockerList.json */,
 				0FCC48E51BAA9F5500A46C4B /* ActionRequestHandler.swift */,
-				0FCC48E61BAA9F5500A46C4B /* blockerList.json */,
 				0FCC48DD1BAA9F1300A46C4B /* Info.plist */,
 			);
 			name = "Block Ads";
@@ -276,7 +268,6 @@
 			);
 			dependencies = (
 				0FCC48DF1BAA9F1300A46C4B /* PBXTargetDependency */,
-				0FCC48F51BAA9FAA00A46C4B /* PBXTargetDependency */,
 			);
 			name = Antelope;
 			productName = AdShield;
@@ -366,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F6E056E1BAF630A000CE6CC /* blockerList.json in Resources */,
 				D46E76BC1BAAB3FF00100460 /* FacebookSDKStrings.bundle in Resources */,
 				0FCC490F1BAAA41C00A46C4B /* settings-screenshot.png in Resources */,
 				0F7C7E4A1BAA9031005D85CD /* Main.storyboard in Resources */,
@@ -378,7 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FCC48E81BAA9F5500A46C4B /* blockerList.json in Resources */,
+				0F6E056F1BAF631F000CE6CC /* blockerList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,11 +427,6 @@
 			isa = PBXTargetDependency;
 			target = 0FCC48D61BAA9F1200A46C4B /* Block Ads */;
 			targetProxy = 0FCC48DE1BAA9F1300A46C4B /* PBXContainerItemProxy */;
-		};
-		0FCC48F51BAA9FAA00A46C4B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0FCC48EC1BAA9FAA00A46C4B /* Block Trackers */;
-			targetProxy = 0FCC48F41BAA9FAA00A46C4B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

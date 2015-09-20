@@ -32,9 +32,9 @@ with open(filter_file_name, "r") as adblock_filter_file:
         	translated_rules.append(rule.as_dict())
     
 with open('mobilelist.json', "r") as mobile_list:
-        mobile_rules = json.load(mobile_list)
-        for rule in mobile_rules:
-            translated_rules.append(rule)
+    mobile_rules = json.load(mobile_list)
+    for rule in mobile_rules:
+        translated_rules.append(rule)
 
 translated_rules = sorted(translated_rules, key=lambda rule: rule["action"]["type"])
 
