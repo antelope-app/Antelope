@@ -34,10 +34,11 @@
 		0FCC49081BAAA0C000A46C4B /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCC49021BAAA0C000A46C4B /* FBSDKMessengerShareKit.framework */; settings = {ASSET_TAGS = (); }; };
 		0FCC49091BAAA0C000A46C4B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCC49031BAAA0C000A46C4B /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
 		0FCC490B1BAAA0C800A46C4B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCC490A1BAAA0C800A46C4B /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
-		0FCC490D1BAAA20A00A46C4B /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC490C1BAAA20A00A46C4B /* FacebookSDKStrings.bundle */; };
 		0FCC490F1BAAA41C00A46C4B /* settings-screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC490E1BAAA41C00A46C4B /* settings-screenshot.png */; settings = {ASSET_TAGS = (); }; };
 		0FCC49131BAF55B800A46C4B /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC49121BAF55B800A46C4B /* blockerList.json */; settings = {ASSET_TAGS = (); }; };
 		0FCC49141BAF568C00A46C4B /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC49121BAF55B800A46C4B /* blockerList.json */; };
+		D46E76BC1BAAB3FF00100460 /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D46E76BB1BAAB3FF00100460 /* FacebookSDKStrings.bundle */; };
+>>>>>>> 35c57912c59290594bcbc13c9feb56213fa101dd
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		0FCC490C1BAAA20A00A46C4B /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = ../../../../../../../../../Users/adamgluck/Desktop/Projects/AdShield/Antelope/Antelope/Antelope/FacebookSDKStrings.bundle; sourceTree = SDKROOT; };
 		0FCC490E1BAAA41C00A46C4B /* settings-screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-screenshot.png"; path = "Antelope/settings-screenshot.png"; sourceTree = SOURCE_ROOT; };
 		0FCC49121BAF55B800A46C4B /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		D46E76BB1BAAB3FF00100460 /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = Antelope/FacebookSDKStrings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		0F053E2B1B93D03000A9EFBC = {
 			isa = PBXGroup;
 			children = (
+				D46E76BB1BAAB3FF00100460 /* FacebookSDKStrings.bundle */,
 				0F053E361B93D03000A9EFBC /* Antelope */,
 				0FCC48D81BAA9F1300A46C4B /* Block Ads */,
 				0FCC48EE1BAA9FAA00A46C4B /* Block Trackers */,
@@ -366,8 +369,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FCC49131BAF55B800A46C4B /* blockerList.json in Resources */,
+				D46E76BC1BAAB3FF00100460 /* FacebookSDKStrings.bundle in Resources */,
 				0FCC490F1BAAA41C00A46C4B /* settings-screenshot.png in Resources */,
-				0FCC490D1BAAA20A00A46C4B /* FacebookSDKStrings.bundle in Resources */,
 				0F7C7E4A1BAA9031005D85CD /* Main.storyboard in Resources */,
 				0F7C7E491BAA9031005D85CD /* Assets.xcassets in Resources */,
 				0F7C7E4C1BAA9031005D85CD /* LaunchScreen.storyboard in Resources */,
@@ -680,6 +683,7 @@
 				0FCC48E31BAA9F1300A46C4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0FCC48F71BAA9FAB00A46C4B /* Build configuration list for PBXNativeTarget "Block Trackers" */ = {
 			isa = XCConfigurationList;
@@ -688,6 +692,7 @@
 				0FCC48F91BAA9FAB00A46C4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

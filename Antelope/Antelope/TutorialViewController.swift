@@ -81,7 +81,7 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate, ShareV
     func finishTutorial()
     {
         
-        if let settingsURL: NSURL = NSURL(string: UIApplicationOpenSettingsURLString) {
+        if let settingsURL: NSURL = NSURL(string: "prefs:root") {
             let application: UIApplication = UIApplication.sharedApplication()
             if (application.canOpenURL(settingsURL)) {
                 application.openURL(settingsURL)
