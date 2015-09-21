@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F6E05741BAF7B03000CE6CC /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F6E05731BAF7B03000CE6CC /* blockerList.json */; settings = {ASSET_TAGS = (); }; };
 		0F6E05751BAF7CC4000CE6CC /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F6E05731BAF7B03000CE6CC /* blockerList.json */; };
+		0F6E05761BAF8D49000CE6CC /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC490C1BAAA20A00A46C4B /* FacebookSDKStrings.bundle */; };
 		0F7C7E321BAA9013005D85CD /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2A1BAA9013005D85CD /* ShareViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0F7C7E331BAA9013005D85CD /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2B1BAA9013005D85CD /* TutorialStep.swift */; settings = {ASSET_TAGS = (); }; };
 		0F7C7E341BAA9013005D85CD /* TutorialStepFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2C1BAA9013005D85CD /* TutorialStepFour.swift */; settings = {ASSET_TAGS = (); }; };
@@ -34,7 +34,6 @@
 		0FCC49091BAAA0C000A46C4B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCC49031BAAA0C000A46C4B /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
 		0FCC490B1BAAA0C800A46C4B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCC490A1BAAA0C800A46C4B /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
 		0FCC490F1BAAA41C00A46C4B /* settings-screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC490E1BAAA41C00A46C4B /* settings-screenshot.png */; settings = {ASSET_TAGS = (); }; };
-		D46E76BC1BAAB3FF00100460 /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D46E76BB1BAAB3FF00100460 /* FacebookSDKStrings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +92,6 @@
 		0FCC490A1BAAA0C800A46C4B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Antelope/Frameworks/Bolts.framework; sourceTree = "<group>"; };
 		0FCC490C1BAAA20A00A46C4B /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = ../../../../../../../../../Users/adamgluck/Desktop/Projects/AdShield/Antelope/Antelope/Antelope/FacebookSDKStrings.bundle; sourceTree = SDKROOT; };
 		0FCC490E1BAAA41C00A46C4B /* settings-screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-screenshot.png"; path = "Antelope/settings-screenshot.png"; sourceTree = SOURCE_ROOT; };
-		D46E76BB1BAAB3FF00100460 /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = Antelope/FacebookSDKStrings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +122,6 @@
 		0F053E2B1B93D03000A9EFBC = {
 			isa = PBXGroup;
 			children = (
-				D46E76BB1BAAB3FF00100460 /* FacebookSDKStrings.bundle */,
 				0F053E361B93D03000A9EFBC /* Antelope */,
 				0FCC48D81BAA9F1300A46C4B /* Block Ads */,
 				0F053E351B93D03000A9EFBC /* Products */,
@@ -310,8 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F6E05741BAF7B03000CE6CC /* blockerList.json in Resources */,
-				D46E76BC1BAAB3FF00100460 /* FacebookSDKStrings.bundle in Resources */,
+				0F6E05761BAF8D49000CE6CC /* FacebookSDKStrings.bundle in Resources */,
 				0FCC490F1BAAA41C00A46C4B /* settings-screenshot.png in Resources */,
 				0F7C7E4A1BAA9031005D85CD /* Main.storyboard in Resources */,
 				0F7C7E491BAA9031005D85CD /* Assets.xcassets in Resources */,
@@ -519,7 +515,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = "Block-Ads/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope-Ad-Blocker.Block-Ads";
@@ -538,7 +534,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = "Block-Ads/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope-Ad-Blocker.Block-Ads";
