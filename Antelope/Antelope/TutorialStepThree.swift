@@ -14,6 +14,8 @@ class TutorialStepThree: TutorialStep
     @IBOutlet weak var header: UITextView!
     @IBOutlet weak var switchImage: UIImageView!
     @IBOutlet weak var buttonLabel: UILabel!
+    @IBOutlet weak var waitNotification: UITextView!
+    
     
     override func viewDidLoad()
     {
@@ -32,6 +34,8 @@ class TutorialStepThree: TutorialStep
         self.constrainButton(nextButton)
         self.constrainHeader(header)
         self.view.layoutSubviews()
+        
+        self.waitNotification.frame.origin.y = self.nextButton.frame.origin.y + self.nextButton.frame.size.height + 10
     }
     
     @IBAction func nextStep(sender: UIButton) {
