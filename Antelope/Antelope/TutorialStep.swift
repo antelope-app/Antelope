@@ -25,15 +25,12 @@ class TutorialStep: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("view did load")
         
         let viewHeight = self.view.frame.size.height
         if viewHeight >= 667.0 {
-            print("phone is iphone6")
             topBuffer = 100.0
             bottomBuffer = 100.0
         } else {
-            print("phone is not iphone6")
             topBuffer = 70.0
             bottomBuffer = 50.0
         }
@@ -46,7 +43,6 @@ class TutorialStep: UIViewController {
     }
     
     func constrainButton(button: UIButton) {
-        print("constraining..")
         bottomLayoutConstraint = NSLayoutConstraint(item: button, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: -bottomBuffer)
         
         view.addConstraint(bottomLayoutConstraint)

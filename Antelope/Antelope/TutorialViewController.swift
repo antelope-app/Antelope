@@ -102,7 +102,6 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate, ShareV
     }
     
     @IBAction func pageChanged(sender: AnyObject) {
-        print("page changed")
         let pageNumber: Int = self.pageControl.currentPage
         self.scrollToViewControllerAtIndex(pageNumber)
     }
