@@ -90,7 +90,7 @@
 		0FCC49021BAAA0C000A46C4B /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = Antelope/Frameworks/FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		0FCC49031BAAA0C000A46C4B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Antelope/Frameworks/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		0FCC490A1BAAA0C800A46C4B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Antelope/Frameworks/Bolts.framework; sourceTree = "<group>"; };
-		0FCC490C1BAAA20A00A46C4B /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = ../../../../../../../../../Users/adamgluck/Desktop/Projects/AdShield/Antelope/Antelope/Antelope/FacebookSDKStrings.bundle; sourceTree = SDKROOT; };
+		0FCC490C1BAAA20A00A46C4B /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = Antelope/FacebookSDKStrings.bundle; sourceTree = SOURCE_ROOT; };
 		0FCC490E1BAAA41C00A46C4B /* settings-screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-screenshot.png"; path = "Antelope/settings-screenshot.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
