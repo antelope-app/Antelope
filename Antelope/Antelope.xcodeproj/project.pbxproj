@@ -27,8 +27,6 @@
 		0F7C7E931BAA9456005D85CD /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F053E821B94066F00A9EFBC /* SafariServices.framework */; settings = {ASSET_TAGS = (); }; };
 		0FCC48E01BAA9F1300A46C4B /* Block Ads.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0FCC48D71BAA9F1200A46C4B /* Block Ads.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0FCC48E71BAA9F5500A46C4B /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC48E51BAA9F5500A46C4B /* ActionRequestHandler.swift */; settings = {ASSET_TAGS = (); }; };
-		0FCC48FB1BAA9FCA00A46C4B /* privacyList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC48FA1BAA9FCA00A46C4B /* privacyList.json */; settings = {ASSET_TAGS = (); }; };
-		0FCC48FD1BAA9FD100A46C4B /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC48FC1BAA9FD100A46C4B /* ActionRequestHandler.swift */; settings = {ASSET_TAGS = (); }; };
 		0FCC49051BAAA0C000A46C4B /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCC48FF1BAAA0C000A46C4B /* FBAudienceNetwork.framework */; settings = {ASSET_TAGS = (); }; };
 		0FCC49061BAAA0C000A46C4B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCC49001BAAA0C000A46C4B /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
 		0FCC49071BAAA0C000A46C4B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FCC49011BAAA0C000A46C4B /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
@@ -87,10 +85,6 @@
 		0FCC48D71BAA9F1200A46C4B /* Block Ads.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Block Ads.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCC48DD1BAA9F1300A46C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FCC48E51BAA9F5500A46C4B /* ActionRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
-		0FCC48ED1BAA9FAA00A46C4B /* Block Trackers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Block Trackers.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FCC48F31BAA9FAA00A46C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FCC48FA1BAA9FCA00A46C4B /* privacyList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = privacyList.json; sourceTree = "<group>"; };
-		0FCC48FC1BAA9FD100A46C4B /* ActionRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
 		0FCC48FF1BAAA0C000A46C4B /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = Antelope/Frameworks/FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		0FCC49001BAAA0C000A46C4B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Antelope/Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		0FCC49011BAAA0C000A46C4B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../../../../../../Users/adamgluck/Desktop/Projects/AdShield/Antelope/Antelope/Frameworks/FBSDKLoginKit.framework; sourceTree = SDKROOT; };
@@ -124,13 +118,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0FCC48EA1BAA9FAA00A46C4B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -140,7 +127,6 @@
 				D46E76BB1BAAB3FF00100460 /* FacebookSDKStrings.bundle */,
 				0F053E361B93D03000A9EFBC /* Antelope */,
 				0FCC48D81BAA9F1300A46C4B /* Block Ads */,
-				0FCC48EE1BAA9FAA00A46C4B /* Block Trackers */,
 				0F053E351B93D03000A9EFBC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -150,7 +136,6 @@
 			children = (
 				0F053E341B93D03000A9EFBC /* Antelope.app */,
 				0FCC48D71BAA9F1200A46C4B /* Block Ads.appex */,
-				0FCC48ED1BAA9FAA00A46C4B /* Block Trackers.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,16 +198,6 @@
 			);
 			name = "Block Ads";
 			path = "Block-Ads";
-			sourceTree = "<group>";
-		};
-		0FCC48EE1BAA9FAA00A46C4B /* Block Trackers */ = {
-			isa = PBXGroup;
-			children = (
-				0FCC48FC1BAA9FD100A46C4B /* ActionRequestHandler.swift */,
-				0FCC48FA1BAA9FCA00A46C4B /* privacyList.json */,
-				0FCC48F31BAA9FAA00A46C4B /* Info.plist */,
-			);
-			path = "Block Trackers";
 			sourceTree = "<group>";
 		};
 		0FF518491BA15FC5006069CC /* Facebook SDK iOS 9 Beta */ = {
@@ -291,23 +266,6 @@
 			productReference = 0FCC48D71BAA9F1200A46C4B /* Block Ads.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		0FCC48EC1BAA9FAA00A46C4B /* Block Trackers */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0FCC48F71BAA9FAB00A46C4B /* Build configuration list for PBXNativeTarget "Block Trackers" */;
-			buildPhases = (
-				0FCC48E91BAA9FAA00A46C4B /* Sources */,
-				0FCC48EA1BAA9FAA00A46C4B /* Frameworks */,
-				0FCC48EB1BAA9FAA00A46C4B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Block Trackers";
-			productName = "Block Trackers";
-			productReference = 0FCC48ED1BAA9FAA00A46C4B /* Block Trackers.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -323,10 +281,6 @@
 						DevelopmentTeam = VPTZL53UP2;
 					};
 					0FCC48D61BAA9F1200A46C4B = {
-						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = VPTZL53UP2;
-					};
-					0FCC48EC1BAA9FAA00A46C4B = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = VPTZL53UP2;
 					};
@@ -347,7 +301,6 @@
 			targets = (
 				0F053E331B93D03000A9EFBC /* Antelope */,
 				0FCC48D61BAA9F1200A46C4B /* Block Ads */,
-				0FCC48EC1BAA9FAA00A46C4B /* Block Trackers */,
 			);
 		};
 /* End PBXProject section */
@@ -371,14 +324,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F6E05751BAF7CC4000CE6CC /* blockerList.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0FCC48EB1BAA9FAA00A46C4B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FCC48FB1BAA9FCA00A46C4B /* privacyList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,14 +354,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FCC48E71BAA9F5500A46C4B /* ActionRequestHandler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0FCC48E91BAA9FAA00A46C4B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FCC48FD1BAA9FD100A46C4B /* ActionRequestHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,7 +476,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Antelope/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope-Ad-Blocker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -565,7 +502,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Antelope/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope-Ad-Blocker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -582,6 +519,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Block-Ads/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope-Ad-Blocker.Block-Ads";
@@ -589,6 +527,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -599,43 +538,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Block-Ads/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope-Ad-Blocker.Block-Ads";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-			};
-			name = Release;
-		};
-		0FCC48F81BAA9FAB00A46C4B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Block Trackers/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope-Ad-Blocker.Block-Trackers";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		0FCC48F91BAA9FAB00A46C4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Block Trackers/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope-Ad-Blocker.Block-Trackers";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
@@ -665,15 +575,6 @@
 			buildConfigurations = (
 				0FCC48E21BAA9F1300A46C4B /* Debug */,
 				0FCC48E31BAA9F1300A46C4B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0FCC48F71BAA9FAB00A46C4B /* Build configuration list for PBXNativeTarget "Block Trackers" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0FCC48F81BAA9FAB00A46C4B /* Debug */,
-				0FCC48F91BAA9FAB00A46C4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
