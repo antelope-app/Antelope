@@ -34,7 +34,7 @@ class TutorialStep: UIViewController {
             bottomBuffer = 100.0
         } else {
             print("phone is not iphone6")
-            topBuffer = 70.0
+            topBuffer = 50.0
             bottomBuffer = 50.0
         }
     }
