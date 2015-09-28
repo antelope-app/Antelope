@@ -21,8 +21,43 @@
     mixpanel.init("6f396dded69f93989ecbf229e5fe8f8b");
 
     mixpanel.track("Homepage View")
-    mixpanel.track_links("nav-download-link", "Clicked Nav Download");
-    mixpanel.track_links("footer-download-button", "Clicked Footer Download");
+
+    var navDownload = $("#nav-download-link")
+    navDownload.bind('click', function(e) {
+      handleRedirectForTracking(e, "Clicked Nav Download")
+    })
+
+    var footerDownload = $("#footer-download-button")
+    footerDownload.bind('click', function(e) {
+      handleRedirectForTracking(e, "Clicked Footer Download")
+    })
+
+    function handleRedirectForTracking(domEvent, tracking) {
+      domEvent.preventDefault()
+      domEvent.stopPropagation()
+
+      var promise = new Promise(function(resolve, reject) {
+        mixpanel.track(tracking, {}, function() {
+          resolve()
+          resolve = true
+        })
+
+        $timeout(function() {
+          if (!resolved) {
+            reject()
+          }
+        }, 300)
+      })
+
+      var link = "https://itunes.apple.com/us/app/antelope-free-adblocker/id1039622141?ls=1&mt=8"
+      promise.then(function() {
+        window.location.href = link
+      }).catch(function() {
+        window.location.href = link
+      })
+
+      return promise
+    }
   </script><!-- end Mixpanel -->
 
 </html>
