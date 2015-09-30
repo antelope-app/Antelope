@@ -101,12 +101,12 @@ class ShareViewController : UIViewController {
         content.contentDescription = self.fbShareDescription
         content.imageURL = self.imageURL
         
-        let shareButton = FBSDKShareButton()
-        shareButton.shareContent = content
-        shareButton.center.x = self.view.center.x
-        shareButton.center.y = self.view.frame.size.height - (self.view.frame.size.height - (fbShareImage.frame.origin.y + fbShareImage.frame.size.height)) / 2
-        shareButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Center
-        self.view.addSubview(shareButton)
+        let sendButton = FBSDKSendButton()
+        sendButton.shareContent = content
+        sendButton.center.x = self.view.center.x
+        sendButton.center.y = self.view.frame.size.height - (self.view.frame.size.height - (fbShareImage.frame.origin.y + fbShareImage.frame.size.height)) / 2
+        sendButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Center
+        self.view.addSubview(sendButton)
         
     }
 
