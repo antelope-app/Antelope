@@ -22,6 +22,10 @@ class TutorialStepOne: TutorialStep
         headline.textColor = colorKit.white
         
         self.view.backgroundColor = self.colorKit.magenta
+
+        self.constrainButton(nextButton)
+        self.constrainHeader(headline)
+        self.view.layoutSubviews()
     }
     
     
@@ -33,5 +37,6 @@ class TutorialStepOne: TutorialStep
     }
     
     func initialize() {
+
     }
 }

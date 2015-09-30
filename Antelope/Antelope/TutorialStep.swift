@@ -17,8 +17,36 @@ class TutorialStep: UIViewController {
     var colorKit = AntelopeColors()
     var delegate: TutorialStepDelegate!
     
+    var topBuffer: CGFloat = 0.0
+    var bottomBuffer: CGFloat = 0.0
+    
+    var bottomLayoutConstraint: NSLayoutConstraint!
+    var topLayoutConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let viewHeight = self.view.frame.size.height
+        if viewHeight >= 667.0 {
+            topBuffer = 100.0
+            bottomBuffer = 100.0
+        } else {
+            print("phone is not iphone6")
+            topBuffer = 50.0
+            bottomBuffer = 50.0
+        }
+    }
+    
+    func constrainHeader(header: UITextView) {
+        topLayoutConstraint = NSLayoutConstraint(item: header, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: topBuffer)
+        
+        view.addConstraint(topLayoutConstraint)
+    }
+    
+    func constrainButton(button: UIButton) {
+        bottomLayoutConstraint = NSLayoutConstraint(item: button, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: -bottomBuffer)
+        
+        view.addConstraint(bottomLayoutConstraint)
     }
     
     func borderButtonStyle(button: UIButton, options: NSDictionary) -> UIButton {
@@ -34,6 +62,7 @@ class TutorialStep: UIViewController {
         button.layer.cornerRadius = 3
         button.layer.borderWidth = 2
         
+        button.frame.size = CGSizeMake(200.0, 40.0)
         
         return button
     }

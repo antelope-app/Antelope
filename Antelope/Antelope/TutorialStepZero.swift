@@ -29,15 +29,22 @@ class TutorialStepZero: TutorialStep
         
         let buttonOptions: [ String: String ] = [ "color": "teal" ]
         nextButton = self.borderButtonStyle(nextButton, options: buttonOptions)
+        
         stepZeroSubheader = self.paragraphStyle(stepZeroSubheader)
+        stepZeroSubheader.userInteractionEnabled = false
         
         secondSubHeader.hidden = true
         secondSubHeader.text = "You'll use less data, see way fewer ads, have better battery life, and stop being tracked on the web."
         secondSubHeader = self.paragraphStyle(secondSubHeader)
+        secondSubHeader.userInteractionEnabled = false
         
         thirdSubHeader.hidden = true
         thirdSubHeader.text = "Antelope receives none of your browsing data, and it's entirely open-source."
         thirdSubHeader = self.paragraphStyle(thirdSubHeader)
+        thirdSubHeader.userInteractionEnabled = false
+        
+        self.constrainButton(nextButton)
+        self.view.layoutSubviews()
     }
     
     override func viewDidAppear(animated: Bool) {

@@ -18,8 +18,8 @@ class ShareViewController : UIViewController {
     var delegate: ShareViewDelegate!
     
     var imageURL: NSURL = NSURL(string: "https://i.imgur.com/v8HFwYG.png")!
-    var fbShareDescription: String = "Antelope tells Safari on your iPhone or iPad not to download ads and trackers, making sites load up to 50% faster. The app is open-source and free."
-    var fbShareTitle: String = "Antelope -- make Safari faster."
+    var fbShareDescription: String = "Antelope blocks ads and trackers in Safari, making sites load up to 50% faster. It's a free app for your iPhone or iPad, and it's open-source."
+    var fbShareTitle: String = "Antelope - free adblocker."
     var fbShareImage: UIImageView!
     
     override func viewDidLoad() {
@@ -67,12 +67,12 @@ class ShareViewController : UIViewController {
         shareHeader.textAlignment = NSTextAlignment.Center
         shareHeader.textColor = colorKit.charcoal
         shareHeader.font = UIFont.systemFontOfSize(22.0)
-        shareHeader.text = "Or, share with friends."
+        shareHeader.text = "Share with friends."
         shareHeader.userInteractionEnabled = false
         self.view.addSubview(shareHeader)
         
         let fbShareTitle = UITextView()
-        fbShareTitle.frame.size = CGSizeMake(self.view.frame.size.width - (fbShareImage.frame.origin.x * 2) - fbShareImage.frame.size.width - 10, 45)
+        fbShareTitle.frame.size = CGSizeMake(self.view.frame.size.width - (fbShareImage.frame.origin.x * 2) - fbShareImage.frame.size.width - 10, 35)
         fbShareTitle.frame.origin.x = self.view.center.x - 35
         fbShareTitle.frame.origin.y = fbShareImage.frame.origin.y - 10
         fbShareTitle.text = self.fbShareTitle
