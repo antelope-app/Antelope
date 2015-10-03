@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 var server = require('http').Server(app);
 var inspect = require('util').inspect;
+var mysql = require('mysql');
 
 var fs = require('fs');
 var path = require('path');
@@ -11,23 +12,36 @@ var cookieParser = require('cookie-parser');
 var cookieSession = require('cookie-session');
 
 var sass = require('node-sass');
-var sassMiddleware = require('node-sass-middleware')
 
 app.use(logger('dev'));
 
 // Asset paths
 app.use(express.static(__dirname + '/public'));
-app.use(sassMiddleware({
-    src: __dirname,
-    dest: __dirname
-}))
 
 // env config
 app.config = require('./config')(app); // pass global app to config file and get ENV vars
 
 // DB config
-var mongoskin = require('mongoskin');
-var db = mongoskin.db(app.config.mongodb); // get URI from config file
+var connection = mysql.createConnection({
+    host: 'adblock-campaign-subscribers.coxbctyj41us.us-west-1.rds.amazonaws.com',
+    user: 'charles',
+    database: 'getscouter',
+    port: '3306'
+})
+
+connection.connect(function(err){
+  if(err){
+    console.log('Error connecting to Db', err);
+    return;
+  }
+  console.log('Connection established');
+});
+
+connection.end(function(err) {
+  // The connection is terminated gracefully
+  // Ensures all previously enqueued queries are still
+  // before sending a COM_QUIT packet to the MySQL server.
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -76,7 +90,6 @@ app.use(function(err, req, res, next) {
 app.listen(process.env.PORT || 4000);
 
 // routing
-var routes = require('./routes')(app, db);
+var routes = require('./routes')(app, connection);
 
 module.exports.app = app;
-module.exports.db = db;

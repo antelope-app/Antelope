@@ -14,6 +14,7 @@
     "mongoskin": "2.0.0",
     "monk": "~1.0.1",
     "morgan": "~1.5.3",
+    "mysql": "^2.9.0",
     "node-sass": "^3.3.3",
     "serve-favicon": "~2.2.1",
     "stylus": "^0.52.4"
