@@ -1,7 +1,5 @@
-node_modules/
 .gitignore
-.elasticbeanstalk/
-||||||| merged common ancestors
+
 # Xcode
 #
 build/
@@ -21,7 +19,11 @@ DerivedData
 *.ipa
 *.xcuserstate
 
+Antelope-application/node_modules
+
 # Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
+Antelope-application/.elasticbeanstalk/*
+!Antelope-application/.elasticbeanstalk/*.cfg.yml
+!Antelope-application/.elasticbeanstalk/*.global.yml
+
+Antelope-application.ebextensions/*

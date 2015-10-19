@@ -3,22 +3,14 @@
 var config = function(app){
   switch(app.get('env')){
     case 'development':
-      return {
-        'mongodb': 'mongodb://localhost:27017/node-blog',
-        //'awsAccessKeyId': constants.AWS_ACCESS_KEY_ID,
-        //'awsSecretAccessKey': constants.AWS_SECRET_ACCESS_KEY,
-        //'s3BucketName': constants.S3_BUCKET_NAME
-      };
+      process.env.DB_USER_NAME = "root"
+      
 
     case 'production':
-      return {
-        'mongodb': process.env.MONGOLAB_URI,
-      };
+      // USES .ebextensions
 
     default:
-      return {
-        
-      };
+      
   }
 }
 

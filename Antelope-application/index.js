@@ -19,13 +19,13 @@ app.use(logger('dev'));
 app.use(express.static(__dirname + '/public'));
 
 // env config
-app.config = require('./config')(app); // pass global app to config file and get ENV vars
+require('./config')(app); // pass global app to config file and set ENV vars
 
 // DB config
 var connection = mysql.createConnection({
-    host: 'adblock-campaign-subscribers.coxbctyj41us.us-west-1.rds.amazonaws.com',
-    user: 'charles',
-    password: '54fortunedarl',
+    host: "localhost",
+    user: process.env["DB_USER_NAME"],
+    password: process.env["DB_PW"],
     database: 'adblock',
     port: '3306'
 })
@@ -33,6 +33,8 @@ var connection = mysql.createConnection({
 connection.connect(function(err){
   if(err){
     console.log('Error connecting to Db', err);
+
+    console.log(process.env)
     return;
   }
   console.log('Connection established');
