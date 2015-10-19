@@ -23,9 +23,9 @@ require('./config')(app); // pass global app to config file and set ENV vars
 
 // DB config
 var connection = mysql.createConnection({
-    host: "localhost",
-    user: process.env["DB_USER_NAME"],
-    password: process.env["DB_PW"],
+    host: process.env.MYSQL_HOST,
+    user: process.env.MYSQL_USERNAME,
+    password: process.env.MYSQL_PW,
     database: 'adblock',
     port: '3306'
 })
@@ -33,8 +33,6 @@ var connection = mysql.createConnection({
 connection.connect(function(err){
   if(err){
     console.log('Error connecting to Db', err);
-
-    console.log(process.env)
     return;
   }
   console.log('Connection established');
