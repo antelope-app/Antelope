@@ -27,4 +27,4 @@ Antelope-application/.elasticbeanstalk/*
 !Antelope-application/.elasticbeanstalk/*.cfg.yml
 !Antelope-application/.elasticbeanstalk/*.global.yml
 
-Antelope-application.ebextensions/*
+Antelope-application/.ebextensions/*
