@@ -20,6 +20,7 @@ DerivedData
 *.xcuserstate
 
 Antelope-application/node_modules
+Antelope-application/config.js
 
 # Elastic Beanstalk Files
 Antelope-application/.elasticbeanstalk/*
