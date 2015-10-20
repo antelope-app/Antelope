@@ -50,7 +50,10 @@ connection.connect(function(err){
 });
 
 connection.query('CREATE DATABASE IF NOT EXISTS antelope', function(err) {
-  if (err) throw err;
+  if (err) {
+    console.log(err)
+    throw err
+  }
   connection.query('USE antelope', function(err) {
     if (err) { console.log(err); throw err;}
     connection.query('CREATE TABLE IF NOT EXISTS users(' + 
