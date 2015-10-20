@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var mainViewController: MainViewController!
     var window: UIWindow?
+    var app: UIApplication = UIApplication.sharedApplication()
 
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         let facebookDeepLinked : Bool = FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
@@ -24,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         mainViewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
+        
+        app.unregisterForRemoteNotifications()
+        
+        self.setupRemoteNotifications()
         
         let facebookLaunched : Bool = FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         return facebookLaunched
@@ -51,7 +56,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    // Notifications
+    
+    func setupRemoteNotifications() {
+        let type: UIUserNotificationType = UIUserNotificationType.Alert
+        let settings = UIUserNotificationSettings(forTypes: type, categories: nil)
+        
+        app.registerUserNotificationSettings(settings)
+        app.registerForRemoteNotifications()
+    }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        let characterSet = NSCharacterSet(charactersInString: "<>")
+        
+        let deviceTokenString: String = String(deviceToken.description as NSString)
+            .stringByTrimmingCharactersInSet(characterSet)
+            .stringByReplacingOccurrencesOfString(" ", withString: "")
+        
+        print(deviceTokenString)
+        
+        _registerDeviceToken(deviceTokenString)
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+    
+    }
+    
+    func _registerDeviceToken(deviceTokenString: String) {
+        print("registering device token remotely")
+        let request = NSMutableURLRequest(URL: NSURL(string: "http://10.0.0.14:4000/users")!)
+        request.HTTPMethod = "POST"
+        
+        let postParams = "device_token=\(deviceTokenString)"
+        request.HTTPBody = postParams.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+            data, response, error in
+            
+            if error != nil {
+                print("error=\(error)")
+                return
+            } else {
+                print(response?.description)
+            }
+        }
+        
+        task.resume()
+    }
 
 }
 

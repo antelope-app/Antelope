@@ -32,7 +32,7 @@
 		D406799F1BD317DE00560CDE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D406799E1BD317DE00560CDE /* FBSDKLoginKit.framework */; };
 		D40679A11BD317E500560CDE /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40679A01BD317E500560CDE /* FBSDKMessengerShareKit.framework */; };
 		D40679A31BD317EB00560CDE /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40679A21BD317EB00560CDE /* FBSDKShareKit.framework */; };
-		D40679A51BD4526F00560CDE /* MessageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40679A41BD4526F00560CDE /* MessageComposer.swift */; settings = {ASSET_TAGS = (); }; };
+		D418E45B1BD4B3A600BA86FF /* MessageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D418E45A1BD4B3A600BA86FF /* MessageComposer.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +88,7 @@
 		D406799E1BD317DE00560CDE /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Frameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		D40679A01BD317E500560CDE /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = Frameworks/FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		D40679A21BD317EB00560CDE /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Frameworks/FBSDKShareKit.framework; sourceTree = "<group>"; };
-		D40679A41BD4526F00560CDE /* MessageComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageComposer.swift; path = ../Antelope/MessageComposer.swift; sourceTree = "<group>"; };
+		D418E45A1BD4B3A600BA86FF /* MessageComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageComposer.swift; path = Antelope/MessageComposer.swift; sourceTree = SOURCE_ROOT; };
 		D4C116371BC63EAB00F5B2DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = DashboardController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,7 +138,7 @@
 		0F053E361B93D03000A9EFBC /* Antelope */ = {
 			isa = PBXGroup;
 			children = (
-				D40679A41BD4526F00560CDE /* MessageComposer.swift */,
+				D418E45A1BD4B3A600BA86FF /* MessageComposer.swift */,
 				0F7C7E3B1BAA9031005D85CD /* AntelopeColors.swift */,
 				0F7C7E3C1BAA9031005D85CD /* AppDelegate.swift */,
 				0F7C7E421BAA9031005D85CD /* LaunchScreen.storyboard */,
@@ -326,7 +326,7 @@
 				0F7C7E4F1BAA9031005D85CD /* ScrollViewController.swift in Sources */,
 				0F7C7E471BAA9031005D85CD /* AntelopeColors.swift in Sources */,
 				0F7C7E371BAA9013005D85CD /* TutorialStepTwo.swift in Sources */,
-				D40679A51BD4526F00560CDE /* MessageComposer.swift in Sources */,
+				D418E45B1BD4B3A600BA86FF /* MessageComposer.swift in Sources */,
 				0F7C7E341BAA9013005D85CD /* TutorialStepFour.swift in Sources */,
 				0F7C7E481BAA9031005D85CD /* AppDelegate.swift in Sources */,
 				0F7C7E361BAA9013005D85CD /* TutorialStepThree.swift in Sources */,

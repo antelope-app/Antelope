@@ -9,8 +9,10 @@ var routes = function(app, db){
   	res.render('./index.jade', {
       
   		title: "Home"
-  	});
-  });
+  	})
+  })
+
+  require('./controllers/usersController')(app);
 }
 
 module.exports = routes;
