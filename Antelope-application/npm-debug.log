@@ -1,17 +1,26 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'start', 'dev' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.35
-4 error Error: ENOENT, open '/Users/jaelee/Projects/ios_projects/Antelope/Antelope-application/node_modules/dev/package.json'
-5 error If you need help, you may report this *entire* log,
-5 error including the npm and node versions, at:
-5 error     <http://github.com/npm/npm/issues>
-6 error System Darwin 15.0.0
-7 error command "node" "/usr/local/bin/npm" "start" "dev"
-8 error cwd /Users/jaelee/Projects/ios_projects/Antelope/Antelope-application
-9 error node -v v0.10.35
-10 error npm -v 1.4.28
-11 error path /Users/jaelee/Projects/ios_projects/Antelope/Antelope-application/node_modules/dev/package.json
-12 error code ENOENT
-13 error errno 34
-14 verbose exit [ 34, true ]
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart Antelope@1.0.0
+6 info start Antelope@1.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info Antelope@1.0.0 Failed to exec start script
+9 error Antelope@1.0.0 start: `node app.js`
+9 error Exit status 8
+10 error Failed at the Antelope@1.0.0 start script.
+10 error This is most likely a problem with the Antelope package,
+10 error not with npm itself.
+10 error Tell the author that this fails on your system:
+10 error     node app.js
+10 error You can get their info via:
+10 error     npm owner ls Antelope
+10 error There is likely additional logging output above.
+11 error System Darwin 15.0.0
+12 error command "node" "/usr/local/bin/npm" "start"
+13 error cwd /Users/jaelee/Projects/ios_projects/Antelope/Antelope-application
+14 error node -v v0.10.35
+15 error npm -v 1.4.28
+16 error code ELIFECYCLE
+17 verbose exit [ 1, true ]
