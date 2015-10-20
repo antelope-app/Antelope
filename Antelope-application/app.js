@@ -26,7 +26,10 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(__dirname + '/public'));
 
 // env config
-require('./config')(app); // pass global app to config file and set ENV vars
+
+if (process.env.NODE_ENV === "development") {
+  require('./config')(app); // pass global app to config file and set ENV vars
+}
 
 // DB config
 var connection = mysql.createConnection({
