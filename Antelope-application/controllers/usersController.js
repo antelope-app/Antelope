@@ -9,10 +9,12 @@ module.exports = function(app) {
 
 		User.getByToken(req.body.device_token, function(token) {
 			if (token) {
-				console.log('already registered', token) 
+				console.log('already registered', token)
+				res.send("Already registered")
 			} else {
 				console.log('creating', req.body.device_token)
 				User.create(req.body)
+				res.send("Created new user")
 			}
 		})
 	})
