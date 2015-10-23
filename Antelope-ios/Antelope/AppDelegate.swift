@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func _registerDeviceToken(deviceTokenString: String) {
-        print("registering device token remotely")
+        print("registering device token remotely", deviceTokenString)
         let request = NSMutableURLRequest(URL: NSURL(string: "http://10.0.0.14:4000/users")!)
         request.HTTPMethod = "POST"
         

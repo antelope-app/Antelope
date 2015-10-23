@@ -1,11 +1,25 @@
-var app = require('../app')
+var app = require('../app');
+var q = require('q');
 
 module.exports.get = function() {
-	db.query("SELECT FROM users")
+}
+
+module.exports.getByToken = function(device_token, callback) {
+	var connection = app.createConnection()
+
+	console.log('getting by token')
+	connection.query("SELECT DISTINCT device_token FROM users WHERE device_token = ?", device_token, function(err, result) {
+
+		if (err || result.length === 0) {
+			callback()
+		} else {
+			callback(result)
+		}
+		connection.end()
+	})
 }
 
 module.exports.create = function(user) {
-	console.log('creating')
 	var connection = app.createConnection()
 
 	connection.query('INSERT INTO users SET ?', user, function(err, result) {
@@ -14,7 +28,7 @@ module.exports.create = function(user) {
 			return
 		}
 
-		console.log(result)
+		connection.end()
 
 	})
 }

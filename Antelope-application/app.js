@@ -33,13 +33,15 @@ if (!process.env.NODE_ENV) {
 require('./config')(app); // pass global app to config file and set ENV vars
 
 // DB config
-var connection = mysql.createConnection({
+var dbConfig = {
     host: process.env.MYSQL_HOST,
     user: process.env.MYSQL_USERNAME,
     password: process.env.MYSQL_PW,
     database: 'antelope',
     port: '3306'
-})
+}
+console.log(dbConfig);
+var connection = mysql.createConnection(dbConfig)
 
 connection.connect(function(err){
   if(err){
