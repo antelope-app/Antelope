@@ -1,7 +1,6 @@
 //var constants = require('./constants');
 
 var config = function(app){
-  console.log(app.get('env'))
   switch(app.get('env')){
     case 'development':
       process.env.NODE_ENV = "development"

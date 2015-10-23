@@ -26,10 +26,6 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(__dirname + '/public'));
 
 // env config
-
-if (!process.env.NODE_ENV) {
-  process.env.NODE_ENV = "production"
-}
 require('./config')(app); // pass global app to config file and set ENV vars
 
 // DB config
