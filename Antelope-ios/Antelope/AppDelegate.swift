@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var mainViewController: MainViewController!
     var window: UIWindow?
     var app: UIApplication = UIApplication.sharedApplication()
+    var storyboard: UIStoryboard!
+    
+    var tutorialStarted: Bool = false
+    
+    var userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    var remoteNotificationsRegistrationSession: NSURLSession!
+    var remoteNotificationsRegistrationSessionTask: NSURLSessionDataTask!
 
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         let facebookDeepLinked : Bool = FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
@@ -23,10 +31,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if !userDefaults.boolForKey("HasLaunchedOnce") {
+            userDefaults.setBool(true, forKey: "HasLaunchedOnce")
+            userDefaults.setBool(true, forKey: "TrialPeriodActive")
+            userDefaults.synchronize()
+            
+            if let preferences = NSUserDefaults.init(suiteName: Constants.APP_GROUP_ID) {
+                preferences.setBool(true, forKey: Constants.BLOCKER_PERMISSION_KEY)
+                preferences.synchronize()
+            }
+        }
+        
+        self.reloadBlocker()
+        
+        storyboard = UIStoryboard(name: "Main", bundle: nil)
         mainViewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
         
-        app.unregisterForRemoteNotifications()
+        self.window?.rootViewController = mainViewController
         
         self.setupRemoteNotifications()
         
@@ -37,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        
     }
     
     func applicationDidEnterBackground(application: UIApplication) {
@@ -51,8 +73,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        if (!self.trialActive()) {
+            self.mainViewController.showShareWall()
+        }
     }
-    
+
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
@@ -65,6 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         app.registerUserNotificationSettings(settings)
         app.registerForRemoteNotifications()
+        
     }
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
@@ -74,36 +101,122 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .stringByTrimmingCharactersInSet(characterSet)
             .stringByReplacingOccurrencesOfString(" ", withString: "")
         
-        print(deviceTokenString)
-        
         _registerDeviceToken(deviceTokenString)
     }
     
-    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        print(error)
+    }
     
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        
+        if let data = userInfo["data"] as? NSDictionary {
+            if let id = data["id"] as? NSInteger {
+                self.getTrialStatus(id)
+            }
+        }
+    }
+
+    // remote notification in background
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+        
+        if let data = userInfo["data"] as? NSDictionary {
+            if let id = data["id"] as? NSInteger {
+                self.getTrialStatus(id)
+                completionHandler(UIBackgroundFetchResult.NewData)
+            }
+        }
     }
     
     func _registerDeviceToken(deviceTokenString: String) {
         print("registering device token remotely", deviceTokenString)
+        
+        let deviceIdString: String! = UIDevice().identifierForVendor?.UUIDString
+        
         let request = NSMutableURLRequest(URL: NSURL(string: "http://10.0.0.14:4000/users")!)
         request.HTTPMethod = "POST"
         
-        let postParams = "device_token=\(deviceTokenString)"
+        let postParams = "device_apn_token=\(deviceTokenString)&device_id=\(deviceIdString)"
         request.HTTPBody = postParams.dataUsingEncoding(NSUTF8StringEncoding)
         
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+        remoteNotificationsRegistrationSession = NSURLSession.sharedSession()
+        remoteNotificationsRegistrationSessionTask = remoteNotificationsRegistrationSession.dataTaskWithRequest(request) {
             data, response, error in
             
             if error != nil {
                 print("error=\(error)")
                 return
             } else {
-                print(response?.description)
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.mainViewController.startTutorial()
+                    self.tutorialStarted = true
+                })
             }
         }
         
-        task.resume()
+        remoteNotificationsRegistrationSessionTask.resume()
     }
-
+    
+    func getTrialStatus(id: NSInteger) {
+        let request = NSMutableURLRequest(URL: NSURL(string: "http://10.0.0.14:4000/users/\(id)/trial_status")!)
+        request.HTTPMethod = "GET"
+        
+        let urlSession = NSURLSession.sharedSession()
+        let sessionTask = urlSession.dataTaskWithRequest(request) {
+            data, response, error in
+            
+            if error != nil {
+                print("error=\(error)")
+                return
+            } else {
+                if let trialPeriodActiveString = NSString(data: data!, encoding: NSUTF8StringEncoding) {
+                    print(trialPeriodActiveString)
+                    if trialPeriodActiveString.boolValue == false && self.trialActive() {
+                        self.finishTrial()
+                        
+                        if UIApplication.sharedApplication().applicationState == UIApplicationState.Active {
+                            dispatch_async(dispatch_get_main_queue(), {
+                                self.mainViewController.showShareWall()
+                            })
+                        }
+                    }
+                }
+            }
+        }
+        
+        sessionTask.resume()
+    }
+    
+    func reloadBlocker() {
+        SFContentBlockerManager.reloadContentBlockerWithIdentifier("com.antelope.Antelope-Ad-Blocker.Block-Ads", completionHandler: { (error) -> Void in
+            if let error = error {
+                print("error:\(error)")
+            } else {
+                print("loaded successfully")
+            }
+        })
+    }
+    
+    func finishTrial() {
+        print("finishing trial")
+        NSUserDefaults.standardUserDefaults().setBool(false, forKey: "TrialPeriodActive")
+        if let preferences = NSUserDefaults.init(suiteName: Constants.APP_GROUP_ID) {
+            preferences.setBool(false, forKey: Constants.BLOCKER_PERMISSION_KEY)
+            preferences.synchronize()
+        }
+        
+        self.reloadBlocker()
+    }
+    
+    func trialActive() -> Bool {
+        if let bool: Bool = userDefaults.boolForKey("TrialPeriodActive") {
+            print("trial period active?", bool)
+            
+            return bool
+        } else {
+            return true
+        }
+    }
+ 
 }
 

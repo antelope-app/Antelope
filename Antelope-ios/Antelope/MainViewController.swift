@@ -7,69 +7,36 @@
 //
 
 import UIKit
-import SafariServices
 
 class MainViewController: UIViewController {
     @IBOutlet weak var splashView: UIView!
     var tutorialViewController: TutorialViewController!
     var hasLaunchedOnce: Bool!
     var currentDate = NSDate()
+    
+    var shareViewController: ShareViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("main controller view did load")
+        
         self.view.frame = UIScreen.mainScreen().bounds
         self.view.addSubview(self.splashView)
-        self.splashView.backgroundColor = UIColor.blackColor()
-        
-        let currentDate = NSDate()
-        
-        if !NSUserDefaults.standardUserDefaults().boolForKey("HasLaunchedOnce") {
+        self.splashView.backgroundColor = UIColor.whiteColor()
+    }
+    
+    func showShareWall() {
+        if shareViewController == nil {
+            shareViewController = ShareViewController()
+            self.addChildViewController(shareViewController)
+            print(self.childViewControllers.count)
             
-            let calendar = NSCalendar.currentCalendar()
-            let components = calendar.components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second, NSCalendarUnit.Nanosecond], fromDate: currentDate)
-            
-            let date = NSCalendar.currentCalendar().dateWithEra(1, year: components.year, month: components.month, day: components.day, hour: components.hour, minute: components.minute, second: components.second, nanosecond: components.nanosecond)!
-            
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasLaunchedOnce")
-            NSUserDefaults.standardUserDefaults().setValue(currentDate, forKey: "firstLaunchDate")
-            
-            NSUserDefaults.standardUserDefaults().synchronize()
-            
-            hasLaunchedOnce = true;
-        }
-        else {
-            if NSUserDefaults.standardUserDefaults().valueForKey("firstLaunchDate") != nil {
-                let minuteThreshold: Double = 3 * 24 * 60
-                
-                let firstLaunchDateInMinutes = NSUserDefaults.standardUserDefaults().valueForKey("firstLaunchDate") as! NSDate
-                let minutesSinceLaunchDate = self.getDifferenceInMinutesSince(firstLaunchDateInMinutes)
-                
-                print(minuteThreshold)
-                
-                if Int(minutesSinceLaunchDate) > Int(minuteThreshold) || true {
-                    print(minutesSinceLaunchDate)
-                    print("show paywall")
-                    
-                    let shareViewController = ShareViewController()
-                    self.addChildViewController(shareViewController)
-                    self.view.insertSubview(shareViewController.view, aboveSubview: self.view)
-                }
-            } else {
-                NSUserDefaults.standardUserDefaults().setValue(currentDate, forKey: "firstLaunchDate")
-            }
+            self.view.addSubview(shareViewController.view)
+        } else {
+            shareViewController.present()
         }
         
-        self.startTutorial()
-        
-        // Auto-reload content blocker when view loads
-        SFContentBlockerManager.reloadContentBlockerWithIdentifier("com.antelope.Antelope-Ad-Blocker.Block-Ads") { (error) -> Void in
-            if let error = error {
-                print("Failed to load with \(error).")
-            } else {
-                print("Loaded successfully.")
-            }
-        }
     }
     
     func startTutorial() {

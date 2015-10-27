@@ -10,21 +10,33 @@ import UIKit
 import MobileCoreServices
 
 class ActionRequestHandler: NSObject, NSExtensionRequestHandling {
+    var preferences: NSUserDefaults!
 
     func beginRequestWithExtensionContext(context: NSExtensionContext) {
-        let attachment = NSItemProvider(contentsOfURL: NSBundle.mainBundle().URLForResource("blockerList", withExtension: "json"))!
-    
-        let item = NSExtensionItem()
-        item.attachments = [attachment]
-        
-        print("begin")
-        context.completeRequestReturningItems([item]) { (expired) -> Void in
-            if expired == true {
-                print("expired")
+        if let preferences = NSUserDefaults.init(suiteName: Constants.APP_GROUP_ID) {
+            
+            let blockerFileString: String!
+            if !preferences.boolForKey(Constants.BLOCKER_PERMISSION_KEY) {
+                blockerFileString = "noopList"
             } else {
-                print("not expired")
+                blockerFileString = "blockerList"
+            }
+            
+            let attachment = NSItemProvider(contentsOfURL: NSBundle.mainBundle().URLForResource(blockerFileString, withExtension: "json"))!
+            
+            let item = NSExtensionItem()
+            item.attachments = [attachment]
+            
+            print("begin")
+            context.completeRequestReturningItems([item]) { (expired) -> Void in
+                if expired == true {
+                    print("expired")
+                } else {
+                    print("not expired")
+                }
             }
         }
+        
     }
     
 }

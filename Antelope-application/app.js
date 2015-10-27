@@ -70,6 +70,11 @@ connection.query('CREATE DATABASE IF NOT EXISTS antelope', function(err) {
   })
 })
 
+// networking
+var apn = require('apn')
+
+var apnConnection = new apn.Connection({})
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -136,4 +141,8 @@ module.exports.createConnection = function() {
   });
 
   return connection
+}
+
+module.exports.apnConnection = function() {
+  return apnConnection
 }

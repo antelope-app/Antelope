@@ -33,6 +33,12 @@
 		D40679A11BD317E500560CDE /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40679A01BD317E500560CDE /* FBSDKMessengerShareKit.framework */; };
 		D40679A31BD317EB00560CDE /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40679A21BD317EB00560CDE /* FBSDKShareKit.framework */; };
 		D418E45B1BD4B3A600BA86FF /* MessageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D418E45A1BD4B3A600BA86FF /* MessageComposer.swift */; settings = {ASSET_TAGS = (); }; };
+		D42182C21BDF5AEE00999B19 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = D42182C11BDF5AEE00999B19 /* Defaults.plist */; settings = {ASSET_TAGS = (); }; };
+		D42182C41BDF5B4E00999B19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42182C31BDF5B4E00999B19 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
+		D42182C71BDF64D400999B19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42182C31BDF5B4E00999B19 /* Constants.swift */; };
+		D42182C91BDF66FA00999B19 /* noopList.json in Resources */ = {isa = PBXBuildFile; fileRef = D42182C81BDF66FA00999B19 /* noopList.json */; settings = {ASSET_TAGS = (); }; };
+		D42182CA1BDF708600999B19 /* noopList.json in Resources */ = {isa = PBXBuildFile; fileRef = D42182C81BDF66FA00999B19 /* noopList.json */; };
+		D458968F1BDD890800B334DD /* PushNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458968E1BDD890800B334DD /* PushNotificationsManager.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +95,13 @@
 		D40679A01BD317E500560CDE /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = Frameworks/FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		D40679A21BD317EB00560CDE /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Frameworks/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		D418E45A1BD4B3A600BA86FF /* MessageComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageComposer.swift; path = Antelope/MessageComposer.swift; sourceTree = SOURCE_ROOT; };
+		D42182B31BDE20AE00999B19 /* Allow Ads.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Allow Ads.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D42182C01BDF5A9C00999B19 /* Antelope.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Antelope.entitlements; path = Antelope/Antelope.entitlements; sourceTree = SOURCE_ROOT; };
+		D42182C11BDF5AEE00999B19 /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Defaults.plist; path = Antelope/Defaults.plist; sourceTree = "<group>"; };
+		D42182C31BDF5B4E00999B19 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Antelope/Constants.swift; sourceTree = "<group>"; };
+		D42182C61BDF5E0C00999B19 /* Block Ads.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Block Ads.entitlements"; sourceTree = SOURCE_ROOT; };
+		D42182C81BDF66FA00999B19 /* noopList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noopList.json; sourceTree = "<group>"; };
+		D458968E1BDD890800B334DD /* PushNotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationsManager.swift; path = Antelope/PushNotificationsManager.swift; sourceTree = SOURCE_ROOT; };
 		D4C116371BC63EAB00F5B2DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = DashboardController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,12 +127,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D42182B01BDE20AE00999B19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0F053E2B1B93D03000A9EFBC = {
 			isa = PBXGroup;
 			children = (
+				D42182C11BDF5AEE00999B19 /* Defaults.plist */,
+				D42182C31BDF5B4E00999B19 /* Constants.swift */,
 				0F053E361B93D03000A9EFBC /* Antelope */,
 				0FCC48D81BAA9F1300A46C4B /* Block Ads */,
 				0F053E351B93D03000A9EFBC /* Products */,
@@ -131,6 +153,7 @@
 			children = (
 				0F053E341B93D03000A9EFBC /* Antelope.app */,
 				0FCC48D71BAA9F1200A46C4B /* Block Ads.appex */,
+				D42182B31BDE20AE00999B19 /* Allow Ads.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,11 +161,13 @@
 		0F053E361B93D03000A9EFBC /* Antelope */ = {
 			isa = PBXGroup;
 			children = (
+				D42182C01BDF5A9C00999B19 /* Antelope.entitlements */,
 				D418E45A1BD4B3A600BA86FF /* MessageComposer.swift */,
 				0F7C7E3B1BAA9031005D85CD /* AntelopeColors.swift */,
 				0F7C7E3C1BAA9031005D85CD /* AppDelegate.swift */,
 				0F7C7E421BAA9031005D85CD /* LaunchScreen.storyboard */,
 				0F7C7E431BAA9031005D85CD /* MainViewController.swift */,
+				D458968E1BDD890800B334DD /* PushNotificationsManager.swift */,
 				0F7C7E461BAA9031005D85CD /* ScrollViewController.swift */,
 				0F7C7E2A1BAA9013005D85CD /* ShareViewController.swift */,
 				0F7C7E311BAA9013005D85CD /* TutorialViewController.swift */,
@@ -185,6 +210,8 @@
 		0FCC48D81BAA9F1300A46C4B /* Block Ads */ = {
 			isa = PBXGroup;
 			children = (
+				D42182C81BDF66FA00999B19 /* noopList.json */,
+				D42182C61BDF5E0C00999B19 /* Block Ads.entitlements */,
 				0F6E05731BAF7B03000CE6CC /* blockerList.json */,
 				0FCC48E51BAA9F5500A46C4B /* ActionRequestHandler.swift */,
 				0FCC48DD1BAA9F1300A46C4B /* Info.plist */,
@@ -252,6 +279,23 @@
 			productReference = 0FCC48D71BAA9F1200A46C4B /* Block Ads.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		D42182B21BDE20AE00999B19 /* Allow Ads */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D42182BD1BDE20AE00999B19 /* Build configuration list for PBXNativeTarget "Allow Ads" */;
+			buildPhases = (
+				D42182AF1BDE20AE00999B19 /* Sources */,
+				D42182B01BDE20AE00999B19 /* Frameworks */,
+				D42182B11BDE20AE00999B19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Allow Ads";
+			productName = "Allow Ads";
+			productReference = D42182B31BDE20AE00999B19 /* Allow Ads.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -265,8 +309,28 @@
 					0F053E331B93D03000A9EFBC = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = VPTZL53UP2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					0FCC48D61BAA9F1200A46C4B = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = VPTZL53UP2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					D42182B21BDE20AE00999B19 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = VPTZL53UP2;
 					};
@@ -287,6 +351,7 @@
 			targets = (
 				0F053E331B93D03000A9EFBC /* Antelope */,
 				0FCC48D61BAA9F1200A46C4B /* Block Ads */,
+				D42182B21BDE20AE00999B19 /* Allow Ads */,
 			);
 		};
 /* End PBXProject section */
@@ -296,9 +361,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42182C21BDF5AEE00999B19 /* Defaults.plist in Resources */,
 				0F7C7E4A1BAA9031005D85CD /* Main.storyboard in Resources */,
 				0F7C7E491BAA9031005D85CD /* Assets.xcassets in Resources */,
 				0F7C7E4C1BAA9031005D85CD /* LaunchScreen.storyboard in Resources */,
+				D42182C91BDF66FA00999B19 /* noopList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +373,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42182CA1BDF708600999B19 /* noopList.json in Resources */,
 				0F6E05751BAF7CC4000CE6CC /* blockerList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D42182B11BDE20AE00999B19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +396,8 @@
 				0F7C7E4D1BAA9031005D85CD /* MainViewController.swift in Sources */,
 				0F7C7E331BAA9013005D85CD /* TutorialStep.swift in Sources */,
 				0F7C7E381BAA9013005D85CD /* TutorialStepZero.swift in Sources */,
+				D458968F1BDD890800B334DD /* PushNotificationsManager.swift in Sources */,
+				D42182C41BDF5B4E00999B19 /* Constants.swift in Sources */,
 				0F7C7E391BAA9013005D85CD /* TutorialViewController.swift in Sources */,
 				0F7C7E351BAA9013005D85CD /* TutorialStepOne.swift in Sources */,
 				0F7C7E4F1BAA9031005D85CD /* ScrollViewController.swift in Sources */,
@@ -337,7 +414,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D42182C71BDF64D400999B19 /* Constants.swift in Sources */,
 				0FCC48E71BAA9F5500A46C4B /* ActionRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D42182AF1BDE20AE00999B19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +544,7 @@
 				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Antelope/Antelope.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -487,6 +573,7 @@
 				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Antelope/Antelope.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -513,6 +600,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Block Ads.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
@@ -520,6 +608,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope-Ad-Blocker.Block-Ads";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALID_ARCHS = arm64;
@@ -531,6 +620,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Block Ads.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
@@ -538,8 +628,37 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope-Ad-Blocker.Block-Ads";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = arm64;
+			};
+			name = Release;
+		};
+		D42182BE1BDE20AE00999B19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Allow Ads/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope-Ad-Blocker.Allow-Ads";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D42182BF1BDE20AE00999B19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Allow Ads/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope-Ad-Blocker.Allow-Ads";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -572,6 +691,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D42182BD1BDE20AE00999B19 /* Build configuration list for PBXNativeTarget "Allow Ads" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D42182BE1BDE20AE00999B19 /* Debug */,
+				D42182BF1BDE20AE00999B19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

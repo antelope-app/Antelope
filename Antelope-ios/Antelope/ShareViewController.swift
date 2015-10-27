@@ -31,6 +31,8 @@ class ShareViewController : UIViewController, MessageComposerDelegate {
     
     var messageComposer: MessageComposer!
     
+    var visible: Bool!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,17 +54,25 @@ class ShareViewController : UIViewController, MessageComposerDelegate {
     }
     
     func present() {
-        self.view.frame.origin.y = self.view.frame.size.height
-        UIView.animateWithDuration(0.5, animations: {
-            self.view.frame.origin.y = 0
-        })
+        if self.visible == nil || self.visible == false {
+            self.view.frame.origin.y = self.view.frame.size.height
+            UIView.animateWithDuration(0.5, animations: {
+                self.view.frame.origin.y = 0
+                }, completion: { (value: Bool) in
+                    self.visible = true
+            })
+        }
     }
     
     func dismiss() {
-        self.view.frame.origin.y = 0
-        UIView.animateWithDuration(0.5, animations: {
-            self.view.frame.origin.y = self.view.frame.size.height
-        })
+        if (self.visible != nil && self.visible == true) {
+            self.view.frame.origin.y = 0
+            UIView.animateWithDuration(0.5, animations: {
+                self.view.frame.origin.y = self.view.frame.size.height
+                }, completion: { (value: Bool) in
+                    self.visible = false
+            })
+        }
     }
     
     func handleLayout() {

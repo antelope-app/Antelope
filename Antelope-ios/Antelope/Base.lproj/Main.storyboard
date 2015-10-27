@@ -25,8 +25,12 @@
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="3T0-rG-B7k"/>
-                                            <constraint firstAttribute="width" constant="100" id="h38-bJ-XDI"/>
+                                            <constraint firstAttribute="height" constant="100" id="3T0-rG-B7k">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="110"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="100" id="h38-bJ-XDI">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="110"/>
+                                            </constraint>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -34,7 +38,8 @@
                                                 <exclude reference="h38-bJ-XDI"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="145" y="355" width="110" height="110"/>
                                             <mask key="constraints">
                                                 <include reference="3T0-rG-B7k"/>
                                                 <include reference="h38-bJ-XDI"/>
@@ -45,6 +50,7 @@
                                 <animations/>
                                 <constraints>
                                     <constraint firstItem="ojg-2G-88Q" firstAttribute="centerX" secondItem="aic-vX-NgN" secondAttribute="centerX" id="FxV-8A-3mu"/>
+                                    <constraint firstItem="ojg-2G-88Q" firstAttribute="centerY" secondItem="aic-vX-NgN" secondAttribute="centerY" id="YiW-tv-7N5"/>
                                     <constraint firstItem="ojg-2G-88Q" firstAttribute="top" secondItem="aic-vX-NgN" secondAttribute="top" constant="150" id="x4f-Tv-ipv"/>
                                 </constraints>
                                 <variation key="default">
@@ -53,6 +59,7 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="FxV-8A-3mu"/>
+                                        <exclude reference="YiW-tv-7N5"/>
                                         <exclude reference="x4f-Tv-ipv"/>
                                     </mask>
                                 </variation>
@@ -62,7 +69,8 @@
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="FxV-8A-3mu"/>
-                                        <include reference="x4f-Tv-ipv"/>
+                                        <include reference="YiW-tv-7N5"/>
+                                        <exclude reference="x4f-Tv-ipv"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -70,20 +78,36 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aic-vX-NgN" secondAttribute="trailing" id="3I2-QH-sIr"/>
+                            <constraint firstItem="aic-vX-NgN" firstAttribute="top" secondItem="SGx-sF-hot" secondAttribute="topMargin" id="66l-sT-HBa"/>
                             <constraint firstAttribute="trailing" secondItem="aic-vX-NgN" secondAttribute="trailing" id="COj-ic-Kqg"/>
+                            <constraint firstItem="tMp-VM-lmb" firstAttribute="top" secondItem="aic-vX-NgN" secondAttribute="bottom" id="M3y-aQ-2ce"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aic-vX-NgN" secondAttribute="trailing" id="VvU-Yo-S5R"/>
                             <constraint firstItem="tMp-VM-lmb" firstAttribute="top" secondItem="aic-vX-NgN" secondAttribute="bottom" id="Y2e-Pt-R6h"/>
+                            <constraint firstItem="aic-vX-NgN" firstAttribute="top" secondItem="hi4-47-G4f" secondAttribute="bottom" id="dy7-YM-LgJ"/>
+                            <constraint firstItem="aic-vX-NgN" firstAttribute="leading" secondItem="SGx-sF-hot" secondAttribute="leadingMargin" id="gWs-kO-7eT"/>
                             <constraint firstItem="aic-vX-NgN" firstAttribute="leading" secondItem="SGx-sF-hot" secondAttribute="leading" id="rbz-QK-a56"/>
+                            <constraint firstItem="tMp-VM-lmb" firstAttribute="top" secondItem="aic-vX-NgN" secondAttribute="bottom" id="sig-Mx-uku"/>
                             <constraint firstItem="aic-vX-NgN" firstAttribute="top" secondItem="hi4-47-G4f" secondAttribute="bottom" id="ydD-kP-a8M"/>
+                            <constraint firstItem="aic-vX-NgN" firstAttribute="leading" secondItem="SGx-sF-hot" secondAttribute="leading" id="yfI-QR-1cZ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="aic-vX-NgN"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Y2e-Pt-R6h"/>
+                                <exclude reference="3I2-QH-sIr"/>
+                                <exclude reference="66l-sT-HBa"/>
                                 <exclude reference="COj-ic-Kqg"/>
+                                <exclude reference="VvU-Yo-S5R"/>
+                                <exclude reference="dy7-YM-LgJ"/>
+                                <exclude reference="gWs-kO-7eT"/>
                                 <exclude reference="rbz-QK-a56"/>
                                 <exclude reference="ydD-kP-a8M"/>
+                                <exclude reference="yfI-QR-1cZ"/>
+                                <exclude reference="M3y-aQ-2ce"/>
+                                <exclude reference="Y2e-Pt-R6h"/>
+                                <exclude reference="sig-Mx-uku"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -91,10 +115,18 @@
                                 <include reference="aic-vX-NgN"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="3I2-QH-sIr"/>
+                                <include reference="66l-sT-HBa"/>
+                                <exclude reference="COj-ic-Kqg"/>
+                                <include reference="VvU-Yo-S5R"/>
+                                <exclude reference="dy7-YM-LgJ"/>
+                                <include reference="gWs-kO-7eT"/>
+                                <exclude reference="rbz-QK-a56"/>
+                                <exclude reference="ydD-kP-a8M"/>
+                                <exclude reference="yfI-QR-1cZ"/>
+                                <exclude reference="M3y-aQ-2ce"/>
                                 <include reference="Y2e-Pt-R6h"/>
-                                <include reference="COj-ic-Kqg"/>
-                                <include reference="rbz-QK-a56"/>
-                                <include reference="ydD-kP-a8M"/>
+                                <exclude reference="sig-Mx-uku"/>
                             </mask>
                         </variation>
                     </view>
@@ -104,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeX-nU-b4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-537" y="1253.25"/>
+            <point key="canvasLocation" x="-537" y="1248"/>
         </scene>
         <!--Tutorial Step Zero-->
         <scene sceneID="oMi-aQ-3Gp">
