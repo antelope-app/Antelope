@@ -67,25 +67,25 @@ class TutorialStepZero: TutorialStep
         self.secondSubHeader.frame.origin.x = self.view.frame.size.width
         self.secondSubHeader.hidden = false
         
-        self.delay(7.0, closure: {
+        /*self.delay(7.0, closure: {
             UIView.animateWithDuration(0.5, animations: {
                 let anchor = self.stepZeroSubheader.frame.origin.x
                 self.stepZeroSubheader.frame.origin.x = 0 - self.stepZeroSubheader.frame.size.width
                 self.secondSubHeader.frame.origin.x = anchor
             })
-        })
+        })*/
         
         self.thirdSubHeader.frame = self.secondSubHeader.frame
         self.thirdSubHeader.frame.origin.x = self.view.frame.size.width
         self.thirdSubHeader.hidden = false
         
-        self.delay(14.0, closure: {
+        /*self.delay(14.0, closure: {
             UIView.animateWithDuration(0.5, animations: {
                 let anchor = self.secondSubHeader.frame.origin.x
                 self.secondSubHeader.frame.origin.x = 0 - self.secondSubHeader.frame.size.width
                 self.thirdSubHeader.frame.origin.x = anchor
             })
-        })
+        })*/
         
         UIView.animateWithDuration(0.7, delay: 0, options: .CurveEaseInOut, animations: {
             // LOGO MOVING

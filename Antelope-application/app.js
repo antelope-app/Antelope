@@ -41,7 +41,13 @@ var exec = require('child_process').exec;
 var cmd = 'node db/migrate.js migrate'
 
 exec(cmd, function(error, stdout, stderr) {
-  console.log(stdout)
+  if (error) {
+    console.log("child_process_err:", error)
+  } else if (stderr) {
+    console.log("child_process_stderr:", stderr)
+  } else {
+    console.log(stdout)
+  }
 })
 
 var connection = mysql.createConnection(dbConfig)
