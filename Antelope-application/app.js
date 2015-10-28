@@ -82,7 +82,7 @@ if (process.env.NODE_ENV === 'development') {
 } else {
   options = {
     key: 'prod-key.pem',
-    cert: 'prod-cert.pem'
+    cert: 'prod-cert.cert'
   }
 }
 
