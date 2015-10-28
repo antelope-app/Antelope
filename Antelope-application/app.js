@@ -73,7 +73,18 @@ connection.query('CREATE DATABASE IF NOT EXISTS antelope', function(err) {
 // networking
 var apn = require('apn')
 
-var apnConnection = new apn.Connection({})
+var options;
+if (process.env.NODE_ENV === 'development') {
+  options = {}
+} else {
+  options = {
+    key: 'prod-key.pem',
+    cert: 'prod-cert.pem'
+  }
+}
+
+console.log('apn options', options)
+var apnConnection = new apn.Connection(options)
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
