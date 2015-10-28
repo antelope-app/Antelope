@@ -73,7 +73,7 @@ connection.query('CREATE DATABASE IF NOT EXISTS antelope', function(err) {
       'PRIMARY KEY(id),' +
       'device_apn_token VARCHAR(200),' +
       'device_id VARCHAR(100),' +
-      'trial_period BOOL NOT NULL DEFAULT "0",' +
+      "trial_period BOOL NOT NULL DEFAULT '1'," +
       'created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,' +
       'updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)', function(err) {
 
