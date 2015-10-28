@@ -86,6 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Notifications
     
     func setupRemoteNotifications() {
+        print("setting up remote notifications")
         let type: UIUserNotificationType = UIUserNotificationType.Alert
         let settings = UIUserNotificationSettings(forTypes: type, categories: nil)
         
@@ -133,7 +134,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let deviceIdString: String! = UIDevice().identifierForVendor?.UUIDString
         
-        let request = NSMutableURLRequest(URL: NSURL(string: "http://10.0.0.14:4000/users")!)
+        let request = NSMutableURLRequest(URL: NSURL(string: "\(Constants.SERVER_DOMAIN)/users")!)
         request.HTTPMethod = "POST"
         
         let postParams = "device_apn_token=\(deviceTokenString)&device_id=\(deviceIdString)"
@@ -158,7 +159,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func getTrialStatus(id: NSInteger) {
-        let request = NSMutableURLRequest(URL: NSURL(string: "http://10.0.0.14:4000/users/\(id)/trial_status")!)
+        let request = NSMutableURLRequest(URL: NSURL(string: "\(Constants.SERVER_DOMAIN)/users/\(id)/trial_status")!)
         request.HTTPMethod = "GET"
         
         let urlSession = NSURLSession.sharedSession()
