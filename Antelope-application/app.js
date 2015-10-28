@@ -68,7 +68,20 @@ connection.query('CREATE DATABASE IF NOT EXISTS antelope', function(err) {
   connection.query('USE antelope', function(err) {
     if (err) { console.log(err); throw err;}
 
-    connection.end(function(err) {
+    connection.query('CREATE TABLE IF NOT EXISTS users(' + 
+      'id INT NOT NULL AUTO_INCREMENT,' +
+      'PRIMARY KEY(id),' +
+      'device_apn_token VARCHAR(200),' +
+      'device_id VARCHAR(100),' +
+      'trial_period BOOL NOT NULL DEFAULT "0",' +
+      'created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,' +
+      'updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)', function(err) {
+
+      if (err) throw err;
+
+      connection.end(function(err) {
+
+      })
     })
   })
 })
