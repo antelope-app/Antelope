@@ -36,7 +36,14 @@ var dbConfig = {
     database: 'antelope',
     port: '3306'
 }
-console.log(dbConfig);
+
+var exec = require('child_process').exec;
+var cmd = 'node db/migrate.js migrate'
+
+exec(cmd, function(error, stdout, stderr) {
+  console.log(stdout)
+})
+
 var connection = mysql.createConnection(dbConfig)
 
 connection.connect(function(err){
