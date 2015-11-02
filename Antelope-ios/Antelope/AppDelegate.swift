@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, NotificationSetupFlowDelegate {
     
     var mainViewController: MainViewController!
     var window: UIWindow?
@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var tutorialStarted: Bool = false
     
+    var user = User()
+    
+    var userIsPromptedForRemoteNotifications: Bool = false
     var userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
     var remoteNotificationsRegistrationSession: NSURLSession!
     var remoteNotificationsRegistrationSessionTask: NSURLSessionDataTask!
@@ -31,25 +34,68 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        storyboard = UIStoryboard(name: "Main", bundle: nil)
+        mainViewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
+        mainViewController.delegate = self
+        
+        self.window?.rootViewController = mainViewController
+        
         if !userDefaults.boolForKey("HasLaunchedOnce") {
+            
             userDefaults.setBool(true, forKey: "HasLaunchedOnce")
             userDefaults.setBool(true, forKey: "TrialPeriodActive")
+            userDefaults.setBool(false, forKey: "PromptedForNotifications")
             userDefaults.synchronize()
             
             if let preferences = NSUserDefaults.init(suiteName: Constants.APP_GROUP_ID) {
                 preferences.setBool(true, forKey: Constants.BLOCKER_PERMISSION_KEY)
                 preferences.synchronize()
             }
+            
+            self.mainViewController.startNotificationSetup()
+            self.mainViewController.notificationSetupFlowController.delegate = self
+        } else {
+            
+            user.getByDeviceId({
+                data, response, error in
+                
+                if error != nil {
+                    print("error=\(error)")
+                    return
+                } else {
+                    dispatch_async(dispatch_get_main_queue(), {
+                        print(NSString(data: data!, encoding: NSUTF8StringEncoding))
+                        let httpResponse = response as! NSHTTPURLResponse
+                        if (data != nil && httpResponse.statusCode != 404) {
+                            
+                            self.user.initFromData(data!)
+                            
+                            print(self.user)
+                            
+                            if (!self.userDefaults.boolForKey("PromptedForNotifications")) {
+                                self.mainViewController.startNotificationSetup()
+                                self.mainViewController.notificationSetupFlowController.delegate = self
+                            } else {
+                                self.setupRemoteNotifications()
+                                self.mainViewController.trialStateActive()
+                                
+                                print("is trial done? \(self.user.trial_period)")
+                                if self.user.trial_period != nil && self.user.trial_period.boolValue == false {
+                                    print("trial is done")
+                                    self.finishTrial()
+                                }
+                            }
+                        }
+                        else if (data == nil || httpResponse.statusCode == 404) {
+                            self.mainViewController.startNotificationSetup()
+                            self.mainViewController.notificationSetupFlowController.delegate = self
+                        }
+                    })
+                }
+            })
         }
         
         self.reloadBlocker()
-        
-        storyboard = UIStoryboard(name: "Main", bundle: nil)
-        mainViewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
-        
-        self.window?.rootViewController = mainViewController
-        
-        self.setupRemoteNotifications()
         
         let facebookLaunched : Bool = FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         return facebookLaunched
@@ -73,9 +119,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        if let preferences = NSUserDefaults.init(suiteName: Constants.APP_GROUP_ID) {
+            preferences.synchronize()
+            
+            if (!self.trialActive() && !preferences.boolForKey(Constants.BLOCKER_PERMISSION_KEY)) {
+                self.mainViewController.showShareWall()
+            }
+        }
         
-        if (!self.trialActive()) {
-            self.mainViewController.showShareWall()
+        if (self.userIsPromptedForRemoteNotifications) {
+            userDefaults.setBool(true, forKey: "PromptedForNotifications")
+            self.userIsPromptedForRemoteNotifications = false
+            
+            print("seguing to tutorial")
+            self.mainViewController.segueToTutorial({
+                self.mainViewController.notificationSetupFlowController.removeFromParentViewController()
+                self.mainViewController.notificationSetupFlowController.view.removeFromSuperview()
+            })
+            
         }
     }
 
@@ -84,16 +145,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     // Notifications
-    
-    func setupRemoteNotifications() {
-        print("setting up remote notifications")
-        let type: UIUserNotificationType = UIUserNotificationType.Alert
-        let settings = UIUserNotificationSettings(forTypes: type, categories: nil)
-        
-        app.registerUserNotificationSettings(settings)
-        app.registerForRemoteNotifications()
-        
-    }
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         let characterSet = NSCharacterSet(charactersInString: "<>")
@@ -109,23 +160,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(error)
     }
     
+    func notificationSetupDidFinish() {
+        self.userIsPromptedForRemoteNotifications = true
+        self.setupRemoteNotifications()
+    }
+    
+    func setupRemoteNotifications() {
+        print("setting up remote notifications")
+        let type: UIUserNotificationType = UIUserNotificationType.Alert
+        let settings = UIUserNotificationSettings(forTypes: type, categories: nil)
+        
+        app.registerUserNotificationSettings(settings)
+        app.registerForRemoteNotifications()
+        
+    }
+    
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         
         if let data = userInfo["data"] as? NSDictionary {
-            if let id = data["id"] as? NSInteger {
-                self.getTrialStatus(id)
-            }
+            self.queryTrialStatusUsingVendorId()
         }
     }
 
-    // remote notification in background
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
         
         if let data = userInfo["data"] as? NSDictionary {
-            if let id = data["id"] as? NSInteger {
-                self.getTrialStatus(id)
-                completionHandler(UIBackgroundFetchResult.NewData)
-            }
+            self.queryTrialStatusUsingVendorId()
+            completionHandler(UIBackgroundFetchResult.NewData)
         }
     }
     
@@ -149,8 +210,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 return
             } else {
                 dispatch_async(dispatch_get_main_queue(), {
-                    self.mainViewController.startTutorial()
-                    self.tutorialStarted = true
                 })
             }
         }
@@ -158,38 +217,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         remoteNotificationsRegistrationSessionTask.resume()
     }
     
-    func getTrialStatus(id: NSInteger) {
-        let request = NSMutableURLRequest(URL: NSURL(string: "\(Constants.SERVER_DOMAIN)/users/\(id)/trial_status")!)
-        request.HTTPMethod = "GET"
+    func queryTrialStatusUsingVendorId() {
         
-        let urlSession = NSURLSession.sharedSession()
-        let sessionTask = urlSession.dataTaskWithRequest(request) {
-            data, response, error in
-            
-            if error != nil {
-                print("error=\(error)")
-                return
-            } else {
-                if let trialPeriodActiveString = NSString(data: data!, encoding: NSUTF8StringEncoding) {
-                    print(trialPeriodActiveString)
-                    if trialPeriodActiveString.boolValue == false && self.trialActive() {
-                        self.finishTrial()
-                        
-                        if UIApplication.sharedApplication().applicationState == UIApplicationState.Active {
-                            dispatch_async(dispatch_get_main_queue(), {
-                                self.mainViewController.showShareWall()
-                            })
+        if !self.trialActive() {
+            return
+        } else {
+            user.getByDeviceId({
+                data, response, error in
+                
+                if error != nil {
+                    print("error=\(error)")
+                    return
+                } else {
+                    dispatch_async(dispatch_get_main_queue(), {
+                        if (data != nil) {
+                            
+                            self.user.initFromData(data!)
+                            
+                            if self.user.trial_period != nil && self.user.trial_period == false {
+                                self.finishTrial()
+                            }
                         }
-                    }
+                    })
                 }
-            }
+            })
         }
-        
-        sessionTask.resume()
     }
     
     func reloadBlocker() {
-        SFContentBlockerManager.reloadContentBlockerWithIdentifier("com.antelope.Antelope-Ad-Blocker.Block-Ads", completionHandler: { (error) -> Void in
+        SFContentBlockerManager.reloadContentBlockerWithIdentifier("com.antelope.Antelope-Ad-Blocker.Block-Ads", completionHandler: {
+            (error) -> Void in
             if let error = error {
                 print("error:\(error)")
             } else {
@@ -205,6 +262,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             preferences.setBool(false, forKey: Constants.BLOCKER_PERMISSION_KEY)
             preferences.synchronize()
         }
+        
+        if UIApplication.sharedApplication().applicationState == UIApplicationState.Active {
+            dispatch_async(dispatch_get_main_queue(), {
+                self.mainViewController.showShareWall()
+            })
+        }
+        
+        self.reloadBlocker()
+    }
+    
+    func didShareWithSuccess() {
+        print("delegate callback in appdelegate, did share with success")
+        if let preferences = NSUserDefaults.init(suiteName: Constants.APP_GROUP_ID) {
+            preferences.setBool(true, forKey: Constants.BLOCKER_PERMISSION_KEY)
+            preferences.synchronize()
+        }
+        
+        self.mainViewController.trialStateViewController.updateCounter(0)
         
         self.reloadBlocker()
     }

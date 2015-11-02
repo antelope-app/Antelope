@@ -8,14 +8,22 @@
 
 import UIKit
 
-class TutorialViewController: ScrollViewController, TutorialStepDelegate, ShareViewDelegate {
+protocol TutorialFlowDelegate {
+    func tutorialDidFinish()
+}
+
+class TutorialViewController: ScrollViewController, TutorialStepDelegate {
     @IBOutlet weak var tutorialSplash: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
+    
+    var delegate: TutorialFlowDelegate!
     
     var colorKit = AntelopeColors()
     
     var absoluteStep: NSInteger = 0
     var step: NSInteger!
+    
+    var segueFromNotificationSetupFlow: Bool = false
     
     var tutorialStepZero: TutorialStepZero!
     var tutorialStepOne: TutorialStepOne!
@@ -50,8 +58,14 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate, ShareV
         tutorialStepThree.delegate = self
         
         //viewControllersForSteps = [tutorialStepZero, tutorialStepOne, tutorialStepTwo, tutorialStepFour, tutorialStepThree, shareViewController]
-        viewControllersForSteps = [tutorialStepZero, tutorialStepThree]
-        self.pageControl.numberOfPages = Int(viewControllersForSteps.count) - 1
+        
+        if segueFromNotificationSetupFlow {
+            viewControllersForSteps = [tutorialStepThree]
+            self.pageControl.numberOfPages = 0
+        } else {
+            viewControllersForSteps = [tutorialStepZero, tutorialStepThree]
+            self.pageControl.numberOfPages = Int(viewControllersForSteps.count)
+        }
         
         self.addChildViewControllers(viewControllersForSteps)
         self.view.bringSubviewToFront(self.pageControl)
@@ -63,22 +77,20 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate, ShareV
     
     func nextStep(index: NSInteger) {
         
-        if self.absoluteStep < self.childViewControllers.count - 1 {
-            self.absoluteStep++
+        if index == self.childViewControllers.count - 1 {
+            self.finishTutorial()
+        } else {
+            self.scrollToViewControllerAtIndex(index + 1)
         }
-        self.scrollToViewControllerAtIndex(index + 1)
     }
     
     func startTutorial() {
-        self.tutorialStepZero.initialize()
+        if let intro = self.childViewControllers[0] as? TutorialStepZero {
+            intro.initialize()
+        }
     }
     
-    func restartTutorial() {
-        self.scrollToViewControllerAtIndex(1)
-    }
-    
-    func finishTutorial()
-    {
+    func finishTutorial() {
         
         if let settingsURL: NSURL = NSURL(string: "prefs:root") {
             let application: UIApplication = UIApplication.sharedApplication()
@@ -87,9 +99,10 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate, ShareV
             }
         }
         
-        self.tutorialStepZero.delay(1.0, closure: {
-            self.scrollToViewControllerAtIndex(Int(self.childViewControllers.count) - 1)
-        })
+        TutorialStep().delay(1.0) {
+            self.delegate.tutorialDidFinish()
+        }
+        
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {

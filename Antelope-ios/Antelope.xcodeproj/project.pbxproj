@@ -38,7 +38,10 @@
 		D42182C71BDF64D400999B19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42182C31BDF5B4E00999B19 /* Constants.swift */; };
 		D42182C91BDF66FA00999B19 /* noopList.json in Resources */ = {isa = PBXBuildFile; fileRef = D42182C81BDF66FA00999B19 /* noopList.json */; settings = {ASSET_TAGS = (); }; };
 		D42182CA1BDF708600999B19 /* noopList.json in Resources */ = {isa = PBXBuildFile; fileRef = D42182C81BDF66FA00999B19 /* noopList.json */; };
-		D458968F1BDD890800B334DD /* PushNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458968E1BDD890800B334DD /* PushNotificationsManager.swift */; settings = {ASSET_TAGS = (); }; };
+		D458968F1BDD890800B334DD /* NotificationSetupFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458968E1BDD890800B334DD /* NotificationSetupFlowController.swift */; settings = {ASSET_TAGS = (); }; };
+		D4D68FF51BE33DD9008CFDEC /* TrialStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D68FF41BE33DD9008CFDEC /* TrialStateViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D4D68FF71BE434A6008CFDEC /* PreNotificationPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D68FF61BE434A6008CFDEC /* PreNotificationPrompt.swift */; settings = {ASSET_TAGS = (); }; };
+		D4D68FF91BE59B45008CFDEC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D68FF81BE59B45008CFDEC /* User.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,8 +104,11 @@
 		D42182C31BDF5B4E00999B19 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Antelope/Constants.swift; sourceTree = "<group>"; };
 		D42182C61BDF5E0C00999B19 /* Block Ads.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Block Ads.entitlements"; sourceTree = SOURCE_ROOT; };
 		D42182C81BDF66FA00999B19 /* noopList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noopList.json; sourceTree = "<group>"; };
-		D458968E1BDD890800B334DD /* PushNotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationsManager.swift; path = Antelope/PushNotificationsManager.swift; sourceTree = SOURCE_ROOT; };
+		D458968E1BDD890800B334DD /* NotificationSetupFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationSetupFlowController.swift; path = Antelope/NotificationSetupFlowController.swift; sourceTree = SOURCE_ROOT; };
 		D4C116371BC63EAB00F5B2DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = DashboardController.swift; sourceTree = "<group>"; };
+		D4D68FF41BE33DD9008CFDEC /* TrialStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrialStateViewController.swift; path = Antelope/TrialStateViewController.swift; sourceTree = SOURCE_ROOT; };
+		D4D68FF61BE434A6008CFDEC /* PreNotificationPrompt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreNotificationPrompt.swift; path = Antelope/PreNotificationPrompt.swift; sourceTree = SOURCE_ROOT; };
+		D4D68FF81BE59B45008CFDEC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Antelope/User.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,11 +171,14 @@
 				D418E45A1BD4B3A600BA86FF /* MessageComposer.swift */,
 				0F7C7E3B1BAA9031005D85CD /* AntelopeColors.swift */,
 				0F7C7E3C1BAA9031005D85CD /* AppDelegate.swift */,
+				D4D68FF81BE59B45008CFDEC /* User.swift */,
 				0F7C7E421BAA9031005D85CD /* LaunchScreen.storyboard */,
 				0F7C7E431BAA9031005D85CD /* MainViewController.swift */,
-				D458968E1BDD890800B334DD /* PushNotificationsManager.swift */,
+				D4D68FF41BE33DD9008CFDEC /* TrialStateViewController.swift */,
+				D458968E1BDD890800B334DD /* NotificationSetupFlowController.swift */,
 				0F7C7E461BAA9031005D85CD /* ScrollViewController.swift */,
 				0F7C7E2A1BAA9013005D85CD /* ShareViewController.swift */,
+				D4D68FF61BE434A6008CFDEC /* PreNotificationPrompt.swift */,
 				0F7C7E311BAA9013005D85CD /* TutorialViewController.swift */,
 				D4FF1E681B990BAA00712B70 /* TutorialSteps */,
 				0F7C7E3E1BAA9031005D85CD /* Base.lproj */,
@@ -396,7 +405,8 @@
 				0F7C7E4D1BAA9031005D85CD /* MainViewController.swift in Sources */,
 				0F7C7E331BAA9013005D85CD /* TutorialStep.swift in Sources */,
 				0F7C7E381BAA9013005D85CD /* TutorialStepZero.swift in Sources */,
-				D458968F1BDD890800B334DD /* PushNotificationsManager.swift in Sources */,
+				D458968F1BDD890800B334DD /* NotificationSetupFlowController.swift in Sources */,
+				D4D68FF51BE33DD9008CFDEC /* TrialStateViewController.swift in Sources */,
 				D42182C41BDF5B4E00999B19 /* Constants.swift in Sources */,
 				0F7C7E391BAA9013005D85CD /* TutorialViewController.swift in Sources */,
 				0F7C7E351BAA9013005D85CD /* TutorialStepOne.swift in Sources */,
@@ -404,6 +414,8 @@
 				0F7C7E471BAA9031005D85CD /* AntelopeColors.swift in Sources */,
 				0F7C7E371BAA9013005D85CD /* TutorialStepTwo.swift in Sources */,
 				D418E45B1BD4B3A600BA86FF /* MessageComposer.swift in Sources */,
+				D4D68FF71BE434A6008CFDEC /* PreNotificationPrompt.swift in Sources */,
+				D4D68FF91BE59B45008CFDEC /* User.swift in Sources */,
 				0F7C7E341BAA9013005D85CD /* TutorialStepFour.swift in Sources */,
 				0F7C7E481BAA9031005D85CD /* AppDelegate.swift in Sources */,
 				0F7C7E361BAA9013005D85CD /* TutorialStepThree.swift in Sources */,
@@ -699,6 +711,7 @@
 				D42182BF1BDE20AE00999B19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

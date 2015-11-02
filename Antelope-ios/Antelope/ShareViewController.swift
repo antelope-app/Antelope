@@ -10,14 +10,14 @@ import Foundation
 import FBSDKMessengerShareKit
 import MessageUI
 
-protocol ShareViewDelegate {
-    func restartTutorial()
+protocol ShareFlowDelegate {
+    func didShareWithSuccess()
 }
 
 class ShareViewController : UIViewController, MessageComposerDelegate {
     var colorKit: AntelopeColors = AntelopeColors()
     var tutorialStep = TutorialStep()
-    var delegate: ShareViewDelegate!
+    var delegate: ShareFlowDelegate!
     
     var imageURL: NSURL = NSURL(string: "https://i.imgur.com/v8HFwYG.png")!
     var fbShareDescription: String = "Antelope blocks ads and trackers in Safari, making sites load up to 50% faster. It's a free app for your iPhone or iPad, and it's open-source."
@@ -56,7 +56,7 @@ class ShareViewController : UIViewController, MessageComposerDelegate {
     func present() {
         if self.visible == nil || self.visible == false {
             self.view.frame.origin.y = self.view.frame.size.height
-            UIView.animateWithDuration(0.5, animations: {
+            UIView.animateWithDuration(0.3, animations: {
                 self.view.frame.origin.y = 0
                 }, completion: { (value: Bool) in
                     self.visible = true
@@ -65,14 +65,7 @@ class ShareViewController : UIViewController, MessageComposerDelegate {
     }
     
     func dismiss() {
-        if (self.visible != nil && self.visible == true) {
-            self.view.frame.origin.y = 0
-            UIView.animateWithDuration(0.5, animations: {
-                self.view.frame.origin.y = self.view.frame.size.height
-                }, completion: { (value: Bool) in
-                    self.visible = false
-            })
-        }
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func handleLayout() {
@@ -106,15 +99,15 @@ class ShareViewController : UIViewController, MessageComposerDelegate {
         self.view.addSubview(fbShareImage)
         
         let shareHeader: UITextView = UITextView()
-        shareHeader.frame.size = CGSizeMake(280, 80)
+        shareHeader.frame.size = CGSizeMake(280, 120)
         shareHeader.center.x = self.view.center.x
         shareHeader.center.y = fbShareImage.frame.origin.y - (fbShareImage.frame.origin.y - topFrame.frame.size.height) / 2
         
         shareHeader.textColor = colorKit.charcoal
-        shareHeader.text = "Keep using Antelope for free. Share with a friend!"
+        shareHeader.text = "Your trial is over. Please share this video with 1 friend to keep using Antelope."
         let style = NSMutableParagraphStyle()
         style.lineSpacing = 12
-        let headerAttributes = [NSParagraphStyleAttributeName: style, NSFontAttributeName: UIFont.systemFontOfSize(20.0)]
+        let headerAttributes = [NSParagraphStyleAttributeName: style, NSFontAttributeName: UIFont.systemFontOfSize(18.0)]
         shareHeader.attributedText = NSAttributedString(string: shareHeader.text, attributes: headerAttributes)
         shareHeader.textColor = colorKit.charcoal
         shareHeader.textAlignment = NSTextAlignment.Center
@@ -169,7 +162,7 @@ class ShareViewController : UIViewController, MessageComposerDelegate {
         messageComposer = MessageComposer()
         messageComposer.delegate = self
         
-        if (messageComposer.canOpenFbMessenger()) {
+        if (messageComposer.canOpenFbMessenger()) && false {
             
             fbMessageDialog = messageComposer.configuredFbMessageDialogWithContent(content)
             
@@ -206,10 +199,12 @@ class ShareViewController : UIViewController, MessageComposerDelegate {
     func didFinishWithSuccess() {
         print("did send message")
         
+        delegate.didShareWithSuccess()
+        
         self.dismiss()
     }
     
     func restartTutorial() {
-        delegate.restartTutorial()
+        //delegate.restartTutorial()
     }
 }

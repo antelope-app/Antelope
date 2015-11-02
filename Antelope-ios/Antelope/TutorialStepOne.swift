@@ -12,6 +12,7 @@ class TutorialStepOne: TutorialStep
 {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var headline: UITextView!
+    @IBOutlet weak var subheader: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,9 @@ class TutorialStepOne: TutorialStep
         nextButton = self.borderButtonStyle(nextButton, options: buttonOptions)
         
         headline.textColor = colorKit.white
+        
+        subheader = self.paragraphStyle(subheader)
+        subheader.textColor = colorKit.white
         
         self.view.backgroundColor = self.colorKit.magenta
 

@@ -27,9 +27,6 @@ class TutorialStepZero: TutorialStep
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let buttonOptions: [ String: String ] = [ "color": "teal" ]
-        nextButton = self.borderButtonStyle(nextButton, options: buttonOptions)
-        
         stepZeroSubheader = self.paragraphStyle(stepZeroSubheader)
         stepZeroSubheader.userInteractionEnabled = false
         
@@ -51,10 +48,7 @@ class TutorialStepZero: TutorialStep
         
         
     }
-    
-    @IBAction func nextStep(sender: UIButton) {
-        delegate.nextStep(0)
-    }
+
     
     func initialize() {
         
@@ -107,7 +101,7 @@ class TutorialStepZero: TutorialStep
                 // sub header, then bars
                 self.delay(1.0) {
                     UIView.animateWithDuration(0.7, animations: {
-                        self.nextButton.alpha = 1.0
+                        self.nextButton.alpha = 0.5
                         self.stepZeroSubheader.alpha = 1.0
                         
                     })

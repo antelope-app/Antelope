@@ -13,6 +13,19 @@ module.exports.get = function(id, callback) {
 	})
 }
 
+module.exports.getByDeviceId = function(device_id, callback) {
+	var connection = app.createConnection()
+
+	connection.query("SELECT DISTINCT id, device_id, created_at FROM users WHERE device_id = ?", device_id, function(err, result) {
+		connection.end()
+		if (err || result.length === 0) {
+			callback()
+		} else {
+			callback(result[0])
+		}
+	})
+}
+
 module.exports.getByToken = function(device_apn_token, callback) {
 	var connection = app.createConnection()
 
