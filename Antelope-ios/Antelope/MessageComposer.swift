@@ -29,10 +29,11 @@ class MessageComposer: NSObject, FBSDKSharingDelegate, MFMessageComposeViewContr
     }
     
     // Configures and returns a MFMessageComposeViewController instance
-    func configuredMessageComposeViewControllerWithMessage(message: String) -> MFMessageComposeViewController {
+    func configuredMessageComposeViewControllerWithData(message: String, videoData: NSData) -> MFMessageComposeViewController {
         let messageComposeVC = MFMessageComposeViewController()
         messageComposeVC.messageComposeDelegate = self  //  Make sure to set this property to self, so that the controller can be dismissed!
         messageComposeVC.body = message
+        messageComposeVC.addAttachmentData(videoData, typeIdentifier: "mp4", filename: "share-video.mp4")
         return messageComposeVC
     }
     

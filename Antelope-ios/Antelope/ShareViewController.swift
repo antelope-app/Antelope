@@ -159,6 +159,12 @@ class ShareViewController : UIViewController, MessageComposerDelegate {
         sendButton.center.y = self.view.frame.size.height - (self.view.frame.size.height - (fbShareImage.frame.origin.y + fbShareImage.frame.size.height)) / 2
         sendButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Center
         
+        print("getting video")
+        let path = NSBundle.mainBundle().pathForResource("share-video", ofType:"mp4")
+        let url = NSURL.fileURLWithPath(path!)
+        
+        let videoData = NSData(contentsOfURL: url)
+        
         messageComposer = MessageComposer()
         messageComposer.delegate = self
         
@@ -172,7 +178,7 @@ class ShareViewController : UIViewController, MessageComposerDelegate {
         } else if (messageComposer.canSendText()) {
             print("NO MESSENGER")
             
-            self.textMessageDialog = messageComposer.configuredMessageComposeViewControllerWithMessage(self.fbShareDescription)
+            self.textMessageDialog = messageComposer.configuredMessageComposeViewControllerWithData(self.fbShareDescription, videoData: videoData!)
             
             sendButton.setTitle("Send via iMessage", forState: UIControlState.Normal)
             sendButton.addTarget(self, action: "openMessages", forControlEvents: .TouchUpInside)

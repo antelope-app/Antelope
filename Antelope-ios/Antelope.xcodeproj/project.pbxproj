@@ -40,6 +40,7 @@
 		D42182CA1BDF708600999B19 /* noopList.json in Resources */ = {isa = PBXBuildFile; fileRef = D42182C81BDF66FA00999B19 /* noopList.json */; };
 		D458968F1BDD890800B334DD /* NotificationSetupFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458968E1BDD890800B334DD /* NotificationSetupFlowController.swift */; };
 		D49D78161BE7155000775233 /* iphone-settings.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D49D78151BE7155000775233 /* iphone-settings.mp4 */; };
+		D49D78181BE765A100775233 /* share-video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D49D78171BE765A100775233 /* share-video.mp4 */; };
 		D4D68FF51BE33DD9008CFDEC /* TrialStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D68FF41BE33DD9008CFDEC /* TrialStateViewController.swift */; };
 		D4D68FF71BE434A6008CFDEC /* PreNotificationPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D68FF61BE434A6008CFDEC /* PreNotificationPrompt.swift */; };
 		D4D68FF91BE59B45008CFDEC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D68FF81BE59B45008CFDEC /* User.swift */; };
@@ -107,6 +108,7 @@
 		D42182C81BDF66FA00999B19 /* noopList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noopList.json; sourceTree = "<group>"; };
 		D458968E1BDD890800B334DD /* NotificationSetupFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationSetupFlowController.swift; path = Antelope/NotificationSetupFlowController.swift; sourceTree = SOURCE_ROOT; };
 		D49D78151BE7155000775233 /* iphone-settings.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iphone-settings.mp4"; path = "Antelope/Assets.xcassets/iphone-settings.dataset/iphone-settings.mp4"; sourceTree = "<group>"; };
+		D49D78171BE765A100775233 /* share-video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "share-video.mp4"; path = "Antelope/Assets.xcassets/share-video.dataset/share-video.mp4"; sourceTree = "<group>"; };
 		D4C116371BC63EAB00F5B2DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = DashboardController.swift; sourceTree = "<group>"; };
 		D4D68FF41BE33DD9008CFDEC /* TrialStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrialStateViewController.swift; path = Antelope/TrialStateViewController.swift; sourceTree = SOURCE_ROOT; };
 		D4D68FF61BE434A6008CFDEC /* PreNotificationPrompt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreNotificationPrompt.swift; path = Antelope/PreNotificationPrompt.swift; sourceTree = SOURCE_ROOT; };
@@ -148,6 +150,7 @@
 		0F053E2B1B93D03000A9EFBC = {
 			isa = PBXGroup;
 			children = (
+				D49D78171BE765A100775233 /* share-video.mp4 */,
 				D49D78151BE7155000775233 /* iphone-settings.mp4 */,
 				D42182C11BDF5AEE00999B19 /* Defaults.plist */,
 				D42182C31BDF5B4E00999B19 /* Constants.swift */,
@@ -373,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49D78181BE765A100775233 /* share-video.mp4 in Resources */,
 				D49D78161BE7155000775233 /* iphone-settings.mp4 in Resources */,
 				D42182C21BDF5AEE00999B19 /* Defaults.plist in Resources */,
 				0F7C7E4A1BAA9031005D85CD /* Main.storyboard in Resources */,

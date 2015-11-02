@@ -179,12 +179,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         
+        print("received notification")
+        
         if let data = userInfo["data"] as? NSDictionary {
             self.queryTrialStatusUsingVendorId()
         }
     }
 
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+        
+        print("received notification")
         
         if let data = userInfo["data"] as? NSDictionary {
             self.queryTrialStatusUsingVendorId()
@@ -222,8 +226,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
         if !self.trialActive() {
             return
         } else {
+            print("getting user")
             user.getByDeviceId({
                 data, response, error in
+                
+                print("got user")
                 
                 if error != nil {
                     print("error=\(error)")
@@ -235,6 +242,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
                             self.user.initFromData(data!)
                             
                             if self.user.trial_period != nil && self.user.trial_period == false && self.userDefaults.boolForKey(Constants.DID_SHARE_KEY) == false {
+                                
+                                print("finishing trial")
                                 self.finishTrial()
                             }
                         }
