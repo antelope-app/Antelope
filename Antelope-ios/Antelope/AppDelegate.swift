@@ -191,7 +191,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
     }
     
     func _registerDeviceToken(deviceTokenString: String) {
-        print("registering device token remotely", deviceTokenString)
         
         let deviceIdString: String! = UIDevice().identifierForVendor?.UUIDString
         
@@ -256,7 +255,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
     }
     
     func finishTrial() {
-        print("finishing trial")
         NSUserDefaults.standardUserDefaults().setBool(false, forKey: "TrialPeriodActive")
         if let preferences = NSUserDefaults.init(suiteName: Constants.APP_GROUP_ID) {
             preferences.setBool(false, forKey: Constants.BLOCKER_PERMISSION_KEY)
@@ -273,7 +271,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
     }
     
     func didShareWithSuccess() {
-        print("delegate callback in appdelegate, did share with success")
         if let preferences = NSUserDefaults.init(suiteName: Constants.APP_GROUP_ID) {
             preferences.setBool(true, forKey: Constants.BLOCKER_PERMISSION_KEY)
             preferences.synchronize()
