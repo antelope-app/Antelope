@@ -19,4 +19,5 @@ public struct Constants {
     
     static let TRIAL_ACTIVE_KEY = "TrialPeriodActive"
     static let BLOCKER_PERMISSION_KEY = "BlockerAllowed"
+    static let DID_SHARE_KEY = "DidShare"
 }

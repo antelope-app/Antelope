@@ -21,7 +21,7 @@ module.exports = function(app) {
 		var token = req.body.device_apn_token
 		var vendorId = req.body.device_id
 
-		User.getByToken(token, function(entry) {
+		User.getByDeviceId(vendorId, function(entry) {
 			if (entry) {
 				console.log(entry)
 				res.send("Already registered")

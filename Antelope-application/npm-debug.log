@@ -1,24 +1,26 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'run', 'start-production' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.35
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info prestart Antelope@1.0.0
-6 info start Antelope@1.0.0
+4 verbose run-script [ 'prestart-production',
+4 verbose run-script   'start-production',
+4 verbose run-script   'poststart-production' ]
+5 info prestart-production Antelope@1.0.0
+6 info start-production Antelope@1.0.0
 7 verbose unsafe-perm in lifecycle true
-8 info Antelope@1.0.0 Failed to exec start script
-9 error Antelope@1.0.0 start: `node app.js`
+8 info Antelope@1.0.0 Failed to exec start-production script
+9 error Antelope@1.0.0 start-production: `NODE_ENV=production DEBUG=apn node app.js`
 9 error Exit status 8
-10 error Failed at the Antelope@1.0.0 start script.
+10 error Failed at the Antelope@1.0.0 start-production script.
 10 error This is most likely a problem with the Antelope package,
 10 error not with npm itself.
 10 error Tell the author that this fails on your system:
-10 error     node app.js
+10 error     NODE_ENV=production DEBUG=apn node app.js
 10 error You can get their info via:
 10 error     npm owner ls Antelope
 10 error There is likely additional logging output above.
 11 error System Darwin 15.0.0
-12 error command "node" "/usr/local/bin/npm" "start"
+12 error command "node" "/usr/local/bin/npm" "run" "start-production"
 13 error cwd /Users/jaelee/Projects/ios_projects/Antelope/Antelope-application
 14 error node -v v0.10.35
 15 error npm -v 1.4.28

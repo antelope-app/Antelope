@@ -28,7 +28,7 @@ class TutorialStep: UIViewController {
         
         let viewHeight = self.view.frame.size.height
         if viewHeight >= 667.0 {
-            topBuffer = 100.0
+            topBuffer = 80.0
             bottomBuffer = 100.0
         } else {
             print("phone is not iphone6")

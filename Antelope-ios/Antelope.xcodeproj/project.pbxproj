@@ -8,40 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		0F6E05751BAF7CC4000CE6CC /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 0F6E05731BAF7B03000CE6CC /* blockerList.json */; };
-		0F7C7E321BAA9013005D85CD /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2A1BAA9013005D85CD /* ShareViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E331BAA9013005D85CD /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2B1BAA9013005D85CD /* TutorialStep.swift */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E341BAA9013005D85CD /* TutorialStepFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2C1BAA9013005D85CD /* TutorialStepFour.swift */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E351BAA9013005D85CD /* TutorialStepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2D1BAA9013005D85CD /* TutorialStepOne.swift */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E361BAA9013005D85CD /* TutorialStepThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2E1BAA9013005D85CD /* TutorialStepThree.swift */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E371BAA9013005D85CD /* TutorialStepTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2F1BAA9013005D85CD /* TutorialStepTwo.swift */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E381BAA9013005D85CD /* TutorialStepZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E301BAA9013005D85CD /* TutorialStepZero.swift */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E391BAA9013005D85CD /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E311BAA9013005D85CD /* TutorialViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E471BAA9031005D85CD /* AntelopeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E3B1BAA9031005D85CD /* AntelopeColors.swift */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E481BAA9031005D85CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E3C1BAA9031005D85CD /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E491BAA9031005D85CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F7C7E3D1BAA9031005D85CD /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E4A1BAA9031005D85CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7C7E3F1BAA9031005D85CD /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E4C1BAA9031005D85CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7C7E421BAA9031005D85CD /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E4D1BAA9031005D85CD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E431BAA9031005D85CD /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E4F1BAA9031005D85CD /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E461BAA9031005D85CD /* ScrollViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		0F7C7E931BAA9456005D85CD /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F053E821B94066F00A9EFBC /* SafariServices.framework */; settings = {ASSET_TAGS = (); }; };
+		0F7C7E321BAA9013005D85CD /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2A1BAA9013005D85CD /* ShareViewController.swift */; };
+		0F7C7E331BAA9013005D85CD /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2B1BAA9013005D85CD /* TutorialStep.swift */; };
+		0F7C7E341BAA9013005D85CD /* TutorialStepFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2C1BAA9013005D85CD /* TutorialStepFour.swift */; };
+		0F7C7E351BAA9013005D85CD /* TutorialStepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2D1BAA9013005D85CD /* TutorialStepOne.swift */; };
+		0F7C7E361BAA9013005D85CD /* TutorialStepThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2E1BAA9013005D85CD /* TutorialStepThree.swift */; };
+		0F7C7E371BAA9013005D85CD /* TutorialStepTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E2F1BAA9013005D85CD /* TutorialStepTwo.swift */; };
+		0F7C7E381BAA9013005D85CD /* TutorialStepZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E301BAA9013005D85CD /* TutorialStepZero.swift */; };
+		0F7C7E391BAA9013005D85CD /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E311BAA9013005D85CD /* TutorialViewController.swift */; };
+		0F7C7E471BAA9031005D85CD /* AntelopeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E3B1BAA9031005D85CD /* AntelopeColors.swift */; };
+		0F7C7E481BAA9031005D85CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E3C1BAA9031005D85CD /* AppDelegate.swift */; };
+		0F7C7E491BAA9031005D85CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F7C7E3D1BAA9031005D85CD /* Assets.xcassets */; };
+		0F7C7E4A1BAA9031005D85CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7C7E3F1BAA9031005D85CD /* Main.storyboard */; };
+		0F7C7E4C1BAA9031005D85CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7C7E421BAA9031005D85CD /* LaunchScreen.storyboard */; };
+		0F7C7E4D1BAA9031005D85CD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E431BAA9031005D85CD /* MainViewController.swift */; };
+		0F7C7E4F1BAA9031005D85CD /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7C7E461BAA9031005D85CD /* ScrollViewController.swift */; };
+		0F7C7E931BAA9456005D85CD /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F053E821B94066F00A9EFBC /* SafariServices.framework */; };
 		0FCC48E01BAA9F1300A46C4B /* Block Ads.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0FCC48D71BAA9F1200A46C4B /* Block Ads.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0FCC48E71BAA9F5500A46C4B /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC48E51BAA9F5500A46C4B /* ActionRequestHandler.swift */; settings = {ASSET_TAGS = (); }; };
+		0FCC48E71BAA9F5500A46C4B /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC48E51BAA9F5500A46C4B /* ActionRequestHandler.swift */; };
 		D40679981BD3178900560CDE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40679971BD3178900560CDE /* Bolts.framework */; };
 		D406799A1BD3179C00560CDE /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40679991BD3179C00560CDE /* FBAudienceNetwork.framework */; };
 		D406799D1BD317D600560CDE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D406799C1BD317D600560CDE /* FBSDKCoreKit.framework */; };
 		D406799F1BD317DE00560CDE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D406799E1BD317DE00560CDE /* FBSDKLoginKit.framework */; };
 		D40679A11BD317E500560CDE /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40679A01BD317E500560CDE /* FBSDKMessengerShareKit.framework */; };
 		D40679A31BD317EB00560CDE /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40679A21BD317EB00560CDE /* FBSDKShareKit.framework */; };
-		D418E45B1BD4B3A600BA86FF /* MessageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D418E45A1BD4B3A600BA86FF /* MessageComposer.swift */; settings = {ASSET_TAGS = (); }; };
-		D42182C21BDF5AEE00999B19 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = D42182C11BDF5AEE00999B19 /* Defaults.plist */; settings = {ASSET_TAGS = (); }; };
-		D42182C41BDF5B4E00999B19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42182C31BDF5B4E00999B19 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
+		D418E45B1BD4B3A600BA86FF /* MessageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D418E45A1BD4B3A600BA86FF /* MessageComposer.swift */; };
+		D42182C21BDF5AEE00999B19 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = D42182C11BDF5AEE00999B19 /* Defaults.plist */; };
+		D42182C41BDF5B4E00999B19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42182C31BDF5B4E00999B19 /* Constants.swift */; };
 		D42182C71BDF64D400999B19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42182C31BDF5B4E00999B19 /* Constants.swift */; };
-		D42182C91BDF66FA00999B19 /* noopList.json in Resources */ = {isa = PBXBuildFile; fileRef = D42182C81BDF66FA00999B19 /* noopList.json */; settings = {ASSET_TAGS = (); }; };
+		D42182C91BDF66FA00999B19 /* noopList.json in Resources */ = {isa = PBXBuildFile; fileRef = D42182C81BDF66FA00999B19 /* noopList.json */; };
 		D42182CA1BDF708600999B19 /* noopList.json in Resources */ = {isa = PBXBuildFile; fileRef = D42182C81BDF66FA00999B19 /* noopList.json */; };
-		D458968F1BDD890800B334DD /* NotificationSetupFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458968E1BDD890800B334DD /* NotificationSetupFlowController.swift */; settings = {ASSET_TAGS = (); }; };
-		D4D68FF51BE33DD9008CFDEC /* TrialStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D68FF41BE33DD9008CFDEC /* TrialStateViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		D4D68FF71BE434A6008CFDEC /* PreNotificationPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D68FF61BE434A6008CFDEC /* PreNotificationPrompt.swift */; settings = {ASSET_TAGS = (); }; };
-		D4D68FF91BE59B45008CFDEC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D68FF81BE59B45008CFDEC /* User.swift */; settings = {ASSET_TAGS = (); }; };
+		D458968F1BDD890800B334DD /* NotificationSetupFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D458968E1BDD890800B334DD /* NotificationSetupFlowController.swift */; };
+		D49D78161BE7155000775233 /* iphone-settings.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D49D78151BE7155000775233 /* iphone-settings.mp4 */; };
+		D4D68FF51BE33DD9008CFDEC /* TrialStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D68FF41BE33DD9008CFDEC /* TrialStateViewController.swift */; };
+		D4D68FF71BE434A6008CFDEC /* PreNotificationPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D68FF61BE434A6008CFDEC /* PreNotificationPrompt.swift */; };
+		D4D68FF91BE59B45008CFDEC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D68FF81BE59B45008CFDEC /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		D42182C61BDF5E0C00999B19 /* Block Ads.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Block Ads.entitlements"; sourceTree = SOURCE_ROOT; };
 		D42182C81BDF66FA00999B19 /* noopList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noopList.json; sourceTree = "<group>"; };
 		D458968E1BDD890800B334DD /* NotificationSetupFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationSetupFlowController.swift; path = Antelope/NotificationSetupFlowController.swift; sourceTree = SOURCE_ROOT; };
+		D49D78151BE7155000775233 /* iphone-settings.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iphone-settings.mp4"; path = "Antelope/Assets.xcassets/iphone-settings.dataset/iphone-settings.mp4"; sourceTree = "<group>"; };
 		D4C116371BC63EAB00F5B2DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = DashboardController.swift; sourceTree = "<group>"; };
 		D4D68FF41BE33DD9008CFDEC /* TrialStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrialStateViewController.swift; path = Antelope/TrialStateViewController.swift; sourceTree = SOURCE_ROOT; };
 		D4D68FF61BE434A6008CFDEC /* PreNotificationPrompt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreNotificationPrompt.swift; path = Antelope/PreNotificationPrompt.swift; sourceTree = SOURCE_ROOT; };
@@ -146,6 +148,7 @@
 		0F053E2B1B93D03000A9EFBC = {
 			isa = PBXGroup;
 			children = (
+				D49D78151BE7155000775233 /* iphone-settings.mp4 */,
 				D42182C11BDF5AEE00999B19 /* Defaults.plist */,
 				D42182C31BDF5B4E00999B19 /* Constants.swift */,
 				0F053E361B93D03000A9EFBC /* Antelope */,
@@ -312,7 +315,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = AdShield;
 				TargetAttributes = {
 					0F053E331B93D03000A9EFBC = {
@@ -370,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49D78161BE7155000775233 /* iphone-settings.mp4 in Resources */,
 				D42182C21BDF5AEE00999B19 /* Defaults.plist in Resources */,
 				0F7C7E4A1BAA9031005D85CD /* Main.storyboard in Resources */,
 				0F7C7E491BAA9031005D85CD /* Assets.xcassets in Resources */,
@@ -485,7 +489,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -508,6 +513,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "347dfaf3-deb1-458f-845c-b63ea64ee194";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -530,7 +536,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -545,6 +552,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "347dfaf3-deb1-458f-845c-b63ea64ee194";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -553,12 +561,12 @@
 		0F053E5D1B93D03000A9EFBC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Antelope/Antelope.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Krisiloff (76X64CY68T)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Matthew Krisiloff (76X64CY68T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Krisiloff (76X64CY68T)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -582,12 +590,12 @@
 		0F053E5E1B93D03000A9EFBC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Antelope/Antelope.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Krisiloff (76X64CY68T)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Matthew Krisiloff (76X64CY68T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Krisiloff (76X64CY68T)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -610,11 +618,10 @@
 		0FCC48E21BAA9F1300A46C4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Block Ads.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Krisiloff (76X64CY68T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Krisiloff (76X64CY68T)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = "Block-Ads/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -630,11 +637,10 @@
 		0FCC48E31BAA9F1300A46C4B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Block Ads.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Krisiloff (76X64CY68T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Krisiloff (76X64CY68T)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = "Block-Ads/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -649,13 +655,13 @@
 		D42182BE1BDE20AE00999B19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Krisiloff (76X64CY68T)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Allow Ads/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope-Ad-Blocker.Allow-Ads";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b3d012f5-54e3-4501-9c05-211697a7a44d";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -663,13 +669,13 @@
 		D42182BF1BDE20AE00999B19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Krisiloff (76X64CY68T)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Allow Ads/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.antelope.Antelope-Ad-Blocker.Allow-Ads";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b3d012f5-54e3-4501-9c05-211697a7a44d";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

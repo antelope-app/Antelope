@@ -44,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
             
             userDefaults.setBool(true, forKey: "HasLaunchedOnce")
             userDefaults.setBool(true, forKey: "TrialPeriodActive")
+            userDefaults.setBool(false, forKey: Constants.DID_SHARE_KEY)
             userDefaults.setBool(false, forKey: "PromptedForNotifications")
             userDefaults.synchronize()
             
@@ -123,6 +124,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
             preferences.synchronize()
             
             if (!self.trialActive() && !preferences.boolForKey(Constants.BLOCKER_PERMISSION_KEY)) {
+                print("trial not active and blocker permission key false")
                 self.mainViewController.showShareWall()
             }
         }
@@ -191,7 +193,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
     }
     
     func _registerDeviceToken(deviceTokenString: String) {
-        
         let deviceIdString: String! = UIDevice().identifierForVendor?.UUIDString
         
         let request = NSMutableURLRequest(URL: NSURL(string: "\(Constants.SERVER_DOMAIN)/users")!)
@@ -233,7 +234,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
                             
                             self.user.initFromData(data!)
                             
-                            if self.user.trial_period != nil && self.user.trial_period == false {
+                            if self.user.trial_period != nil && self.user.trial_period == false && self.userDefaults.boolForKey(Constants.DID_SHARE_KEY) == false {
                                 self.finishTrial()
                             }
                         }
@@ -255,16 +256,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
     }
     
     func finishTrial() {
-        NSUserDefaults.standardUserDefaults().setBool(false, forKey: "TrialPeriodActive")
-        if let preferences = NSUserDefaults.init(suiteName: Constants.APP_GROUP_ID) {
-            preferences.setBool(false, forKey: Constants.BLOCKER_PERMISSION_KEY)
-            preferences.synchronize()
+        
+        if userDefaults.boolForKey("TrialPeriodActive") {
+            userDefaults.setBool(false, forKey: "TrialPeriodActive")
+            if let preferences = NSUserDefaults.init(suiteName: Constants.APP_GROUP_ID) {
+                preferences.setBool(false, forKey: Constants.BLOCKER_PERMISSION_KEY)
+                preferences.synchronize()
+            }
         }
         
-        if UIApplication.sharedApplication().applicationState == UIApplicationState.Active {
-            dispatch_async(dispatch_get_main_queue(), {
-                self.mainViewController.showShareWall()
-            })
+        if !userDefaults.boolForKey("TrialPeriodActive") && !userDefaults.boolForKey(Constants.DID_SHARE_KEY) {
+            if UIApplication.sharedApplication().applicationState == UIApplicationState.Active {
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.mainViewController.showShareWall()
+                })
+            }
         }
         
         self.reloadBlocker()
@@ -273,7 +279,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
     func didShareWithSuccess() {
         if let preferences = NSUserDefaults.init(suiteName: Constants.APP_GROUP_ID) {
             preferences.setBool(true, forKey: Constants.BLOCKER_PERMISSION_KEY)
+            userDefaults.setBool(true, forKey: Constants.DID_SHARE_KEY)
             preferences.synchronize()
+        }
+        
+        if self.mainViewController.trialStateViewController == nil {
+            self.mainViewController.trialStateActive()
         }
         
         self.mainViewController.trialStateViewController.updateCounter(0)

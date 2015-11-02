@@ -96,6 +96,8 @@ class TutorialViewController: ScrollViewController, TutorialStepDelegate {
             let application: UIApplication = UIApplication.sharedApplication()
             if (application.canOpenURL(settingsURL)) {
                 application.openURL(settingsURL)
+            } else {
+                print("cant open settings")
             }
         }
         
