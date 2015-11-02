@@ -15,6 +15,7 @@ protocol TrialStateViewControllerDelegate {
 class TrialStateViewController : UIViewController {
     var colorKit: AntelopeColors = AntelopeColors()
     var tutorialStep = TutorialStep()
+    var app: UIApplication = UIApplication.sharedApplication()
     
     var delegate: TrialStateViewControllerDelegate!
     
@@ -37,7 +38,12 @@ class TrialStateViewController : UIViewController {
         
         handleLayout()
         
-        getTrialStatus()
+        let appDelegate = app.delegate as! AppDelegate
+        if !appDelegate.user.aborting {
+            getTrialStatus()
+        } else {
+            self.updateCounter(0)
+        }
         
         //present()
     }
@@ -124,9 +130,12 @@ class TrialStateViewController : UIViewController {
     
     func updateCounter(hoursLeft: Int) {
         print("updating counter")
+        
+        let appDelegate = app.delegate as! AppDelegate
+        
         let standardDefaults = NSUserDefaults.standardUserDefaults()
         if let preferences = NSUserDefaults.init(suiteName: Constants.APP_GROUP_ID) {
-            if preferences.boolForKey(Constants.BLOCKER_PERMISSION_KEY) && !standardDefaults.boolForKey("TrialPeriodActive") {
+            if standardDefaults.boolForKey(Constants.DID_SHARE_KEY) || appDelegate.user.aborting {
                 countDown.text = "Thanks for using Antelope!"
                 
                 if countDownSubheader != nil {

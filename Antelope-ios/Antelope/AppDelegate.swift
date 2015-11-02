@@ -62,6 +62,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
                 
                 if error != nil {
                     print("error=\(error)")
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self._abortTrial()
+                    })
                     return
                 } else {
                     dispatch_async(dispatch_get_main_queue(), {
@@ -80,14 +83,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
                                 self.setupRemoteNotifications()
                                 self.mainViewController.trialStateActive()
                                 
-                                print("is trial done? \(self.user.trial_period)")
+                                print("is trial active? \(self.user.trial_period)")
                                 if self.user.trial_period != nil && self.user.trial_period.boolValue == false {
-                                    print("trial is done")
+                                    print("trial is not active")
                                     self.finishTrial()
                                 }
                             }
                         }
-                        else if (data == nil || httpResponse.statusCode == 404) {
+                            
+                        else if ((data == nil || httpResponse.statusCode == 404) && self.userDefaults.boolForKey("PromptedForNotifications")) {
+                            print("not found but past notification state")
+                            self.mainViewController.trialStateActive()
+                            self._abortTrial()
+                        } else {
                             self.mainViewController.startNotificationSetup()
                             self.mainViewController.notificationSetupFlowController.delegate = self
                         }
@@ -120,6 +128,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
     
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
         if let preferences = NSUserDefaults.init(suiteName: Constants.APP_GROUP_ID) {
             preferences.synchronize()
             
@@ -265,6 +274,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
     }
     
     func finishTrial() {
+        print("finishing trial")
         
         if userDefaults.boolForKey("TrialPeriodActive") {
             userDefaults.setBool(false, forKey: "TrialPeriodActive")
@@ -283,6 +293,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MainControllerDelegate, N
         }
         
         self.reloadBlocker()
+    }
+    
+    func _abortTrial() {
+        self.user.aborting = true
+        self.mainViewController.trialStateActive()
     }
     
     func didShareWithSuccess() {

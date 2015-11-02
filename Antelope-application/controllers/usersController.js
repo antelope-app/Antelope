@@ -21,11 +21,13 @@ module.exports = function(app) {
 		var token = req.body.device_apn_token
 		var vendorId = req.body.device_id
 
+		console.log("searching by vendor_id", vendorId)
 		User.getByDeviceId(vendorId, function(entry) {
 			if (entry) {
-				console.log(entry)
+				console.log('already registered', entry)
 				res.send("Already registered")
 			} else {
+				console.log("creating new entry")
 				User.create(req.body, function(err, result) {
 					if (err) throw err;
 					var userId = result.insertId

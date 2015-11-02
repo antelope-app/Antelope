@@ -14,6 +14,7 @@ class User: NSObject {
     var created_at: String!
     var device_apn_token: String!
     var trial_period: Bool!
+    var aborting: Bool = false
     
     func initFromData(data: NSData) -> User {
         do {
@@ -48,6 +49,7 @@ class User: NSObject {
     
     func getByDeviceId(completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) -> User {
         let device_id: String! = UIDevice().identifierForVendor?.UUIDString
+        print("User: getting by device id", device_id)
         
         let request = NSMutableURLRequest(URL: NSURL(string: "\(Constants.SERVER_DOMAIN)/users/trial_status/\(device_id)")!)
         request.HTTPMethod = "GET"
